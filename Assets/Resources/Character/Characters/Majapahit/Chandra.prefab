@@ -55,11 +55,11 @@ MonoBehaviour:
     exp: 10
     baseAtk: 11
     baseDef: 8
-    baseHP: 17
+    baseHP: 18
     baseSpd: 14
     baseAcc: 1
     baseEva: 0.3
-    baseEnergy: 5
+    baseEnergy: 6
   skill:
     name: Amavasya Sara
     power: 75

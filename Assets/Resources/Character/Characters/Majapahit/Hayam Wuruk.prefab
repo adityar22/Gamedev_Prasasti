@@ -44,19 +44,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1366e54edd5277f4f82647d55b5ef135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: 
-  kingdom: 
-  type: 
+  name: Hayam Wuruk
+  kingdom: 0
+  type: 0
   element: 0
-  tier: 
+  tier: 2
   stat:
     level: 1
-    exp: 0
-    baseAtk: 0
-    baseDef: 0
-    baseHP: 0
-    baseSpd: 0
-    baseEnergy: 0
+    criticalStage: 0
+    exp: 15
+    baseAtk: 15
+    baseDef: 13
+    baseHP: 27
+    baseSpd: 13
+    baseAcc: 1
+    baseEva: 0.2
+    baseEnergy: 8
+  skill:
+    name: Kelud Parvata Shastra
+    power: 120
+    consumeEnergy: 4
+    skillTarget: 0
+    skillEffectToStatus: 3
+    effectStatusRate: 0.4
+    skillEffectToStat: 2
+    effectStatRate: 0
+    statChange: 0
+    stageChange: 0
+    ratioChange: 0
+    description: Kelud Parvata Shastra. Dengan pedang yang terinspirasi dari gunung
+      Kelud, ia melepaskan serangan elemen api yang menyapu seluruh barisan depan
+      musuh. Serangan ini tidak hanya memberikan kerusakan fisik yang besar, tetapi
+      juga memiliki kemungkinan untuk menyebabkan efek terbakar pada target-targetnya,
+      menambahkan elemen kehancuran yang mempesona di medan pertempuran.
   attribut:
     idle: {fileID: 0}
     attackPose: {fileID: 0}

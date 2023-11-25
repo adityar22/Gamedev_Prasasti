@@ -52,22 +52,22 @@ MonoBehaviour:
   stat:
     level: 1
     criticalStage: 0
-    exp: 12
-    baseAtk: 15
+    exp: 15
+    baseAtk: 13
     baseDef: 11
     baseHP: 23
-    baseSpd: 0
-    baseAcc: 0
-    baseEva: 0
-    baseEnergy: 0
+    baseSpd: 9
+    baseAcc: 1
+    baseEva: 0.2
+    baseEnergy: 7
   skill:
-    name: 
-    power: 0
-    consumeEnergy: 0
-    skillTarget: 0
-    skillEffectToStatus: 0
-    effectStatusRate: 0
-    skillEffectToStat: 0
+    name: Palapa Impact
+    power: 90
+    consumeEnergy: 5
+    skillTarget: 3
+    skillEffectToStatus: 1
+    effectStatusRate: 0.4
+    skillEffectToStat: 2
     effectStatRate: 0
     statChange: 0
     stageChange: 0
