@@ -36,7 +36,7 @@ public class BattleManager : MonoBehaviour
 
     System.Random random;
 
-    private void Start()
+    public void StartBattle()
     {
         random = new System.Random();
         InitializeBattle();

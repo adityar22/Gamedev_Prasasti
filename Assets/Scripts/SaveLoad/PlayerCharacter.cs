@@ -9,13 +9,19 @@ public class PlayerCharacter : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        /// DEBUG PREFS
+
         /*GameObject eventSystem = GameObject.Find("charData");
         CharData dataChar = eventSystem.GetComponent<CharData>();
         Character unlockedCharacter = dataChar.charData[0];
         unlockedCharacter.SaveCharacter();*/
-        Debug.Log("try to load characters");
+
+        /*PlayerPrefs.DeleteKey("UnlockedCharacterList");
+        Debug.Log("Try to delete player data");*/
 
         unlockedCharacters = GetUnlockedCharacterList();
+
+        /// DEBUG PREFS
     }
 
     void Update()
@@ -32,10 +38,10 @@ public class PlayerCharacter : MonoBehaviour
         string characterListData = PlayerPrefs.GetString("UnlockedCharacterList", "");
         if (!string.IsNullOrEmpty(characterListData))
         {
-            Debug.Log("data loaded");
+            Debug.Log("Player Data Loaded!");
             return JsonUtility.FromJson<List<Character>>(characterListData);
         }
-        Debug.Log("data empty");
+        Debug.Log("Player Data Empty");
         return new List<Character>();
     }
 }

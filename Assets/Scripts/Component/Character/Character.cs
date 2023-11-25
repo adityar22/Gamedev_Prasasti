@@ -15,7 +15,7 @@ public class CharTypes
 
 public class Kingdoms
 {
-    [SerializeField] public enum Kingdom { Majapahit, Sriwijaya, Demak, Singasari, MataramKuno, MataramIslam, GowaTalo }
+    [SerializeField] public enum Kingdom { Majapahit, Sriwijaya, Demak, Singasari, MataramKuno, MataramIslam, GowaTalo, KalaYuga }
 }
 
 public class Tiers

@@ -77,7 +77,7 @@ MonoBehaviour:
       Selain itu, keahlian ini meningkatkan kecepatan Chandra secara signifikan,
       memberinya keunggulan di medan pertempuran.
   attribut:
-    idle: {fileID: 0}
+    idle: {fileID: 21300000, guid: d944340263eafed46a697f67b5049dd6, type: 3}
     attackPose: {fileID: 0}
     skillPose: {fileID: 0}
     dialog: {fileID: 0}
