@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4094285010527660963
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 906558505075816842}
+  - component: {fileID: 559299343314850929}
+  m_Layer: 0
+  m_Name: Chandra
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &906558505075816842
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094285010527660963}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &559299343314850929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4094285010527660963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1366e54edd5277f4f82647d55b5ef135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  name: Chandra
+  kingdom: 0
+  type: 1
+  element: 3
+  tier: 1
+  stat:
+    level: 1
+    criticalStage: 0
+    exp: 10
+    baseAtk: 11
+    baseDef: 8
+    baseHP: 17
+    baseSpd: 14
+    baseAcc: 1
+    baseEva: 0.3
+    baseEnergy: 5
+  skill:
+    name: Amavasya Sara
+    power: 75
+    consumeEnergy: 3
+    skillTarget: 2
+    skillEffectToStatus: 0
+    effectStatusRate: 1
+    skillEffectToStat: 0
+    effectStatRate: 0.8
+    statChange: 2
+    stageChange: 0
+    ratioChange: 0.2
+    description: Amavasya Strike adalah gerakan lincah Chandra yang melibatkan lompatan
+      dengan tombak membentuk bulan sabit, menyebabkan kerusakan besar pada musuh.
+      Selain itu, keahlian ini meningkatkan kecepatan Chandra secara signifikan,
+      memberinya keunggulan di medan pertempuran.
+  attribut:
+    idle: {fileID: 0}
+    attackPose: {fileID: 0}
+    skillPose: {fileID: 0}
+    dialog: {fileID: 0}
