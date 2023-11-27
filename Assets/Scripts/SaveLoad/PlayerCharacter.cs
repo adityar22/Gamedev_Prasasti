@@ -15,13 +15,13 @@ public class PlayerCharacter : MonoBehaviour
         GameObject eventSystem = GameObject.Find("charData");
         dataChar = eventSystem.GetComponent<CharData>();
 
-        if (dataChar != null)
-        {
-            SaveCharacter(0);
-            SaveCharacter(1);
-        }
+        // if (dataChar != null)
+        // {
+        //     SaveCharacter(0);
+        //     SaveCharacter(1);
+        // }
 
-        // unlockedCharacters = GetUnlockedCharacterList();
+        unlockedCharacters = GetUnlockedCharacterList();
 
         // PlayerPrefs.DeleteKey("UnlockedCharacterList");
         // Debug.Log("Try to delete player data");
@@ -43,13 +43,13 @@ public class PlayerCharacter : MonoBehaviour
         {
             // Jika karakter sudah ada, update data karakter
             unlockedCharacters[existingIndex] = dataChar.charData[index].character;
+
         }
         else
         {
             // Jika karakter belum ada, tambahkan ke list
             unlockedCharacters.Add(dataChar.charData[index].character);
         }
-
         // Simpan list karakter ke PlayerPrefs
         SaveCharacterList(index);
     }
@@ -57,28 +57,41 @@ public class PlayerCharacter : MonoBehaviour
     // Simpan list karakter ke PlayerPrefs
     private void SaveCharacterList(int index)
     {
-        string characterListData = JsonUtility.ToJson(unlockedCharacters);
-        Debug.Log(characterListData);
-        PlayerPrefs.SetString("UnlockedCharacterList", characterListData);
-
-        string loadData = PlayerPrefs.GetString("UnlockedCharacterList");
-        Debug.Log(loadData);
+        string charListData = "";
+        foreach(var data in unlockedCharacters){
+            charListData += JsonUtility.ToJson(data) + " <sep> ";
+        }
+        // Debug.Log("List Contents: " + charListData);
+        PlayerPrefs.SetString("UnlockedCharacterList", charListData);
     }
 
     // Mendapatkan list karakter yang di-unlock oleh player
-    public static List<Character> GetUnlockedCharacterList()
+    public static List<CharModel> GetUnlockedCharacterList()
     {
+        List<CharModel> loadedChar = new List<CharModel>();
         string characterListData = PlayerPrefs.GetString("UnlockedCharacterList", "");
         if (characterListData != "" && characterListData!= "{}")
         {
-            Debug.Log("Get Player Data");
-            Debug.Log(characterListData);
-            return JsonUtility.FromJson<List<Character>>(characterListData);
+            // Debug.Log("Get Player Data");
+            // Debug.Log(characterListData);
+
+            
+            string[] jsonParts = characterListData.Split(new string[] {" <sep> "}, System.StringSplitOptions.RemoveEmptyEntries);
+
+            foreach(var part in jsonParts){
+                // Debug.Log(part);
+                if (!string.IsNullOrEmpty(part)){
+                    CharModel charLoad = JsonUtility.FromJson<CharModel>(part);
+                    loadedChar.Add(charLoad);
+                }
+            }
+            
+            return loadedChar;
         }
         else
         {
             Debug.Log("Player Data Empty");
-            return new List<Character>();
+            return new List<CharModel>();
         }
     }
 }

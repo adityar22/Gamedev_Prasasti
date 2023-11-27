@@ -1,10 +1,13 @@
+// using System.Diagnostics;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerInput : MonoBehaviour
 {
     private BattleManager battleManager;
+    private static Battle battle;
 
     public static int choosedArea;
 
@@ -12,6 +15,7 @@ public class PlayerInput : MonoBehaviour
     {
         GameObject eventSystem = GameObject.Find("EventSystem");
         battleManager = eventSystem.GetComponent<BattleManager>();
+        battle = eventSystem.GetComponent<Battle>();
     }
 
     private void Update()
@@ -36,9 +40,29 @@ public class PlayerInput : MonoBehaviour
         {
             Character input = new Character();
             input.character = PlayerCharacter.unlockedCharacters[id];
-            ChoosedPlayer.choosedChar.Add(input.character);
+            ChoosedPlayer.choosedChar.Add(input);
         }
-        Debug.Log(PlayerCharacter.unlockedCharacters[id].name);
+        
+        Image imageComponent = battle.player[teamIndex].GetComponent<Image>();
+        Sprite yourSprite = ChoosedPlayer.choosedChar[teamIndex].character.attribut.idle;
+
+        if (imageComponent != null)
+        {
+            // Set the sprite of the Image component
+            imageComponent.sprite = yourSprite;
+
+            // Calculate the aspect ratio of the sprite
+            float aspectRatio = yourSprite.rect.width / yourSprite.rect.height;
+
+            // Set the size of the Image component based on the sprite's aspect ratio
+            imageComponent.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, imageComponent.rectTransform.rect.width / aspectRatio);
+        }
+        else
+        {
+            Debug.LogError("Image component is not assigned.");
+        }
+        ChoosePlayer.teamIndex += ChoosePlayer.teamIndex != 2 ? 1 : 0;
+        Debug.Log(ChoosedPlayer.choosedChar[teamIndex].character.name);
     }
 
     public void clickAttack()

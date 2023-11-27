@@ -18,8 +18,8 @@ public class Battle : MonoBehaviour
     [SerializeField] private GameObject battlePhase;
     [SerializeField] private GameObject choosePhase;
 
-    [SerializeField] private GameObject[] player = new GameObject[] { };
-    [SerializeField] private GameObject[] enemy = new GameObject[] { };
+    [SerializeField] public GameObject[] player = new GameObject[] { };
+    [SerializeField] public GameObject[] enemy = new GameObject[] { };
 
     [SerializeField] public GameObject _charData;
     [SerializeField] public GameObject _playerData;
@@ -27,6 +27,8 @@ public class Battle : MonoBehaviour
     public List<ChooseItem> chooseItemList;
     public GameObject chooseBox;
     public Transform choosePanel;
+
+    public int teamCount;
 
     void Start()
     {
@@ -36,6 +38,11 @@ public class Battle : MonoBehaviour
 
         GameObject playerData = Instantiate(_playerData);
         PlayerCharacter playerCharacter = playerData.GetComponent<PlayerCharacter>();
+
+        for(int i = 0; i < teamCount; i++){
+            Character placeHolder = new Character();
+            ChoosedPlayer.choosedChar.Add(placeHolder);
+        }
 
         initChoose();
     }
@@ -50,29 +57,12 @@ public class Battle : MonoBehaviour
         }
     }
 
+    public void setSprite(int id){
+
+    }
+
     public void initBattle()
     {
-        for (int i = 0; i < player.Length; i++)
-        {
-            Image imageComponent = this.player[i].GetComponent<Image>();
-            Sprite yourSprite = ChoosedPlayer.choosedChar[i].character.attribut.idle;
-
-            if (imageComponent != null)
-            {
-                // Set the sprite of the Image component
-                imageComponent.sprite = yourSprite;
-
-                // Calculate the aspect ratio of the sprite
-                float aspectRatio = yourSprite.rect.width / yourSprite.rect.height;
-
-                // Set the size of the Image component based on the sprite's aspect ratio
-                imageComponent.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, imageComponent.rectTransform.rect.width / aspectRatio);
-            }
-            else
-            {
-                Debug.LogError("Image component is not assigned.");
-            }
-        }
 
         for (int i = 0; i < enemy.Length; i++)
         {

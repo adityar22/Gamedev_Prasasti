@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class Elements
 {
-    [SerializeField] public enum Element { Fire, Water, Earth, Wind, Dark, Light }
+    public enum Element { Fire, Water, Earth, Wind, Dark, Light }
 }
 
 public class CharTypes
 {
-    [SerializeField] public enum CharType { Swordsman, Lancer, Archer, Caster, Berserker, Assassin }
+    public enum CharType { Swordsman, Lancer, Archer, Caster, Berserker, Assassin }
 }
 
 public class Kingdoms
 {
-    [SerializeField] public enum Kingdom { Majapahit, Sriwijaya, Demak, Singasari, MataramKuno, MataramIslam, GowaTalo, KalaYuga }
+    public enum Kingdom { Majapahit, Sriwijaya, Demak, Singasari, MataramKuno, MataramIslam, GowaTalo, KalaYuga }
 }
 
 public class Tiers
 {
-    [SerializeField] public enum Tier { Common, Rare, Epic, Ultimate}
+    public enum Tier { Common, Rare, Epic, Ultimate}
 }
 
 [System.Serializable]
