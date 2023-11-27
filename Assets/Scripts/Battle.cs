@@ -15,13 +15,18 @@ public class ChoosedPlayer
 
 public class Battle : MonoBehaviour
 {
+    [SerializeField] private GameObject battlePhase;
+    [SerializeField] private GameObject choosePhase;
+
     [SerializeField] private GameObject[] player = new GameObject[] { };
     [SerializeField] private GameObject[] enemy = new GameObject[] { };
 
     [SerializeField] public GameObject _charData;
     [SerializeField] public GameObject _playerData;
 
-    [SerializeField] public GameObject chooseBox;
+    public List<ChooseItem> chooseItemList;
+    public GameObject chooseBox;
+    public Transform choosePanel;
 
     void Start()
     {
@@ -31,11 +36,18 @@ public class Battle : MonoBehaviour
 
         GameObject playerData = Instantiate(_playerData);
         PlayerCharacter playerCharacter = playerData.GetComponent<PlayerCharacter>();
+
+        initChoose();
     }
 
     public void initChoose()
     {
-
+        foreach(var character in PlayerCharacter.unlockedCharacters)
+        {
+            GameObject chooseInstantiated = Instantiate(chooseBox, choosePanel);
+            ChooseItem instantiate = chooseInstantiated.GetComponent<ChooseItem>();
+            instantiate.indexChar = PlayerCharacter.unlockedCharacters.IndexOf(character);
+        }
     }
 
     public void initBattle()
@@ -43,9 +55,7 @@ public class Battle : MonoBehaviour
         for (int i = 0; i < player.Length; i++)
         {
             Image imageComponent = this.player[i].GetComponent<Image>();
-            Sprite yourSprite = ChoosedPlayer.choosedChar[i].attribut.idle;
-
-            Debug.Log("tes ratio");
+            Sprite yourSprite = ChoosedPlayer.choosedChar[i].character.attribut.idle;
 
             if (imageComponent != null)
             {
@@ -67,9 +77,8 @@ public class Battle : MonoBehaviour
         for (int i = 0; i < enemy.Length; i++)
         {
             Image imageComponent = this.enemy[i].GetComponent<Image>();
-            Sprite yourSprite = ChoosedPlayer.choosedEnemy[i].attribut.idle;
+            Sprite yourSprite = ChoosedPlayer.choosedEnemy[i].character.attribut.idle;
 
-            Debug.Log("tes ratio");
 
             if (imageComponent != null)
             {

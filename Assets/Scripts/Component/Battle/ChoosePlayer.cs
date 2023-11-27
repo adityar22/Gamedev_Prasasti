@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class ChoosePlayer : MonoBehaviour
 {
-    public int teamIndex;
+    public static int teamIndex;
 
-    public void choosed(int id)
+    public int indexPosition;
+
+    public void positionClicked()
     {
-        GameObject _charData = GameObject.Find("charData");
-        CharData data = _charData.GetComponent<CharData>();
-        ChoosedPlayer.choosedChar[teamIndex] = data.charData[id];
+        ChoosePlayer.teamIndex = indexPosition;
     }
 }

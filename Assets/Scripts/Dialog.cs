@@ -86,7 +86,7 @@ public class Dialog : MonoBehaviour
         int charId = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].characterIndex;
         textChar.text = this.character.charData[charId].name;
         textDialog.text = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].dialogText;
-        imgChar.sprite = this.character.charData[charId].attribut.dialog;
+        imgChar.sprite = this.character.charData[charId].character.attribut.dialog;
     }
 
     void onChangeSubChapter()

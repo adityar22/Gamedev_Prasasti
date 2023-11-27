@@ -52,7 +52,7 @@ public class BattleManager : MonoBehaviour
         turnOrder.AddRange(ChoosedPlayer.choosedEnemy);
 
         // Sort turnOrder based on character speed (higher speed goes first)
-        turnOrder.Sort((a, b) => b.stat.Spd.CompareTo(a.stat.Spd));
+        turnOrder.Sort((a, b) => b.character.stat.Spd.CompareTo(a.character.stat.Spd));
 
         // Start the first turn
         StartCoroutine(StartTurns());
@@ -63,7 +63,7 @@ public class BattleManager : MonoBehaviour
         foreach (var character in turnOrder)
         {
             // Check if the character is still alive
-            if (character.stat.HP > 0)
+            if (character.character.stat.HP > 0)
             {
                 // Perform actions (BasicAttack, Skill, Item) based on player input or AI logic
                 ChoosedPlayer.activeChar = character;
@@ -95,7 +95,7 @@ public class BattleManager : MonoBehaviour
 
     private double intervenceState(Character attacker)
     {
-        switch (attacker.stat.Status)
+        switch (attacker.character.stat.Status)
         {
             case intervenceStatus.status.Burn:
                 return 0.75;
@@ -111,7 +111,7 @@ public class BattleManager : MonoBehaviour
 
     private double criticalHitRatio(Character attacker)
     {
-        switch (attacker.stat.criticalStage)
+        switch (attacker.character.stat.criticalStage)
         {
             case 0:
                 return 1.0 / 16;
@@ -144,8 +144,8 @@ public class BattleManager : MonoBehaviour
     private bool isLandingAttack(Character attacker, Character defender)
     {
         double landingPercentage = random.NextDouble();
-        double intervence = attacker.stat.Status == intervenceStatus.status.Paralyze ? 0.25 : 0.0;
-        double actualAcc = attacker.stat.Acc * (1 - defender.stat.Eva) * (1 - intervence);
+        double intervence = attacker.character.stat.Status == intervenceStatus.status.Paralyze ? 0.25 : 0.0;
+        double actualAcc = attacker.character.stat.Acc * (1 - defender.character.stat.Eva) * (1 - intervence);
         
         return landingPercentage <= actualAcc;
     }
@@ -156,18 +156,18 @@ public class BattleManager : MonoBehaviour
         {
             double interval = random.NextDouble() * (1.0 - 0.85) + 0.85;
 
-            double basicDamage = (((2 * attacker.stat.level) / 5) + 2) * (isSkill ? attacker.skill.power * (attacker.stat.Atk / target.stat.Def) : (attacker.stat.Atk - (target.stat.Def * 0.2)));
-            double typeEffective = ChartWeakness.ElementChart(attacker.element, target.element);
+            double basicDamage = (((2 * attacker.character.stat.level) / 5) + 2) * (isSkill ? attacker.character.skill.power * (attacker.character.stat.Atk / target.character.stat.Def) : (attacker.character.stat.Atk - (target.character.stat.Def * 0.2)));
+            double typeEffective = ChartWeakness.ElementChart(attacker.character.element, target.character.element);
             double damage = (basicDamage / (isSkill ? 50 :10) + 2) * typeEffective * isCritical(attacker) * intervenceState(attacker) * interval ;
             if (isSkill)
             {
                 // call skill effect here
             }
-            ChoosedPlayer.targetEnemy.stat.HP -= damage;
+            ChoosedPlayer.targetEnemy.character.stat.HP -= damage;
         }
         else
         {
-            Debug.Log(attacker.name + "'s attack missed");
+            Debug.Log(attacker.character.name + "'s attack missed");
         }
     }
 }

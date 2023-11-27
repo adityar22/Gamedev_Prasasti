@@ -6,6 +6,8 @@ public class PlayerInput : MonoBehaviour
 {
     private BattleManager battleManager;
 
+    public static int choosedArea;
+
     private void Start()
     {
         GameObject eventSystem = GameObject.Find("EventSystem");
@@ -19,6 +21,24 @@ public class PlayerInput : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.A)) { battleManager.PerformAction(BattleAction.ActionType.BasicAttack, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy); }
         if (Input.GetKeyDown(KeyCode.S)) { battleManager.PerformAction(BattleAction.ActionType.Skill, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy); }
 /*        if (Input.GetKeyDown(KeyCode.W)) { battleManager.PerformAction(BattleAction.ActionType.Item, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy); }*/
+    }
+
+    public static void clickTeam(int id, int teamIndex)
+    {
+        GameObject _charData = GameObject.Find("charData");
+        CharData data = _charData.GetComponent<CharData>();
+
+        if (teamIndex < ChoosedPlayer.choosedChar.Count)
+        {
+            ChoosedPlayer.choosedChar[teamIndex].character = PlayerCharacter.unlockedCharacters[id];
+        }
+        else
+        {
+            Character input = new Character();
+            input.character = PlayerCharacter.unlockedCharacters[id];
+            ChoosedPlayer.choosedChar.Add(input.character);
+        }
+        Debug.Log(PlayerCharacter.unlockedCharacters[id].name);
     }
 
     public void clickAttack()

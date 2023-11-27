@@ -1,47 +1,84 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerCharacter : MonoBehaviour
 {
-    public static List<Character> unlockedCharacters = new List<Character>();
+    public static List<CharModel> unlockedCharacters = new List<CharModel>();
+    CharData dataChar;
 
     // Start is called before the first frame update
     void Start()
     {
         /// DEBUG PREFS
+        GameObject eventSystem = GameObject.Find("charData");
+        dataChar = eventSystem.GetComponent<CharData>();
 
-        /*GameObject eventSystem = GameObject.Find("charData");
-        CharData dataChar = eventSystem.GetComponent<CharData>();
-        Character unlockedCharacter = dataChar.charData[0];
-        unlockedCharacter.SaveCharacter();*/
+        if (dataChar != null)
+        {
+            SaveCharacter(0);
+            SaveCharacter(1);
+        }
 
-        /*PlayerPrefs.DeleteKey("UnlockedCharacterList");
-        Debug.Log("Try to delete player data");*/
+        // unlockedCharacters = GetUnlockedCharacterList();
 
-        unlockedCharacters = GetUnlockedCharacterList();
+        // PlayerPrefs.DeleteKey("UnlockedCharacterList");
+        // Debug.Log("Try to delete player data");
 
         /// DEBUG PREFS
     }
 
     void Update()
     {
-        foreach (Character character in unlockedCharacters)
+
+    }
+
+    public void SaveCharacter(int index)
+    {
+        // Cek apakah karakter sudah ada dalam list
+        int existingIndex = unlockedCharacters.FindIndex(c => c.name == dataChar.charData[index].character.name);
+
+        if (existingIndex != -1)
         {
-            Debug.Log("Unlocked character: " + character.name);
+            // Jika karakter sudah ada, update data karakter
+            unlockedCharacters[existingIndex] = dataChar.charData[index].character;
         }
+        else
+        {
+            // Jika karakter belum ada, tambahkan ke list
+            unlockedCharacters.Add(dataChar.charData[index].character);
+        }
+
+        // Simpan list karakter ke PlayerPrefs
+        SaveCharacterList(index);
+    }
+
+    // Simpan list karakter ke PlayerPrefs
+    private void SaveCharacterList(int index)
+    {
+        string characterListData = JsonUtility.ToJson(unlockedCharacters);
+        Debug.Log(characterListData);
+        PlayerPrefs.SetString("UnlockedCharacterList", characterListData);
+
+        string loadData = PlayerPrefs.GetString("UnlockedCharacterList");
+        Debug.Log(loadData);
     }
 
     // Mendapatkan list karakter yang di-unlock oleh player
     public static List<Character> GetUnlockedCharacterList()
     {
         string characterListData = PlayerPrefs.GetString("UnlockedCharacterList", "");
-        if (!string.IsNullOrEmpty(characterListData))
+        if (characterListData != "" && characterListData!= "{}")
         {
-            Debug.Log("Player Data Loaded!");
+            Debug.Log("Get Player Data");
+            Debug.Log(characterListData);
             return JsonUtility.FromJson<List<Character>>(characterListData);
         }
-        Debug.Log("Player Data Empty");
-        return new List<Character>();
+        else
+        {
+            Debug.Log("Player Data Empty");
+            return new List<Character>();
+        }
     }
 }
