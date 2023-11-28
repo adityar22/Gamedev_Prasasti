@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Linq;
 
 public class PlayerCharacter : MonoBehaviour
 {
@@ -21,17 +22,22 @@ public class PlayerCharacter : MonoBehaviour
         //     SaveCharacter(1);
         // }
 
-        unlockedCharacters = GetUnlockedCharacterList();
+        List<CharModel> playerPrefsLoad = GetUnlockedCharacterList();
+
+        //Update Data
+        List<Character> updated = new List<Character>();
+        foreach(var load in playerPrefsLoad){
+             updated.Add(dataChar.charData.Find(c => c.character.name == load.name));
+        }
+
+        foreach(var chars in updated){
+            unlockedCharacters.Add(chars.character);
+        }      
 
         // PlayerPrefs.DeleteKey("UnlockedCharacterList");
         // Debug.Log("Try to delete player data");
 
         /// DEBUG PREFS
-    }
-
-    void Update()
-    {
-
     }
 
     public void SaveCharacter(int index)

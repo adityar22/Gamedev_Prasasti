@@ -35,6 +35,7 @@ public class PlayerInput : MonoBehaviour
         if (teamIndex < ChoosedPlayer.choosedChar.Count)
         {
             ChoosedPlayer.choosedChar[teamIndex].character = PlayerCharacter.unlockedCharacters[id];
+            
         }
         else
         {
@@ -62,7 +63,6 @@ public class PlayerInput : MonoBehaviour
             Debug.LogError("Image component is not assigned.");
         }
         ChoosePlayer.teamIndex += ChoosePlayer.teamIndex != 2 ? 1 : 0;
-        Debug.Log(ChoosedPlayer.choosedChar[teamIndex].character.name);
     }
 
     public void clickAttack()

@@ -54,13 +54,13 @@ MonoBehaviour:
       level: 1
       criticalStage: 0
       exp: 0
-      baseAtk: 0
-      baseDef: 0
-      baseHP: 0
-      baseSpd: 0
-      baseAcc: 0
-      baseEva: 0
-      baseEnergy: 0
+      baseAtk: 13
+      baseDef: 10
+      baseHP: 21
+      baseSpd: 10
+      baseAcc: 1
+      baseEva: 0.2
+      baseEnergy: 7
     skill:
       name: 
       power: 0

@@ -44,12 +44,22 @@ public class BattleManager : MonoBehaviour
 
     private void InitializeBattle()
     {
-        // Initialize playerTeam and enemyTeam with characters
-
         // Combine both teams to determine turn order
         turnOrder = new List<Character>();
-        turnOrder.AddRange(ChoosedPlayer.choosedChar);
-        turnOrder.AddRange(ChoosedPlayer.choosedEnemy);
+        // Initialize playerTeam and enemyTeam with characters
+        foreach(var chars in ChoosedPlayer.choosedChar){
+            if(chars.character.name!=null){
+                turnOrder.Add(chars);
+                Debug.Log(chars.character.name+" : "+chars.character.stat.Spd);
+            }
+        }
+
+        foreach(var chars in ChoosedPlayer.choosedEnemy){
+            if(chars){
+                turnOrder.Add(chars);
+                Debug.Log(chars.character.name+" : "+chars.character.stat.Spd);
+            }
+        }
 
         // Sort turnOrder based on character speed (higher speed goes first)
         turnOrder.Sort((a, b) => b.character.stat.Spd.CompareTo(a.character.stat.Spd));
@@ -67,6 +77,7 @@ public class BattleManager : MonoBehaviour
             {
                 // Perform actions (BasicAttack, Skill, Item) based on player input or AI logic
                 ChoosedPlayer.activeChar = character;
+                Debug.Log("Now is "+ ChoosedPlayer.activeChar.character.name+"'s turn");
 
                 // Wait for a short duration between turns for better visualization
                 yield return new WaitForSeconds(1.0f);
