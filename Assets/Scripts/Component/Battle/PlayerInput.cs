@@ -24,7 +24,7 @@ public class PlayerInput : MonoBehaviour
         // For simplicity, you can use Input.GetKey or Input.GetButtonDown
         if (Input.GetKeyDown(KeyCode.A)) { battleManager.PerformAction(BattleAction.ActionType.BasicAttack, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy); }
         if (Input.GetKeyDown(KeyCode.S)) { battleManager.PerformAction(BattleAction.ActionType.Skill, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy); }
-/*        if (Input.GetKeyDown(KeyCode.W)) { battleManager.PerformAction(BattleAction.ActionType.Item, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy); }*/
+        /*        if (Input.GetKeyDown(KeyCode.W)) { battleManager.PerformAction(BattleAction.ActionType.Item, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy); }*/
     }
 
     public static void clickTeam(int id, int teamIndex)
@@ -35,7 +35,7 @@ public class PlayerInput : MonoBehaviour
         if (teamIndex < ChoosedPlayer.choosedChar.Count)
         {
             ChoosedPlayer.choosedChar[teamIndex].character = PlayerCharacter.unlockedCharacters[id];
-            
+
         }
         else
         {
@@ -43,7 +43,7 @@ public class PlayerInput : MonoBehaviour
             input.character = PlayerCharacter.unlockedCharacters[id];
             ChoosedPlayer.choosedChar.Add(input);
         }
-        
+
         Image imageComponent = battle.player[teamIndex].GetComponent<Image>();
         Sprite yourSprite = ChoosedPlayer.choosedChar[teamIndex].character.attribut.idle;
 
@@ -65,10 +65,33 @@ public class PlayerInput : MonoBehaviour
         ChoosePlayer.teamIndex += ChoosePlayer.teamIndex != 2 ? 1 : 0;
     }
 
+    private bool checkTargetExist(){
+        return true;
+    }
+    private Character getTarget(Character source)
+    {
+        Character target = new Character();
+
+        switch (source.character.target)
+        {
+            case TargetAttack.Target.FrontLine:
+                return target;
+                break;
+            case TargetAttack.Target.BackLine:
+                return target;
+                break;
+            case TargetAttack.Target.All:
+                return target;
+                break;
+            default:
+                return target;
+                break;
+        }
+    }
     public void clickAttack()
     {
         Debug.Log("clicked basic attack");
-        ChoosedPlayer.targetEnemy = ChoosedPlayer.choosedEnemy[0];
+        ChoosedPlayer.targetEnemy = getTarget(ChoosedPlayer.activeChar);
         battleManager.PerformAction(BattleAction.ActionType.BasicAttack, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy);
     }
 

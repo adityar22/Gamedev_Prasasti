@@ -50,6 +50,7 @@ MonoBehaviour:
     type: 1
     element: 3
     tier: 1
+    target: 0
     stat:
       level: 1
       criticalStage: 1
@@ -62,18 +63,21 @@ MonoBehaviour:
       baseEva: 0.3
       baseEnergy: 7
     skill:
-      name: 
-      power: 80
+      name: Amavasya Strike
+      power: 75
       consumeEnergy: 0
-      skillTarget: 0
+      skillTarget: 2
       skillEffectToStatus: 0
       effectStatusRate: 0
       skillEffectToStat: 0
-      effectStatRate: 0
+      effectStatRate: 0.6
       statChange: 0
       stageChange: 0
       ratioChange: 0
-      description: 
+      description: Amavasya Strike adalah gerakan lincah Chandra yang melibatkan
+        lompatan dengan tombak membentuk bulan sabit, menyebabkan kerusakan besar
+        pada musuh. Selain itu, keahlian ini meningkatkan kecepatan Chandra secara
+        signifikan, memberinya keunggulan di medan pertempuran.
     attribut:
       profile: {fileID: 21300000, guid: f56dc9b526f211e4d8c4a3bbf19a8e22, type: 3}
       idle: {fileID: 21300000, guid: d944340263eafed46a697f67b5049dd6, type: 3}
