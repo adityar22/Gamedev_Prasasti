@@ -50,30 +50,32 @@ MonoBehaviour:
     type: 0
     element: 0
     tier: 2
+    target: 0
     stat:
       level: 1
       criticalStage: 0
       exp: 0
-      baseAtk: 13
-      baseDef: 10
-      baseHP: 21
-      baseSpd: 10
+      baseAtk: 15
+      baseDef: 13
+      baseHP: 27
+      baseSpd: 13
       baseAcc: 1
       baseEva: 0.2
       baseEnergy: 7
     skill:
-      name: 
-      power: 0
-      consumeEnergy: 0
+      name: Kelud Parvata Roar
+      power: 90
+      consumeEnergy: 3
       skillTarget: 0
-      skillEffectToStatus: 0
-      effectStatusRate: 0
-      skillEffectToStat: 0
+      skillEffectToStatus: 3
+      effectStatusRate: 0.5
+      skillEffectToStat: 2
       effectStatRate: 0
       statChange: 0
       stageChange: 0
       ratioChange: 0
-      description: 
+      description: Hayam Wuruk melepaskan raungan mematikan yang menghasilkan badai
+        api di sekitarnya, menyebabkan luka bakar pada musuh-musuh di sekitarnya.
     attribut:
       profile: {fileID: 21300000, guid: 21b5982c4f3f50248938acd2f673f952, type: 3}
       idle: {fileID: 21300000, guid: 267092b83ae24d544b7236a849555a20, type: 3}
