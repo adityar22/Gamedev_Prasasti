@@ -2458,16 +2458,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TextGenerator_Populate_Internal_Injected
 #pragma clang diagnostic ignored "-Winvalid-offsetof"
 #pragma clang diagnostic ignored "-Wunused-variable"
 #endif
-// System.String UnityEngine.TextMesh::get_text()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* TextMesh_get_text_mB3E900AED17390DE50DFC984428BC29EB1CA60A2 (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, const RuntimeMethod* method) 
-{
-	typedef String_t* (*TextMesh_get_text_mB3E900AED17390DE50DFC984428BC29EB1CA60A2_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*);
-	static TextMesh_get_text_mB3E900AED17390DE50DFC984428BC29EB1CA60A2_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_get_text_mB3E900AED17390DE50DFC984428BC29EB1CA60A2_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::get_text()");
-	String_t* icallRetVal = _il2cpp_icall_func(__this);
-	return icallRetVal;
-}
 // System.Void UnityEngine.TextMesh::set_text(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_text_mDF79D39638ED82797D0B0B3BB9E6B10712F8EA9E (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, String_t* ___value0, const RuntimeMethod* method) 
 {
@@ -2496,16 +2486,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_font_m7E407CAEDBB382B95B700
 	_il2cpp_icall_func = (TextMesh_set_font_m7E407CAEDBB382B95B70069D8FAB8A9E74EAAA74_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::set_font(UnityEngine.Font)");
 	_il2cpp_icall_func(__this, ___value0);
 }
-// System.Int32 UnityEngine.TextMesh::get_fontSize()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TextMesh_get_fontSize_m9D9DCB98FC5E439868F25A8CDA2A4F5C2D85985C (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, const RuntimeMethod* method) 
-{
-	typedef int32_t (*TextMesh_get_fontSize_m9D9DCB98FC5E439868F25A8CDA2A4F5C2D85985C_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*);
-	static TextMesh_get_fontSize_m9D9DCB98FC5E439868F25A8CDA2A4F5C2D85985C_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_get_fontSize_m9D9DCB98FC5E439868F25A8CDA2A4F5C2D85985C_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::get_fontSize()");
-	int32_t icallRetVal = _il2cpp_icall_func(__this);
-	return icallRetVal;
-}
 // System.Void UnityEngine.TextMesh::set_fontSize(System.Int32)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_fontSize_mAB9F7FFC0E4DB759B786F6A9357B18C86015498B (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, int32_t ___value0, const RuntimeMethod* method) 
 {
@@ -2515,73 +2495,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_fontSize_mAB9F7FFC0E4DB759B
 	_il2cpp_icall_func = (TextMesh_set_fontSize_mAB9F7FFC0E4DB759B786F6A9357B18C86015498B_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::set_fontSize(System.Int32)");
 	_il2cpp_icall_func(__this, ___value0);
 }
-// UnityEngine.FontStyle UnityEngine.TextMesh::get_fontStyle()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TextMesh_get_fontStyle_mB5186C6CCE5303FF459E6C95D7EB35C48A22AD73 (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, const RuntimeMethod* method) 
-{
-	typedef int32_t (*TextMesh_get_fontStyle_mB5186C6CCE5303FF459E6C95D7EB35C48A22AD73_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*);
-	static TextMesh_get_fontStyle_mB5186C6CCE5303FF459E6C95D7EB35C48A22AD73_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_get_fontStyle_mB5186C6CCE5303FF459E6C95D7EB35C48A22AD73_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::get_fontStyle()");
-	int32_t icallRetVal = _il2cpp_icall_func(__this);
-	return icallRetVal;
-}
-// System.Void UnityEngine.TextMesh::set_fontStyle(UnityEngine.FontStyle)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_fontStyle_m038D1FE5DA05B74AF611B1D2DCDD771756E744CF (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, int32_t ___value0, const RuntimeMethod* method) 
-{
-	typedef void (*TextMesh_set_fontStyle_m038D1FE5DA05B74AF611B1D2DCDD771756E744CF_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*, int32_t);
-	static TextMesh_set_fontStyle_m038D1FE5DA05B74AF611B1D2DCDD771756E744CF_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_set_fontStyle_m038D1FE5DA05B74AF611B1D2DCDD771756E744CF_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::set_fontStyle(UnityEngine.FontStyle)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// System.Single UnityEngine.TextMesh::get_offsetZ()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TextMesh_get_offsetZ_mBFF3610B382430095EF40CB4D00A770F87FD4529 (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, const RuntimeMethod* method) 
-{
-	typedef float (*TextMesh_get_offsetZ_mBFF3610B382430095EF40CB4D00A770F87FD4529_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*);
-	static TextMesh_get_offsetZ_mBFF3610B382430095EF40CB4D00A770F87FD4529_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_get_offsetZ_mBFF3610B382430095EF40CB4D00A770F87FD4529_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::get_offsetZ()");
-	float icallRetVal = _il2cpp_icall_func(__this);
-	return icallRetVal;
-}
-// System.Void UnityEngine.TextMesh::set_offsetZ(System.Single)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_offsetZ_m387CC7DE7BBD2FECADF377051EB3E57E0F7B7DF7 (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, float ___value0, const RuntimeMethod* method) 
-{
-	typedef void (*TextMesh_set_offsetZ_m387CC7DE7BBD2FECADF377051EB3E57E0F7B7DF7_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*, float);
-	static TextMesh_set_offsetZ_m387CC7DE7BBD2FECADF377051EB3E57E0F7B7DF7_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_set_offsetZ_m387CC7DE7BBD2FECADF377051EB3E57E0F7B7DF7_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::set_offsetZ(System.Single)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// UnityEngine.TextAlignment UnityEngine.TextMesh::get_alignment()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TextMesh_get_alignment_m9D0F0104F6DDA4C0B716B5C391F881200766915A (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, const RuntimeMethod* method) 
-{
-	typedef int32_t (*TextMesh_get_alignment_m9D0F0104F6DDA4C0B716B5C391F881200766915A_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*);
-	static TextMesh_get_alignment_m9D0F0104F6DDA4C0B716B5C391F881200766915A_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_get_alignment_m9D0F0104F6DDA4C0B716B5C391F881200766915A_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::get_alignment()");
-	int32_t icallRetVal = _il2cpp_icall_func(__this);
-	return icallRetVal;
-}
-// System.Void UnityEngine.TextMesh::set_alignment(UnityEngine.TextAlignment)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_alignment_mCEAFE4A6CB546C3CB2B03582289FCC943EEF760F (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, int32_t ___value0, const RuntimeMethod* method) 
-{
-	typedef void (*TextMesh_set_alignment_mCEAFE4A6CB546C3CB2B03582289FCC943EEF760F_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*, int32_t);
-	static TextMesh_set_alignment_mCEAFE4A6CB546C3CB2B03582289FCC943EEF760F_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_set_alignment_mCEAFE4A6CB546C3CB2B03582289FCC943EEF760F_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::set_alignment(UnityEngine.TextAlignment)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// UnityEngine.TextAnchor UnityEngine.TextMesh::get_anchor()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t TextMesh_get_anchor_m504B52CADC07A2B29CF2F229A0F03B2E102DCD69 (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, const RuntimeMethod* method) 
-{
-	typedef int32_t (*TextMesh_get_anchor_m504B52CADC07A2B29CF2F229A0F03B2E102DCD69_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*);
-	static TextMesh_get_anchor_m504B52CADC07A2B29CF2F229A0F03B2E102DCD69_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_get_anchor_m504B52CADC07A2B29CF2F229A0F03B2E102DCD69_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::get_anchor()");
-	int32_t icallRetVal = _il2cpp_icall_func(__this);
-	return icallRetVal;
-}
 // System.Void UnityEngine.TextMesh::set_anchor(UnityEngine.TextAnchor)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_anchor_m3FCB7C4B1FF66CE189B56076C0306AFE984FCD32 (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, int32_t ___value0, const RuntimeMethod* method) 
 {
@@ -2589,82 +2502,6 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_anchor_m3FCB7C4B1FF66CE189B
 	static TextMesh_set_anchor_m3FCB7C4B1FF66CE189B56076C0306AFE984FCD32_ftn _il2cpp_icall_func;
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (TextMesh_set_anchor_m3FCB7C4B1FF66CE189B56076C0306AFE984FCD32_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::set_anchor(UnityEngine.TextAnchor)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// System.Single UnityEngine.TextMesh::get_characterSize()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TextMesh_get_characterSize_mA9495F227772CFEBB2EB64B65166E682DB5E8147 (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, const RuntimeMethod* method) 
-{
-	typedef float (*TextMesh_get_characterSize_mA9495F227772CFEBB2EB64B65166E682DB5E8147_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*);
-	static TextMesh_get_characterSize_mA9495F227772CFEBB2EB64B65166E682DB5E8147_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_get_characterSize_mA9495F227772CFEBB2EB64B65166E682DB5E8147_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::get_characterSize()");
-	float icallRetVal = _il2cpp_icall_func(__this);
-	return icallRetVal;
-}
-// System.Void UnityEngine.TextMesh::set_characterSize(System.Single)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_characterSize_mAEAE87C4648EF49409BDA93E5F504356B68D6052 (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, float ___value0, const RuntimeMethod* method) 
-{
-	typedef void (*TextMesh_set_characterSize_mAEAE87C4648EF49409BDA93E5F504356B68D6052_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*, float);
-	static TextMesh_set_characterSize_mAEAE87C4648EF49409BDA93E5F504356B68D6052_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_set_characterSize_mAEAE87C4648EF49409BDA93E5F504356B68D6052_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::set_characterSize(System.Single)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// System.Single UnityEngine.TextMesh::get_lineSpacing()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TextMesh_get_lineSpacing_mC8A8CA472D961F42465D3193B44E0104E2DD817E (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, const RuntimeMethod* method) 
-{
-	typedef float (*TextMesh_get_lineSpacing_mC8A8CA472D961F42465D3193B44E0104E2DD817E_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*);
-	static TextMesh_get_lineSpacing_mC8A8CA472D961F42465D3193B44E0104E2DD817E_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_get_lineSpacing_mC8A8CA472D961F42465D3193B44E0104E2DD817E_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::get_lineSpacing()");
-	float icallRetVal = _il2cpp_icall_func(__this);
-	return icallRetVal;
-}
-// System.Void UnityEngine.TextMesh::set_lineSpacing(System.Single)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_lineSpacing_m3FB0A3F54E8F0412DD8BED2095AF0A73491E0658 (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, float ___value0, const RuntimeMethod* method) 
-{
-	typedef void (*TextMesh_set_lineSpacing_m3FB0A3F54E8F0412DD8BED2095AF0A73491E0658_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*, float);
-	static TextMesh_set_lineSpacing_m3FB0A3F54E8F0412DD8BED2095AF0A73491E0658_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_set_lineSpacing_m3FB0A3F54E8F0412DD8BED2095AF0A73491E0658_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::set_lineSpacing(System.Single)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// System.Single UnityEngine.TextMesh::get_tabSize()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR float TextMesh_get_tabSize_m627F284247B15DF0F03336C7418A24EFA5A7D459 (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, const RuntimeMethod* method) 
-{
-	typedef float (*TextMesh_get_tabSize_m627F284247B15DF0F03336C7418A24EFA5A7D459_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*);
-	static TextMesh_get_tabSize_m627F284247B15DF0F03336C7418A24EFA5A7D459_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_get_tabSize_m627F284247B15DF0F03336C7418A24EFA5A7D459_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::get_tabSize()");
-	float icallRetVal = _il2cpp_icall_func(__this);
-	return icallRetVal;
-}
-// System.Void UnityEngine.TextMesh::set_tabSize(System.Single)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_tabSize_m1CA08EEE2A13E28227466754E7FE616C2DC023BA (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, float ___value0, const RuntimeMethod* method) 
-{
-	typedef void (*TextMesh_set_tabSize_m1CA08EEE2A13E28227466754E7FE616C2DC023BA_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*, float);
-	static TextMesh_set_tabSize_m1CA08EEE2A13E28227466754E7FE616C2DC023BA_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_set_tabSize_m1CA08EEE2A13E28227466754E7FE616C2DC023BA_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::set_tabSize(System.Single)");
-	_il2cpp_icall_func(__this, ___value0);
-}
-// System.Boolean UnityEngine.TextMesh::get_richText()
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool TextMesh_get_richText_mD09467720AE70BEA5ACB9F5227693507957949D6 (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, const RuntimeMethod* method) 
-{
-	typedef bool (*TextMesh_get_richText_mD09467720AE70BEA5ACB9F5227693507957949D6_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*);
-	static TextMesh_get_richText_mD09467720AE70BEA5ACB9F5227693507957949D6_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_get_richText_mD09467720AE70BEA5ACB9F5227693507957949D6_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::get_richText()");
-	bool icallRetVal = _il2cpp_icall_func(__this);
-	return icallRetVal;
-}
-// System.Void UnityEngine.TextMesh::set_richText(System.Boolean)
-IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void TextMesh_set_richText_m26D52770D73A6B142A153B913F2D005E895F2EE2 (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8* __this, bool ___value0, const RuntimeMethod* method) 
-{
-	typedef void (*TextMesh_set_richText_m26D52770D73A6B142A153B913F2D005E895F2EE2_ftn) (TextMesh_t7E1981C7B03E50D5CA5A3AD5B0D9BB0AB6EE91F8*, bool);
-	static TextMesh_set_richText_m26D52770D73A6B142A153B913F2D005E895F2EE2_ftn _il2cpp_icall_func;
-	if (!_il2cpp_icall_func)
-	_il2cpp_icall_func = (TextMesh_set_richText_m26D52770D73A6B142A153B913F2D005E895F2EE2_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.TextMesh::set_richText(System.Boolean)");
 	_il2cpp_icall_func(__this, ___value0);
 }
 // UnityEngine.Color UnityEngine.TextMesh::get_color()
