@@ -56,19 +56,19 @@ static Il2CppMethodPointer s_methodPointers[13] =
 };
 static const int32_t s_InvokerIndices[13] = 
 {
-	7231,
-	10103,
-	6633,
-	4631,
-	4630,
-	4630,
-	4630,
-	4630,
-	4630,
-	9660,
-	7231,
-	6633,
-	4572,
+	7226,
+	10091,
+	6628,
+	4626,
+	4625,
+	4625,
+	4625,
+	4625,
+	4625,
+	9650,
+	7226,
+	6628,
+	4567,
 };
 IL2CPP_EXTERN_C const Il2CppCodeGenModule g_Mapbox_VectorTile_ExtensionMethods_CodeGenModule;
 const Il2CppCodeGenModule g_Mapbox_VectorTile_ExtensionMethods_CodeGenModule = 

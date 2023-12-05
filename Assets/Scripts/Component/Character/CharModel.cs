@@ -22,6 +22,10 @@ public class Tiers
     public enum Tier { Common, Rare, Epic, Ultimate}
 }
 
+public class TargetAttack{
+    public enum Target{FrontLine, BackLine, All}
+}
+
 [System.Serializable]
 public class CharModel
 {
@@ -30,6 +34,8 @@ public class CharModel
     public CharTypes.CharType type;
     public Elements.Element element;
     public Tiers.Tier tier;
+
+    public TargetAttack.Target target;
 
     // base stat here
     [SerializeField] public Stat stat;

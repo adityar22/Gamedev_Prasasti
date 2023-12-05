@@ -23,4 +23,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Adventure Child/Task.unity
     guid: 472d6be99e37dc84b8ded2ea092f59cf
+  - enabled: 1
+    path: Assets/Scenes/Battle.unity
+    guid: 416db41998daeaf44a11bab1e484a2fb
+  - enabled: 1
+    path: Assets/Scenes/Story.unity
+    guid: c5bbd7709ce7a2543824857295eaba31
+  - enabled: 1
+    path: Assets/Scenes/New folder/About.unity
+    guid: 1e51f8e2ab168a04a93b13673cda54f1
+  - enabled: 1
+    path: Assets/Scenes/New folder/Setting.unity
+    guid: bc0720e8541abab4a91bcb9520bbe85f
   m_configObjects: {}

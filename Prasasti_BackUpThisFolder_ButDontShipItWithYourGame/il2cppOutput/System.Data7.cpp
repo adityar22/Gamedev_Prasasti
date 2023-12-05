@@ -2913,9 +2913,9 @@ struct SqlUdtStorage_t5F263716B666F5A31BD1DC9AC94981BF3185F067_StaticFields
 struct Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE  : public MarshalByRefObject_t8C2F4C5854177FD60439EB1FCCFC1B3CFAFE8DCE
 {
 	// System.IO.Stream/ReadWriteTask System.IO.Stream::_activeReadWriteTask
-	ReadWriteTask_t0821BF49EE38596C7734E86E1A6A39D769BE2C05* ____activeReadWriteTask_3;
+	ReadWriteTask_t0821BF49EE38596C7734E86E1A6A39D769BE2C05* ____activeReadWriteTask_2;
 	// System.Threading.SemaphoreSlim System.IO.Stream::_asyncActiveSemaphore
-	SemaphoreSlim_t0D5CB5685D9BFA5BF95CEC6E7395490F933E8DB2* ____asyncActiveSemaphore_4;
+	SemaphoreSlim_t0D5CB5685D9BFA5BF95CEC6E7395490F933E8DB2* ____asyncActiveSemaphore_3;
 };
 
 struct Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE_StaticFields
@@ -3609,25 +3609,25 @@ struct Exception_t_marshaled_com
 struct MemoryStream_tAAED1B42172E3390584E4194308AB878E786AAC2  : public Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE
 {
 	// System.Byte[] System.IO.MemoryStream::_buffer
-	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ____buffer_5;
+	ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* ____buffer_4;
 	// System.Int32 System.IO.MemoryStream::_origin
-	int32_t ____origin_6;
+	int32_t ____origin_5;
 	// System.Int32 System.IO.MemoryStream::_position
-	int32_t ____position_7;
+	int32_t ____position_6;
 	// System.Int32 System.IO.MemoryStream::_length
-	int32_t ____length_8;
+	int32_t ____length_7;
 	// System.Int32 System.IO.MemoryStream::_capacity
-	int32_t ____capacity_9;
+	int32_t ____capacity_8;
 	// System.Boolean System.IO.MemoryStream::_expandable
-	bool ____expandable_10;
+	bool ____expandable_9;
 	// System.Boolean System.IO.MemoryStream::_writable
-	bool ____writable_11;
+	bool ____writable_10;
 	// System.Boolean System.IO.MemoryStream::_exposable
-	bool ____exposable_12;
+	bool ____exposable_11;
 	// System.Boolean System.IO.MemoryStream::_isOpen
-	bool ____isOpen_13;
+	bool ____isOpen_12;
 	// System.Threading.Tasks.Task`1<System.Int32> System.IO.MemoryStream::_lastReadTask
-	Task_1_t4C228DE57804012969575431CFF12D57C875552D* ____lastReadTask_14;
+	Task_1_t4C228DE57804012969575431CFF12D57C875552D* ____lastReadTask_13;
 };
 
 // System.Reflection.MethodInfo
@@ -3727,11 +3727,11 @@ struct SqlDateTime_tFB5902479382E8A61934E274E7BBF3280A3D25B2_marshaled_com
 struct SqlXmlStreamWrapper_tA9F7A1E4AC5B9EA4C1963D95D14F573B55950F93  : public Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE
 {
 	// System.IO.Stream System.Data.SqlTypes.SqlXmlStreamWrapper::_stream
-	Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* ____stream_5;
+	Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* ____stream_4;
 	// System.Int64 System.Data.SqlTypes.SqlXmlStreamWrapper::_lPosition
-	int64_t ____lPosition_6;
+	int64_t ____lPosition_5;
 	// System.Boolean System.Data.SqlTypes.SqlXmlStreamWrapper::_isClosed
-	bool ____isClosed_7;
+	bool ____isClosed_6;
 };
 
 // System.IO.StreamWriter
@@ -9956,10 +9956,10 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SqlXmlStreamWrapper__ctor_m4A90ABADE18EA
 		il2cpp_codegen_runtime_class_init_inline(Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE_il2cpp_TypeInfo_var);
 		Stream__ctor_mE8B074A0EBEB026FFF14062AB4B8A78E17EFFBF0(__this, NULL);
 		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = ___stream0;
-		__this->____stream_5 = L_0;
-		Il2CppCodeGenWriteBarrier((void**)(&__this->____stream_5), (void*)L_0);
-		__this->____lPosition_6 = ((int64_t)0);
-		__this->____isClosed_7 = (bool)0;
+		__this->____stream_4 = L_0;
+		Il2CppCodeGenWriteBarrier((void**)(&__this->____stream_4), (void*)L_0);
+		__this->____lPosition_5 = ((int64_t)0);
+		__this->____isClosed_6 = (bool)0;
 		return;
 	}
 }
@@ -9980,7 +9980,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SqlXmlStreamWrapper_get_CanRead_mCFF0E53
 
 IL_000a:
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_1 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_1 = __this->____stream_4;
 		NullCheck(L_1);
 		bool L_2;
 		L_2 = VirtualFuncInvoker0< bool >::Invoke(7 /* System.Boolean System.IO.Stream::get_CanRead() */, L_1);
@@ -10004,7 +10004,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SqlXmlStreamWrapper_get_CanSeek_mD67A830
 
 IL_000a:
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_1 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_1 = __this->____stream_4;
 		NullCheck(L_1);
 		bool L_2;
 		L_2 = VirtualFuncInvoker0< bool >::Invoke(8 /* System.Boolean System.IO.Stream::get_CanSeek() */, L_1);
@@ -10028,7 +10028,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SqlXmlStreamWrapper_get_CanWrite_m887477
 
 IL_000a:
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_1 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_1 = __this->____stream_4;
 		NullCheck(L_1);
 		bool L_2;
 		L_2 = VirtualFuncInvoker0< bool >::Invoke(10 /* System.Boolean System.IO.Stream::get_CanWrite() */, L_1);
@@ -10047,7 +10047,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t SqlXmlStreamWrapper_get_Length_mD8289
 	{
 		SqlXmlStreamWrapper_ThrowIfStreamClosed_mA140D1B092C241204034B6DF7F71C0696D7A27FB(__this, _stringLiteral17AEB937D152CE34510C2A2AA3CE289371D64F0F, NULL);
 		SqlXmlStreamWrapper_ThrowIfStreamCannotSeek_mA68A37C9695B89714F0F9D4BED8B7D6F27F584B5(__this, _stringLiteral17AEB937D152CE34510C2A2AA3CE289371D64F0F, NULL);
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_4;
 		NullCheck(L_0);
 		int64_t L_1;
 		L_1 = VirtualFuncInvoker0< int64_t >::Invoke(11 /* System.Int64 System.IO.Stream::get_Length() */, L_0);
@@ -10066,7 +10066,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int64_t SqlXmlStreamWrapper_get_Position_m3C9
 	{
 		SqlXmlStreamWrapper_ThrowIfStreamClosed_mA140D1B092C241204034B6DF7F71C0696D7A27FB(__this, _stringLiteral4380CAFC99BEF05DDE185FD6D86FEF87639E46C7, NULL);
 		SqlXmlStreamWrapper_ThrowIfStreamCannotSeek_mA68A37C9695B89714F0F9D4BED8B7D6F27F584B5(__this, _stringLiteral4380CAFC99BEF05DDE185FD6D86FEF87639E46C7, NULL);
-		int64_t L_0 = __this->____lPosition_6;
+		int64_t L_0 = __this->____lPosition_5;
 		return L_0;
 	}
 }
@@ -10090,7 +10090,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SqlXmlStreamWrapper_set_Position_m0AE80C
 	}
 	{
 		int64_t L_1 = ___value0;
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_2 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_2 = __this->____stream_4;
 		NullCheck(L_2);
 		int64_t L_3;
 		L_3 = VirtualFuncInvoker0< int64_t >::Invoke(11 /* System.Int64 System.IO.Stream::get_Length() */, L_2);
@@ -10111,7 +10111,7 @@ IL_0029:
 IL_0034:
 	{
 		int64_t L_5 = ___value0;
-		__this->____lPosition_6 = L_5;
+		__this->____lPosition_5 = L_5;
 		return;
 	}
 }
@@ -10160,7 +10160,7 @@ IL_0030:
 	}
 	{
 		int64_t L_2 = ___offset0;
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_3 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_3 = __this->____stream_4;
 		NullCheck(L_3);
 		int64_t L_4;
 		L_4 = VirtualFuncInvoker0< int64_t >::Invoke(11 /* System.Int64 System.IO.Stream::get_Length() */, L_3);
@@ -10181,13 +10181,13 @@ IL_0043:
 IL_004e:
 	{
 		int64_t L_6 = ___offset0;
-		__this->____lPosition_6 = L_6;
+		__this->____lPosition_5 = L_6;
 		goto IL_00c7;
 	}
 
 IL_0057:
 	{
-		int64_t L_7 = __this->____lPosition_6;
+		int64_t L_7 = __this->____lPosition_5;
 		int64_t L_8 = ___offset0;
 		V_0 = ((int64_t)il2cpp_codegen_add(L_7, L_8));
 		int64_t L_9 = V_0;
@@ -10198,7 +10198,7 @@ IL_0057:
 	}
 	{
 		int64_t L_10 = V_0;
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_11 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_11 = __this->____stream_4;
 		NullCheck(L_11);
 		int64_t L_12;
 		L_12 = VirtualFuncInvoker0< int64_t >::Invoke(11 /* System.Int64 System.IO.Stream::get_Length() */, L_11);
@@ -10219,13 +10219,13 @@ IL_0073:
 IL_007e:
 	{
 		int64_t L_14 = V_0;
-		__this->____lPosition_6 = L_14;
+		__this->____lPosition_5 = L_14;
 		goto IL_00c7;
 	}
 
 IL_0087:
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_15 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_15 = __this->____stream_4;
 		NullCheck(L_15);
 		int64_t L_16;
 		L_16 = VirtualFuncInvoker0< int64_t >::Invoke(11 /* System.Int64 System.IO.Stream::get_Length() */, L_15);
@@ -10239,7 +10239,7 @@ IL_0087:
 	}
 	{
 		int64_t L_19 = V_0;
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_20 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_20 = __this->____stream_4;
 		NullCheck(L_20);
 		int64_t L_21;
 		L_21 = VirtualFuncInvoker0< int64_t >::Invoke(11 /* System.Int64 System.IO.Stream::get_Length() */, L_20);
@@ -10260,7 +10260,7 @@ IL_00a8:
 IL_00b3:
 	{
 		int64_t L_23 = V_0;
-		__this->____lPosition_6 = L_23;
+		__this->____lPosition_5 = L_23;
 		goto IL_00c7;
 	}
 
@@ -10274,7 +10274,7 @@ IL_00bc:
 
 IL_00c7:
 	{
-		int64_t L_25 = __this->____lPosition_6;
+		int64_t L_25 = __this->____lPosition_5;
 		return L_25;
 	}
 }
@@ -10359,7 +10359,7 @@ IL_0045:
 
 IL_0050:
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_11 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_11 = __this->____stream_4;
 		NullCheck(L_11);
 		bool L_12;
 		L_12 = VirtualFuncInvoker0< bool >::Invoke(8 /* System.Boolean System.IO.Stream::get_CanSeek() */, L_11);
@@ -10369,19 +10369,19 @@ IL_0050:
 		}
 	}
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_13 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_13 = __this->____stream_4;
 		NullCheck(L_13);
 		int64_t L_14;
 		L_14 = VirtualFuncInvoker0< int64_t >::Invoke(12 /* System.Int64 System.IO.Stream::get_Position() */, L_13);
-		int64_t L_15 = __this->____lPosition_6;
+		int64_t L_15 = __this->____lPosition_5;
 		if ((((int64_t)L_14) == ((int64_t)L_15)))
 		{
 			goto IL_0083;
 		}
 	}
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_16 = __this->____stream_5;
-		int64_t L_17 = __this->____lPosition_6;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_16 = __this->____stream_4;
+		int64_t L_17 = __this->____lPosition_5;
 		NullCheck(L_16);
 		int64_t L_18;
 		L_18 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(29 /* System.Int64 System.IO.Stream::Seek(System.Int64,System.IO.SeekOrigin) */, L_16, L_17, 0);
@@ -10389,7 +10389,7 @@ IL_0050:
 
 IL_0083:
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_19 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_19 = __this->____stream_4;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_20 = ___buffer0;
 		int32_t L_21 = ___offset1;
 		int32_t L_22 = ___count2;
@@ -10397,9 +10397,9 @@ IL_0083:
 		int32_t L_23;
 		L_23 = VirtualFuncInvoker3< int32_t, ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(31 /* System.Int32 System.IO.Stream::Read(System.Byte[],System.Int32,System.Int32) */, L_19, L_20, L_21, L_22);
 		V_0 = L_23;
-		int64_t L_24 = __this->____lPosition_6;
+		int64_t L_24 = __this->____lPosition_5;
 		int32_t L_25 = V_0;
-		__this->____lPosition_6 = ((int64_t)il2cpp_codegen_add(L_24, ((int64_t)L_25)));
+		__this->____lPosition_5 = ((int64_t)il2cpp_codegen_add(L_24, ((int64_t)L_25)));
 		int32_t L_26 = V_0;
 		return L_26;
 	}
@@ -10484,7 +10484,7 @@ IL_0045:
 
 IL_0050:
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_11 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_11 = __this->____stream_4;
 		NullCheck(L_11);
 		bool L_12;
 		L_12 = VirtualFuncInvoker0< bool >::Invoke(8 /* System.Boolean System.IO.Stream::get_CanSeek() */, L_11);
@@ -10494,19 +10494,19 @@ IL_0050:
 		}
 	}
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_13 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_13 = __this->____stream_4;
 		NullCheck(L_13);
 		int64_t L_14;
 		L_14 = VirtualFuncInvoker0< int64_t >::Invoke(12 /* System.Int64 System.IO.Stream::get_Position() */, L_13);
-		int64_t L_15 = __this->____lPosition_6;
+		int64_t L_15 = __this->____lPosition_5;
 		if ((((int64_t)L_14) == ((int64_t)L_15)))
 		{
 			goto IL_0083;
 		}
 	}
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_16 = __this->____stream_5;
-		int64_t L_17 = __this->____lPosition_6;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_16 = __this->____stream_4;
+		int64_t L_17 = __this->____lPosition_5;
 		NullCheck(L_16);
 		int64_t L_18;
 		L_18 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(29 /* System.Int64 System.IO.Stream::Seek(System.Int64,System.IO.SeekOrigin) */, L_16, L_17, 0);
@@ -10514,15 +10514,15 @@ IL_0050:
 
 IL_0083:
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_19 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_19 = __this->____stream_4;
 		ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031* L_20 = ___buffer0;
 		int32_t L_21 = ___offset1;
 		int32_t L_22 = ___count2;
 		NullCheck(L_19);
 		VirtualActionInvoker3< ByteU5BU5D_tA6237BF417AE52AD70CFB4EF24A7A82613DF9031*, int32_t, int32_t >::Invoke(34 /* System.Void System.IO.Stream::Write(System.Byte[],System.Int32,System.Int32) */, L_19, L_20, L_21, L_22);
-		int64_t L_23 = __this->____lPosition_6;
+		int64_t L_23 = __this->____lPosition_5;
 		int32_t L_24 = ___count2;
-		__this->____lPosition_6 = ((int64_t)il2cpp_codegen_add(L_23, ((int64_t)L_24)));
+		__this->____lPosition_5 = ((int64_t)il2cpp_codegen_add(L_23, ((int64_t)L_24)));
 		return;
 	}
 }
@@ -10538,7 +10538,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SqlXmlStreamWrapper_ReadByte_m434508C
 	{
 		SqlXmlStreamWrapper_ThrowIfStreamClosed_mA140D1B092C241204034B6DF7F71C0696D7A27FB(__this, _stringLiteral0B4FB0A34DFD1686FD3CB662B8DAAF8A57C5E255, NULL);
 		SqlXmlStreamWrapper_ThrowIfStreamCannotRead_m1750CBA129596FD533669876B15E2CA572A2A073(__this, _stringLiteral0B4FB0A34DFD1686FD3CB662B8DAAF8A57C5E255, NULL);
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_4;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = VirtualFuncInvoker0< bool >::Invoke(8 /* System.Boolean System.IO.Stream::get_CanSeek() */, L_0);
@@ -10548,8 +10548,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SqlXmlStreamWrapper_ReadByte_m434508C
 		}
 	}
 	{
-		int64_t L_2 = __this->____lPosition_6;
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_3 = __this->____stream_5;
+		int64_t L_2 = __this->____lPosition_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_3 = __this->____stream_4;
 		NullCheck(L_3);
 		int64_t L_4;
 		L_4 = VirtualFuncInvoker0< int64_t >::Invoke(11 /* System.Int64 System.IO.Stream::get_Length() */, L_3);
@@ -10564,7 +10564,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t SqlXmlStreamWrapper_ReadByte_m434508C
 
 IL_0038:
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_5 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_5 = __this->____stream_4;
 		NullCheck(L_5);
 		bool L_6;
 		L_6 = VirtualFuncInvoker0< bool >::Invoke(8 /* System.Boolean System.IO.Stream::get_CanSeek() */, L_5);
@@ -10574,19 +10574,19 @@ IL_0038:
 		}
 	}
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_7 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_7 = __this->____stream_4;
 		NullCheck(L_7);
 		int64_t L_8;
 		L_8 = VirtualFuncInvoker0< int64_t >::Invoke(12 /* System.Int64 System.IO.Stream::get_Position() */, L_7);
-		int64_t L_9 = __this->____lPosition_6;
+		int64_t L_9 = __this->____lPosition_5;
 		if ((((int64_t)L_8) == ((int64_t)L_9)))
 		{
 			goto IL_006b;
 		}
 	}
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_10 = __this->____stream_5;
-		int64_t L_11 = __this->____lPosition_6;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_10 = __this->____stream_4;
+		int64_t L_11 = __this->____lPosition_5;
 		NullCheck(L_10);
 		int64_t L_12;
 		L_12 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(29 /* System.Int64 System.IO.Stream::Seek(System.Int64,System.IO.SeekOrigin) */, L_10, L_11, 0);
@@ -10594,12 +10594,12 @@ IL_0038:
 
 IL_006b:
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_13 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_13 = __this->____stream_4;
 		NullCheck(L_13);
 		int32_t L_14;
 		L_14 = VirtualFuncInvoker0< int32_t >::Invoke(33 /* System.Int32 System.IO.Stream::ReadByte() */, L_13);
-		int64_t L_15 = __this->____lPosition_6;
-		__this->____lPosition_6 = ((int64_t)il2cpp_codegen_add(L_15, ((int64_t)1)));
+		int64_t L_15 = __this->____lPosition_5;
+		__this->____lPosition_5 = ((int64_t)il2cpp_codegen_add(L_15, ((int64_t)1)));
 		return L_14;
 	}
 }
@@ -10615,7 +10615,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SqlXmlStreamWrapper_WriteByte_m0C42C6A4E
 	{
 		SqlXmlStreamWrapper_ThrowIfStreamClosed_mA140D1B092C241204034B6DF7F71C0696D7A27FB(__this, _stringLiteralBE48955B73AEFF30D689F88FD5BE1AAEA88DFFC9, NULL);
 		SqlXmlStreamWrapper_ThrowIfStreamCannotWrite_m3D28A5DC086E4BA6C8401FAD7CA725AE572CF363(__this, _stringLiteralBE48955B73AEFF30D689F88FD5BE1AAEA88DFFC9, NULL);
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_4;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = VirtualFuncInvoker0< bool >::Invoke(8 /* System.Boolean System.IO.Stream::get_CanSeek() */, L_0);
@@ -10625,19 +10625,19 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SqlXmlStreamWrapper_WriteByte_m0C42C6A4E
 		}
 	}
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_2 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_2 = __this->____stream_4;
 		NullCheck(L_2);
 		int64_t L_3;
 		L_3 = VirtualFuncInvoker0< int64_t >::Invoke(12 /* System.Int64 System.IO.Stream::get_Position() */, L_2);
-		int64_t L_4 = __this->____lPosition_6;
+		int64_t L_4 = __this->____lPosition_5;
 		if ((((int64_t)L_3) == ((int64_t)L_4)))
 		{
 			goto IL_0049;
 		}
 	}
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_5 = __this->____stream_5;
-		int64_t L_6 = __this->____lPosition_6;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_5 = __this->____stream_4;
+		int64_t L_6 = __this->____lPosition_5;
 		NullCheck(L_5);
 		int64_t L_7;
 		L_7 = VirtualFuncInvoker2< int64_t, int64_t, int32_t >::Invoke(29 /* System.Int64 System.IO.Stream::Seek(System.Int64,System.IO.SeekOrigin) */, L_5, L_6, 0);
@@ -10645,12 +10645,12 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SqlXmlStreamWrapper_WriteByte_m0C42C6A4E
 
 IL_0049:
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_8 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_8 = __this->____stream_4;
 		uint8_t L_9 = ___value0;
 		NullCheck(L_8);
 		VirtualActionInvoker1< uint8_t >::Invoke(36 /* System.Void System.IO.Stream::WriteByte(System.Byte) */, L_8, L_9);
-		int64_t L_10 = __this->____lPosition_6;
-		__this->____lPosition_6 = ((int64_t)il2cpp_codegen_add(L_10, ((int64_t)1)));
+		int64_t L_10 = __this->____lPosition_5;
+		__this->____lPosition_5 = ((int64_t)il2cpp_codegen_add(L_10, ((int64_t)1)));
 		return;
 	}
 }
@@ -10666,11 +10666,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SqlXmlStreamWrapper_SetLength_m8A8833C04
 	{
 		SqlXmlStreamWrapper_ThrowIfStreamClosed_mA140D1B092C241204034B6DF7F71C0696D7A27FB(__this, _stringLiteralEA11839FFA673044FF4EB9A4F59B3BC47F4144AE, NULL);
 		SqlXmlStreamWrapper_ThrowIfStreamCannotSeek_mA68A37C9695B89714F0F9D4BED8B7D6F27F584B5(__this, _stringLiteralEA11839FFA673044FF4EB9A4F59B3BC47F4144AE, NULL);
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_4;
 		int64_t L_1 = ___value0;
 		NullCheck(L_0);
 		VirtualActionInvoker1< int64_t >::Invoke(30 /* System.Void System.IO.Stream::SetLength(System.Int64) */, L_0, L_1);
-		int64_t L_2 = __this->____lPosition_6;
+		int64_t L_2 = __this->____lPosition_5;
 		int64_t L_3 = ___value0;
 		if ((((int64_t)L_2) <= ((int64_t)L_3)))
 		{
@@ -10679,7 +10679,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SqlXmlStreamWrapper_SetLength_m8A8833C04
 	}
 	{
 		int64_t L_4 = ___value0;
-		__this->____lPosition_6 = L_4;
+		__this->____lPosition_5 = L_4;
 	}
 
 IL_0032:
@@ -10691,14 +10691,14 @@ IL_0032:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SqlXmlStreamWrapper_Flush_m216093DC6D3A6A42B182488C330F1E31A1DE8A0E (SqlXmlStreamWrapper_tA9F7A1E4AC5B9EA4C1963D95D14F573B55950F93* __this, const RuntimeMethod* method) 
 {
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_4;
 		if (!L_0)
 		{
 			goto IL_0013;
 		}
 	}
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_1 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_1 = __this->____stream_4;
 		NullCheck(L_1);
 		VirtualActionInvoker0::Invoke(20 /* System.Void System.IO.Stream::Flush() */, L_1);
 	}
@@ -10724,7 +10724,7 @@ FINALLY_0009:
 		});
 		try
 		{// begin try (depth: 1)
-			__this->____isClosed_7 = (bool)1;
+			__this->____isClosed_6 = (bool)1;
 			goto IL_0011;
 		}// end try (depth: 1)
 		catch(Il2CppExceptionWrapper& e)
@@ -10742,7 +10742,7 @@ IL_0011:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SqlXmlStreamWrapper_ThrowIfStreamCannotSeek_mA68A37C9695B89714F0F9D4BED8B7D6F27F584B5 (SqlXmlStreamWrapper_tA9F7A1E4AC5B9EA4C1963D95D14F573B55950F93* __this, String_t* ___method0, const RuntimeMethod* method) 
 {
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_4;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = VirtualFuncInvoker0< bool >::Invoke(8 /* System.Boolean System.IO.Stream::get_CanSeek() */, L_0);
@@ -10770,7 +10770,7 @@ IL_0019:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SqlXmlStreamWrapper_ThrowIfStreamCannotRead_m1750CBA129596FD533669876B15E2CA572A2A073 (SqlXmlStreamWrapper_tA9F7A1E4AC5B9EA4C1963D95D14F573B55950F93* __this, String_t* ___method0, const RuntimeMethod* method) 
 {
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_4;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = VirtualFuncInvoker0< bool >::Invoke(7 /* System.Boolean System.IO.Stream::get_CanRead() */, L_0);
@@ -10798,7 +10798,7 @@ IL_0019:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void SqlXmlStreamWrapper_ThrowIfStreamCannotWrite_m3D28A5DC086E4BA6C8401FAD7CA725AE572CF363 (SqlXmlStreamWrapper_tA9F7A1E4AC5B9EA4C1963D95D14F573B55950F93* __this, String_t* ___method0, const RuntimeMethod* method) 
 {
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_0 = __this->____stream_4;
 		NullCheck(L_0);
 		bool L_1;
 		L_1 = VirtualFuncInvoker0< bool >::Invoke(10 /* System.Boolean System.IO.Stream::get_CanWrite() */, L_0);
@@ -10852,21 +10852,21 @@ IL_0014:
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SqlXmlStreamWrapper_IsStreamClosed_m2D70F08EB0D257D78D5789B788E6D6BCF8908B40 (SqlXmlStreamWrapper_tA9F7A1E4AC5B9EA4C1963D95D14F573B55950F93* __this, const RuntimeMethod* method) 
 {
 	{
-		bool L_0 = __this->____isClosed_7;
+		bool L_0 = __this->____isClosed_6;
 		if (L_0)
 		{
 			goto IL_0037;
 		}
 	}
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_1 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_1 = __this->____stream_4;
 		if (!L_1)
 		{
 			goto IL_0037;
 		}
 	}
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_2 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_2 = __this->____stream_4;
 		NullCheck(L_2);
 		bool L_3;
 		L_3 = VirtualFuncInvoker0< bool >::Invoke(7 /* System.Boolean System.IO.Stream::get_CanRead() */, L_2);
@@ -10876,7 +10876,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SqlXmlStreamWrapper_IsStreamClosed_m2D70
 		}
 	}
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_4 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_4 = __this->____stream_4;
 		NullCheck(L_4);
 		bool L_5;
 		L_5 = VirtualFuncInvoker0< bool >::Invoke(10 /* System.Boolean System.IO.Stream::get_CanWrite() */, L_4);
@@ -10886,7 +10886,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool SqlXmlStreamWrapper_IsStreamClosed_m2D70
 		}
 	}
 	{
-		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_6 = __this->____stream_5;
+		Stream_tF844051B786E8F7F4244DBD218D74E8617B9A2DE* L_6 = __this->____stream_4;
 		NullCheck(L_6);
 		bool L_7;
 		L_7 = VirtualFuncInvoker0< bool >::Invoke(8 /* System.Boolean System.IO.Stream::get_CanSeek() */, L_6);

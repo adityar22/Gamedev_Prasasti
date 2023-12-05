@@ -38524,7 +38524,7 @@ IL_0027:
 	{
 		EventWaitHandle_t18F2EB0161747B0646A9A406015A61A214A1EB7E* L_7 = V_0;
 		NullCheck(L_7);
-		VirtualActionInvoker0::Invoke(12 /* System.Void System.Threading.WaitHandle::Close() */, L_7);
+		VirtualActionInvoker0::Invoke(11 /* System.Void System.Threading.WaitHandle::Close() */, L_7);
 		return;
 	}
 }
@@ -38674,7 +38674,7 @@ IL_00ae:
 			L_19 = TimeoutTracker_get_RemainingMilliseconds_mDAA8A0E545F8E28D3688095CA346B0A04337BC23((&___timeout2), NULL);
 			NullCheck(L_18);
 			bool L_20;
-			L_20 = VirtualFuncInvoker1< bool, int32_t >::Invoke(11 /* System.Boolean System.Threading.WaitHandle::WaitOne(System.Int32) */, L_18, L_19);
+			L_20 = VirtualFuncInvoker1< bool, int32_t >::Invoke(10 /* System.Boolean System.Threading.WaitHandle::WaitOne(System.Int32) */, L_18, L_19);
 			V_0 = L_20;
 			goto IL_00af;
 		}// end try (depth: 1)
@@ -39246,7 +39246,7 @@ IL_0064:
 	{
 		EventWaitHandle_t18F2EB0161747B0646A9A406015A61A214A1EB7E* L_13 = __this->___writeEvent_9;
 		NullCheck(L_13);
-		VirtualActionInvoker0::Invoke(12 /* System.Void System.Threading.WaitHandle::Close() */, L_13);
+		VirtualActionInvoker0::Invoke(11 /* System.Void System.Threading.WaitHandle::Close() */, L_13);
 		__this->___writeEvent_9 = (EventWaitHandle_t18F2EB0161747B0646A9A406015A61A214A1EB7E*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___writeEvent_9), (void*)(EventWaitHandle_t18F2EB0161747B0646A9A406015A61A214A1EB7E*)NULL);
 	}
@@ -39262,7 +39262,7 @@ IL_007e:
 	{
 		EventWaitHandle_t18F2EB0161747B0646A9A406015A61A214A1EB7E* L_15 = __this->___readEvent_10;
 		NullCheck(L_15);
-		VirtualActionInvoker0::Invoke(12 /* System.Void System.Threading.WaitHandle::Close() */, L_15);
+		VirtualActionInvoker0::Invoke(11 /* System.Void System.Threading.WaitHandle::Close() */, L_15);
 		__this->___readEvent_10 = (EventWaitHandle_t18F2EB0161747B0646A9A406015A61A214A1EB7E*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___readEvent_10), (void*)(EventWaitHandle_t18F2EB0161747B0646A9A406015A61A214A1EB7E*)NULL);
 	}
@@ -39278,7 +39278,7 @@ IL_0098:
 	{
 		EventWaitHandle_t18F2EB0161747B0646A9A406015A61A214A1EB7E* L_17 = __this->___upgradeEvent_11;
 		NullCheck(L_17);
-		VirtualActionInvoker0::Invoke(12 /* System.Void System.Threading.WaitHandle::Close() */, L_17);
+		VirtualActionInvoker0::Invoke(11 /* System.Void System.Threading.WaitHandle::Close() */, L_17);
 		__this->___upgradeEvent_11 = (EventWaitHandle_t18F2EB0161747B0646A9A406015A61A214A1EB7E*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___upgradeEvent_11), (void*)(EventWaitHandle_t18F2EB0161747B0646A9A406015A61A214A1EB7E*)NULL);
 	}
@@ -39294,7 +39294,7 @@ IL_00b2:
 	{
 		EventWaitHandle_t18F2EB0161747B0646A9A406015A61A214A1EB7E* L_19 = __this->___waitUpgradeEvent_12;
 		NullCheck(L_19);
-		VirtualActionInvoker0::Invoke(12 /* System.Void System.Threading.WaitHandle::Close() */, L_19);
+		VirtualActionInvoker0::Invoke(11 /* System.Void System.Threading.WaitHandle::Close() */, L_19);
 		__this->___waitUpgradeEvent_12 = (EventWaitHandle_t18F2EB0161747B0646A9A406015A61A214A1EB7E*)NULL;
 		Il2CppCodeGenWriteBarrier((void**)(&__this->___waitUpgradeEvent_12), (void*)(EventWaitHandle_t18F2EB0161747B0646A9A406015A61A214A1EB7E*)NULL);
 	}

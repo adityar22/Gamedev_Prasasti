@@ -68,6 +68,7 @@ public class PlayerInput : MonoBehaviour
     public void clickAttack()
     {
         Debug.Log("clicked basic attack");
+        ChoosedPlayer.targetEnemy = ChoosedPlayer.choosedEnemy[0];
         battleManager.PerformAction(BattleAction.ActionType.BasicAttack, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy);
     }
 

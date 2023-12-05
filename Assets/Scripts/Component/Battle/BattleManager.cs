@@ -48,17 +48,19 @@ public class BattleManager : MonoBehaviour
         // Combine both teams to determine turn order
         turnOrder = new List<Character>();
         // Initialize playerTeam and enemyTeam with characters
-        foreach(var chars in ChoosedPlayer.choosedChar){
-            if(chars.character.name!=null){
+        foreach (var chars in ChoosedPlayer.choosedChar)
+        {
+            if (chars.character.name != null)
+            {
                 turnOrder.Add(chars);
-                Debug.Log(chars.character.name+" : "+chars.character.stat.Spd);
             }
         }
 
-        foreach(var chars in ChoosedPlayer.choosedEnemy){
-            if(chars){
+        foreach (var chars in ChoosedPlayer.choosedEnemy)
+        {
+            if (chars)
+            {
                 turnOrder.Add(chars);
-                Debug.Log(chars.character.name+" : "+chars.character.stat.Spd);
             }
         }
 
@@ -77,16 +79,23 @@ public class BattleManager : MonoBehaviour
             if (character.character.stat.HP > 0)
             {
                 hasAction = false;
-                // Perform actions (BasicAttack, Skill, Item) based on player input or AI logic
-                ChoosedPlayer.activeChar = character;
-                Debug.Log("Now is "+ ChoosedPlayer.activeChar.character.name+"'s turn");
-            }
-            if(hasAction)yield return new WaitForSeconds(1.0f);
-        }
 
+                // Perform actions (BasicAttack, Skill, Item) based on player input or AI logic
+                ChoosedPlayer.ActiveChar = character;
+                Debug.Log("Now is " + ChoosedPlayer.activeChar.character.name + "'s turn");
+
+                // Wait until hasAction becomes true
+                while (!hasAction)
+                {
+                    yield return null;
+                }
+            }
+            yield return new WaitForSeconds(1.0f);
+        }
         // Start the next round of turns
         StartCoroutine(StartTurns());
     }
+
 
     public void PerformAction(BattleAction.ActionType actionType, Character source, Character target)
     {
@@ -94,9 +103,11 @@ public class BattleManager : MonoBehaviour
         {
             case BattleAction.ActionType.BasicAttack:
                 BasicAttack(source, target, false);
+                Battle.setCommentText(source.character.name+" use basic attack to "+target.character.name);
                 break;
             case BattleAction.ActionType.Skill:
                 BasicAttack(source, target, true);
+                Battle.setCommentText(source.character.name+" use "+source.character.skill.name+" to "+target.character.name);
                 break;
             case BattleAction.ActionType.Item:
                 // Implement item logic
@@ -157,7 +168,7 @@ public class BattleManager : MonoBehaviour
         double landingPercentage = random.NextDouble();
         double intervence = attacker.character.stat.Status == intervenceStatus.status.Paralyze ? 0.25 : 0.0;
         double actualAcc = attacker.character.stat.Acc * (1 - defender.character.stat.Eva) * (1 - intervence);
-        
+
         return landingPercentage <= actualAcc;
     }
 
@@ -169,7 +180,7 @@ public class BattleManager : MonoBehaviour
 
             double basicDamage = (((2 * attacker.character.stat.level) / 5) + 2) * (isSkill ? attacker.character.skill.power * (attacker.character.stat.Atk / target.character.stat.Def) : (attacker.character.stat.Atk - (target.character.stat.Def * 0.2)));
             double typeEffective = ChartWeakness.ElementChart(attacker.character.element, target.character.element);
-            double damage = (basicDamage / (isSkill ? 50 :10) + 2) * typeEffective * isCritical(attacker) * intervenceState(attacker) * interval ;
+            double damage = (basicDamage / (isSkill ? 50 : 10) + 2) * typeEffective * isCritical(attacker) * intervenceState(attacker) * interval;
             if (isSkill)
             {
                 // call skill effect here

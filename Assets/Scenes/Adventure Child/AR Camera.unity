@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 320372701}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372059912}
+        m_TargetAssemblyTypeName: QuestionRandomize, Assembly-CSharp
+        m_MethodName: checkAnswer
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: No
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &320372701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -341,7 +353,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arCamera: {fileID: 445260138}
-  QuizCanvas: {fileID: 1755344288}
+  QuizCanvas: {fileID: 1278476800}
   distanceThreshold: 10
   angleThreshold: 30
 --- !u!1 &445260134
@@ -489,10 +501,10 @@ RectTransform:
   m_Father: {fileID: 1755344292}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 1080, y: 1920}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &548148197
 MonoBehaviour:
@@ -720,7 +732,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1278476801
 RectTransform:
   m_ObjectHideFlags: 0
@@ -967,7 +979,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1507908957}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 372059912}
+        m_TargetAssemblyTypeName: QuestionRandomize, Assembly-CSharp
+        m_MethodName: checkAnswer
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Yes
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1507908957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1108,7 +1132,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1755344289
 MonoBehaviour:
   m_ObjectHideFlags: 0

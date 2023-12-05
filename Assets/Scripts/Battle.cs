@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 /// CHOOSE PHASE CODE
 public class ChoosedPlayer
@@ -10,6 +11,13 @@ public class ChoosedPlayer
     public static List<Character> choosedEnemy = new List<Character>();
 
     public static Character activeChar;
+    public static Character ActiveChar{
+        get{return activeChar;}
+        set{
+            activeChar = value;
+            Battle.setTurnText(activeChar);
+        }
+    }
     public static Character targetEnemy;
 }
 
@@ -36,6 +44,9 @@ public class Battle : MonoBehaviour
     [SerializeField] private GameObject btnStart;
 
     BattleManager battleManager;
+
+    public static TextMeshProUGUI txtTurn;
+    public static TextMeshProUGUI txtComment;
 
     void Start()
     {
@@ -120,7 +131,20 @@ public class Battle : MonoBehaviour
         battlePhase.SetActive(true);
         choosePhase.SetActive(false);
 
+        GameObject txtTurnObj = GameObject.Find("txtTurn");
+        Battle.txtTurn = txtTurnObj.GetComponent<TextMeshProUGUI>();
+        GameObject txtCommentObj = GameObject.Find("txtComment");
+        Battle.txtComment = txtCommentObj.GetComponent<TextMeshProUGUI>();
+
         Battle.statePhase = 1;
         battleManager.StartBattle();
+    }
+
+    public static void setTurnText(Character activeChar){
+        Battle.txtTurn.text = activeChar.character.name;
+    }
+
+    public static void setCommentText(string comment){
+        Battle.txtComment.text = comment;
     }
 }
