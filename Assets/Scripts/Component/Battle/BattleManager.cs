@@ -33,6 +33,7 @@ public class BattleAction
 public class BattleManager : MonoBehaviour
 {
     private List<Character> turnOrder;
+    private bool hasAction;
 
     System.Random random;
 
@@ -75,13 +76,12 @@ public class BattleManager : MonoBehaviour
             // Check if the character is still alive
             if (character.character.stat.HP > 0)
             {
+                hasAction = false;
                 // Perform actions (BasicAttack, Skill, Item) based on player input or AI logic
                 ChoosedPlayer.activeChar = character;
                 Debug.Log("Now is "+ ChoosedPlayer.activeChar.character.name+"'s turn");
-
-                // Wait for a short duration between turns for better visualization
-                yield return new WaitForSeconds(1.0f);
             }
+            if(hasAction)yield return new WaitForSeconds(1.0f);
         }
 
         // Start the next round of turns
@@ -180,5 +180,6 @@ public class BattleManager : MonoBehaviour
         {
             Debug.Log(attacker.character.name + "'s attack missed");
         }
+        hasAction = true;
     }
 }

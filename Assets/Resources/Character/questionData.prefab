@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3455706619397181184}
-  - component: {fileID: -2763319452832201320}
+  - component: {fileID: 9175163220620028569}
   m_Layer: 0
   m_Name: questionData
   m_TagString: Untagged
@@ -32,7 +32,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &-2763319452832201320
+--- !u!114 &9175163220620028569
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -41,12 +41,64 @@ MonoBehaviour:
   m_GameObject: {fileID: 8442416763699160466}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ae4ef209287927147886922c8fc301d1, type: 3}
+  m_Script: {fileID: 11500000, guid: 289a5951ed0c48c4db8398e5c6d6fa54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   questionList:
   - ID: 0
-    question: 
+    question: Apakah Majapahit pernah menjadi kerajaan terbesar di Nusantara pada
+      abad ke-14?
+    answer: 0
+    difficulty: 0
+    isInit: 1
+  - ID: 1
+    question: Apakah Sriwijaya merupakan kerajaan maritim yang kuat di wilayah Sumatra
+      pada abad ke-7 hingga ke-14?
+    answer: 0
+    difficulty: 1
+    isInit: 1
+  - ID: 2
+    question: Apakah Demak adalah kerajaan Islam pertama di Jawa?
+    answer: 0
+    difficulty: 1
+    isInit: 1
+  - ID: 3
+    question: Apakah Gajah Mada merupakan perdana menteri yang terkenal di Kerajaan
+      Majapahit?
+    answer: 0
+    difficulty: 0
+    isInit: 1
+  - ID: 4
+    question: Apakah Sriwijaya memiliki kekuatan angkatan laut yang besar dan mengontrol
+      jalur perdagangan maritim?
+    answer: 0
+    difficulty: 2
+    isInit: 1
+  - ID: 5
+    question: Apakah Demak pernah menjadi pusat penyebaran Islam di Jawa?
+    answer: 0
+    difficulty: 0
+    isInit: 1
+  - ID: 6
+    question: Apakah Prabu Hayam Wuruk merupakan salah satu raja terkenal dalam sejarah
+      Majapahit?
+    answer: 0
+    difficulty: 0
+    isInit: 1
+  - ID: 7
+    question: Apakah kerajaan Sriwijaya dikenal sebagai pusat agama Buddha di Nusantara?
+    answer: 0
+    difficulty: 1
+    isInit: 1
+  - ID: 9
+    question: Apakah Demak pernah melakukan ekspedisi laut ke wilayah sekitar, termasuk
+      Malaka?
+    answer: 0
+    difficulty: 0
+    isInit: 1
+  - ID: 9
+    question: Apakah akhir Kerajaan Majapahit terkait erat dengan serangan dari Kesultanan
+      Demak?
     answer: 0
     difficulty: 0
     isInit: 1

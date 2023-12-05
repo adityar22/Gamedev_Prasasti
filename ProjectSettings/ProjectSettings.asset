@@ -157,6 +157,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.1
   applicationIdentifier:
     Android: com.DefaultCompany.Prasasti
+    Standalone: com.DefaultCompany.Prasasti
     iPhone: com.DefaultCompany.Prasasti
   buildNumber:
     Standalone: 0
@@ -251,7 +252,7 @@ PlayerSettings:
   AndroidTargetDevices: 0
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: E:/KULIAH/Gamedev/Gamedev_Prasasti/prasasti.keystore
+  AndroidKeystoreName: '{inproject}: prasasti.keystore'
   AndroidKeyaliasName: prasasti
   AndroidBuildApkPerCpuArchitecture: 0
   AndroidTVCompatibility: 0
