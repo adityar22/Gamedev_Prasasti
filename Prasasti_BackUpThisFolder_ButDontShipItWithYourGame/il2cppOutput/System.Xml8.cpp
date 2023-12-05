@@ -9211,7 +9211,7 @@ IL_021a:
 		RuntimeObject* L_124 = ___memberValue1;
 		NullCheck(L_123);
 		bool L_125;
-		L_125 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(113 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_123, L_124);
+		L_125 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(114 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_123, L_124);
 		if (L_125)
 		{
 			goto IL_024a;
@@ -9400,7 +9400,7 @@ IL_008f:
 		Type_t* L_35 = V_0;
 		NullCheck(L_35);
 		Type_t* L_36;
-		L_36 = VirtualFuncInvoker0< Type_t* >::Invoke(110 /* System.Type System.Type::get_BaseType() */, L_35);
+		L_36 = VirtualFuncInvoker0< Type_t* >::Invoke(111 /* System.Type System.Type::get_BaseType() */, L_35);
 		V_0 = L_36;
 	}
 
@@ -12811,7 +12811,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* XmlTypeMapMember_GetValue_m957
 		String_t* L_2 = ___name1;
 		NullCheck(L_1);
 		MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053* L_3;
-		L_3 = VirtualFuncInvoker2< MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053*, String_t*, int32_t >::Invoke(88 /* System.Reflection.MemberInfo[] System.Type::GetMember(System.String,System.Reflection.BindingFlags) */, L_1, L_2, ((int32_t)20));
+		L_3 = VirtualFuncInvoker2< MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053*, String_t*, int32_t >::Invoke(89 /* System.Reflection.MemberInfo[] System.Type::GetMember(System.String,System.Reflection.BindingFlags) */, L_1, L_2, ((int32_t)20));
 		V_0 = L_3;
 		MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053* L_4 = V_0;
 		NullCheck(L_4);
@@ -12977,7 +12977,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlTypeMapMember_SetValue_m163DA4E73791F
 		String_t* L_2 = ___name1;
 		NullCheck(L_1);
 		MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053* L_3;
-		L_3 = VirtualFuncInvoker2< MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053*, String_t*, int32_t >::Invoke(88 /* System.Reflection.MemberInfo[] System.Type::GetMember(System.String,System.Reflection.BindingFlags) */, L_1, L_2, ((int32_t)20));
+		L_3 = VirtualFuncInvoker2< MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053*, String_t*, int32_t >::Invoke(89 /* System.Reflection.MemberInfo[] System.Type::GetMember(System.String,System.Reflection.BindingFlags) */, L_1, L_2, ((int32_t)20));
 		V_0 = L_3;
 		MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053* L_4 = V_0;
 		NullCheck(L_4);
@@ -13033,7 +13033,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlTypeMapMember_InitMember_mDF86C7533AF
 		String_t* L_1 = __this->____name_0;
 		NullCheck(L_0);
 		MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053* L_2;
-		L_2 = VirtualFuncInvoker2< MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053*, String_t*, int32_t >::Invoke(88 /* System.Reflection.MemberInfo[] System.Type::GetMember(System.String,System.Reflection.BindingFlags) */, L_0, L_1, ((int32_t)20));
+		L_2 = VirtualFuncInvoker2< MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053*, String_t*, int32_t >::Invoke(89 /* System.Reflection.MemberInfo[] System.Type::GetMember(System.String,System.Reflection.BindingFlags) */, L_0, L_1, ((int32_t)20));
 		V_0 = L_2;
 		MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053* L_3 = V_0;
 		NullCheck(L_3);
@@ -13047,7 +13047,7 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void XmlTypeMapMember_InitMember_mDF86C7533AF
 		L_8 = String_Concat_mAF2CE02CC0CB7460753D0A1A91CCF2B1E9804C5D(L_7, _stringLiteral87C858E345116CE7C4123AF185CDD74EFDD94384, NULL);
 		NullCheck(L_6);
 		MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053* L_9;
-		L_9 = VirtualFuncInvoker2< MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053*, String_t*, int32_t >::Invoke(88 /* System.Reflection.MemberInfo[] System.Type::GetMember(System.String,System.Reflection.BindingFlags) */, L_6, L_8, ((int32_t)20));
+		L_9 = VirtualFuncInvoker2< MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053*, String_t*, int32_t >::Invoke(89 /* System.Reflection.MemberInfo[] System.Type::GetMember(System.String,System.Reflection.BindingFlags) */, L_6, L_8, ((int32_t)20));
 		V_0 = L_9;
 		MemberInfoU5BU5D_t4CB6970BB166E8E1CFB06152B2A2284971873053* L_10 = V_0;
 		NullCheck(L_10);
@@ -13959,7 +13959,7 @@ IL_00b3_1:
 				RuntimeObject* L_37 = ___memberValue1;
 				NullCheck(L_36);
 				bool L_38;
-				L_38 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(113 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_36, L_37);
+				L_38 = VirtualFuncInvoker1< bool, RuntimeObject* >::Invoke(114 /* System.Boolean System.Type::IsInstanceOfType(System.Object) */, L_36, L_37);
 				if (!L_38)
 				{
 					goto IL_00fb_1;

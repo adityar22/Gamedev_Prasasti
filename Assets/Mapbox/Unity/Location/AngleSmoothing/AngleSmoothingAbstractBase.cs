@@ -1,3 +1,4 @@
+using System.Diagnostics;
 namespace Mapbox.Unity.Location
 {
 

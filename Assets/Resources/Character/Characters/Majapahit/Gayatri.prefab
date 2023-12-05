@@ -44,37 +44,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1366e54edd5277f4f82647d55b5ef135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Gayatri
-  kingdom: 0
-  type: 3
-  element: 3
-  tier: 1
-  stat:
-    level: 1
-    criticalStage: 0
-    exp: 0
-    baseAtk: 0
-    baseDef: 0
-    baseHP: 0
-    baseSpd: 0
-    baseAcc: 0
-    baseEva: 0
-    baseEnergy: 0
-  skill:
-    name: 
-    power: 0
-    consumeEnergy: 0
-    skillTarget: 0
-    skillEffectToStatus: 0
-    effectStatusRate: 0
-    skillEffectToStat: 0
-    effectStatRate: 0
-    statChange: 0
-    stageChange: 0
-    ratioChange: 0
-    description: 
-  attribut:
-    idle: {fileID: 0}
-    attackPose: {fileID: 0}
-    skillPose: {fileID: 0}
-    dialog: {fileID: 0}
+  character:
+    name: Gayatri
+    kingdom: 0
+    type: 3
+    element: 1
+    tier: 1
+    stat:
+      level: 1
+      criticalStage: 0
+      exp: 0
+      baseAtk: 0
+      baseDef: 0
+      baseHP: 0
+      baseSpd: 0
+      baseAcc: 0
+      baseEva: 0
+      baseEnergy: 0
+    skill:
+      name: 
+      power: 0
+      consumeEnergy: 0
+      skillTarget: 0
+      skillEffectToStatus: 0
+      effectStatusRate: 0
+      skillEffectToStat: 0
+      effectStatRate: 0
+      statChange: 0
+      stageChange: 0
+      ratioChange: 0
+      description: 
+    attribut:
+      profile: {fileID: 0}
+      idle: {fileID: 0}
+      attackPose: {fileID: 0}
+      skillPose: {fileID: 0}
+      dialog: {fileID: 0}
