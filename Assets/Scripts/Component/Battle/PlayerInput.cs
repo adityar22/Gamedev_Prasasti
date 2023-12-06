@@ -1,4 +1,4 @@
-// using System.Diagnostics;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,21 +10,21 @@ public class PlayerInput : MonoBehaviour
     private static Battle battle;
 
     public static int choosedArea;
+    System.Random random;
 
     private void Start()
     {
         GameObject eventSystem = GameObject.Find("EventSystem");
         battleManager = eventSystem.GetComponent<BattleManager>();
         battle = eventSystem.GetComponent<Battle>();
+
+        random = new System.Random();
     }
 
     private void Update()
     {
         // Handle player input for actions (basic attack, skill, item)
         // For simplicity, you can use Input.GetKey or Input.GetButtonDown
-        if (Input.GetKeyDown(KeyCode.A)) { battleManager.PerformAction(BattleAction.ActionType.BasicAttack, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy); }
-        if (Input.GetKeyDown(KeyCode.S)) { battleManager.PerformAction(BattleAction.ActionType.Skill, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy); }
-        /*        if (Input.GetKeyDown(KeyCode.W)) { battleManager.PerformAction(BattleAction.ActionType.Item, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy); }*/
     }
 
     public static void clickTeam(int id, int teamIndex)
@@ -47,6 +47,8 @@ public class PlayerInput : MonoBehaviour
         Image imageComponent = battle.player[teamIndex].GetComponent<Image>();
         Sprite yourSprite = ChoosedPlayer.choosedChar[teamIndex].character.attribut.idle;
 
+        battle.playerInfo[teamIndex].SetActive(true);
+
         if (imageComponent != null)
         {
             // Set the sprite of the Image component
@@ -65,38 +67,84 @@ public class PlayerInput : MonoBehaviour
         ChoosePlayer.teamIndex += ChoosePlayer.teamIndex != 2 ? 1 : 0;
     }
 
-    private bool checkTargetExist(){
-        return true;
-    }
-    private Character getTarget(Character source)
+    private bool checkTargetExist(int index, Teams.team team)
     {
-        Character target = new Character();
+        int targetIndex = getTargetIndex(index, team);
+        if(index < ChoosedPlayer.choosedEnemy.Count){
+            if(BattleManager.heroInBattle[targetIndex].HP > 0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
+    }
+    private int getAttackTarget(Fighter source)
+    {
+        int index;
+        Debug.Log(source.character.target);
 
         switch (source.character.target)
         {
             case TargetAttack.Target.FrontLine:
-                return target;
+                index = random.Next(0, 1);
                 break;
             case TargetAttack.Target.BackLine:
-                return target;
+                index = 2;
                 break;
             case TargetAttack.Target.All:
-                return target;
+                index = random.Next(0, 2);
                 break;
             default:
-                return target;
+                index = 0;
+                break;
+        }
+
+        return checkTargetExist(index, source.charTeam) ? index : checkTargetExist(index != 0 ? 0 : random.Next(1, 2), source.charTeam) ? index != 0 ? 0 : random.Next(1, 2): getAttackTarget(source);
+    }
+
+    private int getSkillTarget(Fighter source)
+    {
+        int index = 0;
+
+        switch (source.character.skill.skillTarget)
+        {
+            case TargetSkill.targetSkill.FrontLine:
+                return index;
+                break;
+            case TargetSkill.targetSkill.BackLine:
+                return index;
+                break;
+            case TargetSkill.targetSkill.Single:
+                return index;
+                break;
+            case TargetSkill.targetSkill.All:
+                return index;
+                break;
+            default:
+                return index;
                 break;
         }
     }
+    private int getTargetIndex(int index, Teams.team team){
+        int indexTarget = BattleManager.heroInBattle.FindIndex(a => a.charTeam != team && a.indexPosition == index );
+        return indexTarget;
+    }
+
     public void clickAttack()
     {
-        Debug.Log("clicked basic attack");
-        ChoosedPlayer.targetEnemy = getTarget(ChoosedPlayer.activeChar);
-        battleManager.PerformAction(BattleAction.ActionType.BasicAttack, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy);
+        int index = getAttackTarget(BattleManager.heroInBattle[ChoosedPlayer.activeChar]);
+        ChoosedPlayer.targetEnemy = getTargetIndex(index, BattleManager.heroInBattle[ChoosedPlayer.activeChar].charTeam);
+        battleManager.PerformAction(BattleAction.ActionType.BasicAttack, BattleManager.heroInBattle[ChoosedPlayer.activeChar], BattleManager.heroInBattle[ChoosedPlayer.targetEnemy]);
     }
 
     public void clickSkill()
     {
-        battleManager.PerformAction(BattleAction.ActionType.Skill, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy);
+        int index = getSkillTarget(BattleManager.heroInBattle[ChoosedPlayer.activeChar]);
+        ChoosedPlayer.targetEnemy = getTargetIndex(index, BattleManager.heroInBattle[ChoosedPlayer.activeChar].charTeam);
+        battleManager.PerformAction(BattleAction.ActionType.Skill, BattleManager.heroInBattle[ChoosedPlayer.activeChar], BattleManager.heroInBattle[ChoosedPlayer.targetEnemy]);
     }
 }

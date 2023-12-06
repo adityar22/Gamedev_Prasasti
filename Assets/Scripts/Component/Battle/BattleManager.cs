@@ -33,39 +33,69 @@ public class BattleAction
 public class BattleManager : MonoBehaviour
 {
     private List<Character> turnOrder;
+    public static List<Fighter> heroInBattle;
     private bool hasAction;
+    private static Battle battle;
 
     System.Random random;
 
     public void StartBattle()
     {
+        GameObject eventSystem = GameObject.Find("EventSystem");
+        battle = eventSystem.GetComponent<Battle>();
+
         random = new System.Random();
         InitializeBattle();
     }
 
     private void InitializeBattle()
     {
+        BattleManager.heroInBattle = new List<Fighter>();
         // Combine both teams to determine turn order
+        int indexHero = 0;
+        int indexPosition = 0;
         turnOrder = new List<Character>();
         // Initialize playerTeam and enemyTeam with characters
         foreach (var chars in ChoosedPlayer.choosedChar)
         {
             if (chars.character.name != null)
             {
+                Fighter index = new Fighter();
+                BattleManager.heroInBattle.Add(index);
+                BattleManager.heroInBattle[indexHero].charTeam = Teams.team.Player;
+                BattleManager.heroInBattle[indexHero].indexPosition = indexPosition;
+                BattleManager.heroInBattle[indexHero].character = chars.character;
+                BattleManager.heroInBattle[indexHero].HP = chars.character.stat.HP;
+                BattleManager.heroInBattle[indexHero].Energy = chars.character.stat.Energy;
                 turnOrder.Add(chars);
+                indexHero += 1;
+                indexPosition += 1;
+                ChoosedPlayer.totalPlayer += 1;
             }
         }
 
+        indexPosition = 0;
         foreach (var chars in ChoosedPlayer.choosedEnemy)
         {
             if (chars)
             {
+                Fighter index = new Fighter();
+                BattleManager.heroInBattle.Add(index);
+                BattleManager.heroInBattle[indexHero].charTeam = Teams.team.Enemy;
+                BattleManager.heroInBattle[indexHero].indexPosition = indexPosition;
+                BattleManager.heroInBattle[indexHero].character = chars.character;
+                BattleManager.heroInBattle[indexHero].HP = chars.character.stat.HP;
+                BattleManager.heroInBattle[indexHero].Energy = chars.character.stat.Energy;
                 turnOrder.Add(chars);
+                indexHero += 1;
+                indexPosition += 1;
+                ChoosedPlayer.totalEnemy += 1;
             }
         }
 
         // Sort turnOrder based on character speed (higher speed goes first)
         turnOrder.Sort((a, b) => b.character.stat.Spd.CompareTo(a.character.stat.Spd));
+        heroInBattle.Sort((a,b)=> b.character.stat.Spd.CompareTo(a.character.stat.Spd));
 
         // Start the first turn
         StartCoroutine(StartTurns());
@@ -73,7 +103,8 @@ public class BattleManager : MonoBehaviour
 
     private IEnumerator StartTurns()
     {
-        foreach (var character in turnOrder)
+        int index = 0;
+        foreach (var character in heroInBattle)
         {
             // Check if the character is still alive
             if (character.character.stat.HP > 0)
@@ -81,8 +112,8 @@ public class BattleManager : MonoBehaviour
                 hasAction = false;
 
                 // Perform actions (BasicAttack, Skill, Item) based on player input or AI logic
-                ChoosedPlayer.ActiveChar = character;
-                Debug.Log("Now is " + ChoosedPlayer.activeChar.character.name + "'s turn");
+                ChoosedPlayer.ActiveChar = index;
+                Debug.Log("Now is " + heroInBattle[ChoosedPlayer.activeChar].character.name + "'s turn");
 
                 // Wait until hasAction becomes true
                 while (!hasAction)
@@ -90,6 +121,7 @@ public class BattleManager : MonoBehaviour
                     yield return null;
                 }
             }
+            index += 1;
             yield return new WaitForSeconds(1.0f);
         }
         // Start the next round of turns
@@ -97,7 +129,7 @@ public class BattleManager : MonoBehaviour
     }
 
 
-    public void PerformAction(BattleAction.ActionType actionType, Character source, Character target)
+    public void PerformAction(BattleAction.ActionType actionType, Fighter source, Fighter target)
     {
         switch (actionType)
         {
@@ -115,7 +147,7 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-    private double intervenceState(Character attacker)
+    private double intervenceState(Fighter attacker)
     {
         switch (attacker.character.stat.Status)
         {
@@ -131,7 +163,7 @@ public class BattleManager : MonoBehaviour
         }
     }
 
-    private double criticalHitRatio(Character attacker)
+    private double criticalHitRatio(Fighter attacker)
     {
         switch (attacker.character.stat.criticalStage)
         {
@@ -155,7 +187,7 @@ public class BattleManager : MonoBehaviour
                 break;
         }
     }
-    private double isCritical(Character attacker)
+    private double isCritical(Fighter attacker)
     {
         double randomValue = random.NextDouble();
         if (randomValue < criticalHitRatio(attacker)) { Debug.Log("It's a critical hit!"); }
@@ -163,7 +195,7 @@ public class BattleManager : MonoBehaviour
         return randomValue < criticalHitRatio(attacker) ? 1.5 : 1.0;
     }
 
-    private bool isLandingAttack(Character attacker, Character defender)
+    private bool isLandingAttack(Fighter attacker, Fighter defender)
     {
         double landingPercentage = random.NextDouble();
         double intervence = attacker.character.stat.Status == intervenceStatus.status.Paralyze ? 0.25 : 0.0;
@@ -172,7 +204,7 @@ public class BattleManager : MonoBehaviour
         return landingPercentage <= actualAcc;
     }
 
-    private void BasicAttack(Character attacker, Character target, bool isSkill)
+    private void BasicAttack(Fighter attacker, Fighter target, bool isSkill)
     {
         if (isLandingAttack(attacker, target))
         {
@@ -185,7 +217,11 @@ public class BattleManager : MonoBehaviour
             {
                 // call skill effect here
             }
-            ChoosedPlayer.targetEnemy.character.stat.HP -= damage;
+            heroInBattle[ChoosedPlayer.targetEnemy].HP -= damage;
+            Debug.Log(attacker.character.name + " give "+ damage +" damages to "+target.character.name);
+            Debug.Log(target.character.name + " HP  "+ target.HP +" / "+target.character.stat.HP + " left");
+
+            battle.updateHPBar(heroInBattle.FindIndex(a=> a==target), target.indexPosition, target.charTeam);
         }
         else
         {
