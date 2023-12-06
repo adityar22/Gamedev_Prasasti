@@ -53,12 +53,12 @@ MonoBehaviour:
     target: 1
     stat:
       level: 1
-      criticalStage: 0
+      criticalStage: 1
       exp: 0
       baseAtk: 16
-      baseDef: 10
-      baseHP: 20
-      baseSpd: 16
+      baseDef: 9
+      baseHP: 18
+      baseSpd: 14
       baseAcc: 1
       baseEva: 0.3
       baseEnergy: 7
@@ -69,8 +69,8 @@ MonoBehaviour:
       skillTarget: 2
       skillEffectToStatus: 2
       effectStatusRate: 0.4
-      skillEffectToStat: 0
-      effectStatRate: 0.4
+      skillEffectToStat: 2
+      effectStatRate: 0
       statChange: 2
       stageChange: 0
       ratioChange: 0

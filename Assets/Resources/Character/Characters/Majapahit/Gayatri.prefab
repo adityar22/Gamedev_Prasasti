@@ -57,7 +57,7 @@ MonoBehaviour:
       exp: 0
       baseAtk: 15
       baseDef: 8
-      baseHP: 0
+      baseHP: 16
       baseSpd: 10
       baseAcc: 0.8
       baseEva: 0.2
