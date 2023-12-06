@@ -186,6 +186,7 @@ public class BattleManager : MonoBehaviour
                 // call skill effect here
             }
             ChoosedPlayer.targetEnemy.character.stat.HP -= damage;
+            Debug.Log(attacker.character.name + "give "+ damage +" damages to "+target.character.name);
         }
         else
         {

@@ -1,4 +1,4 @@
-// using System.Diagnostics;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,12 +10,15 @@ public class PlayerInput : MonoBehaviour
     private static Battle battle;
 
     public static int choosedArea;
+    System.Random random;
 
     private void Start()
     {
         GameObject eventSystem = GameObject.Find("EventSystem");
         battleManager = eventSystem.GetComponent<BattleManager>();
         battle = eventSystem.GetComponent<Battle>();
+
+        random = new System.Random();
     }
 
     private void Update()
@@ -65,22 +68,60 @@ public class PlayerInput : MonoBehaviour
         ChoosePlayer.teamIndex += ChoosePlayer.teamIndex != 2 ? 1 : 0;
     }
 
-    private bool checkTargetExist(){
-        return true;
+    private bool checkTargetExist(int index)
+    {
+        if(index < ChoosedPlayer.choosedEnemy.Count){
+            if(ChoosedPlayer.choosedEnemy[index].character.stat.HP > 0){
+                return true;
+            }
+            else{
+                return false;
+            }
+        }
+        else{
+            return false;
+        }
     }
     private Character getTarget(Character source)
     {
-        Character target = new Character();
+        int index;
+        Debug.Log(source.character.target);
 
         switch (source.character.target)
         {
             case TargetAttack.Target.FrontLine:
-                return target;
+                index = random.Next(0, 1);
                 break;
             case TargetAttack.Target.BackLine:
-                return target;
+                index = 2;
                 break;
             case TargetAttack.Target.All:
+                index = random.Next(0, 2);
+                break;
+            default:
+                index = 0;
+                break;
+        }
+
+        return checkTargetExist(index) ? ChoosedPlayer.choosedEnemy[index] : checkTargetExist(index != 0 ? 0 : random.Next(1, 2)) ? ChoosedPlayer.choosedEnemy[index != 0 ? 0 : random.Next(1, 2)]: getTarget(source);
+    }
+
+    private Character getSkillTarget(Character source)
+    {
+        Character target = new Character();
+
+        switch (source.character.skill.skillTarget)
+        {
+            case TargetSkill.targetSkill.FrontLine:
+                return target;
+                break;
+            case TargetSkill.targetSkill.BackLine:
+                return target;
+                break;
+            case TargetSkill.targetSkill.Single:
+                return target;
+                break;
+            case TargetSkill.targetSkill.All:
                 return target;
                 break;
             default:
@@ -90,13 +131,13 @@ public class PlayerInput : MonoBehaviour
     }
     public void clickAttack()
     {
-        Debug.Log("clicked basic attack");
         ChoosedPlayer.targetEnemy = getTarget(ChoosedPlayer.activeChar);
         battleManager.PerformAction(BattleAction.ActionType.BasicAttack, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy);
     }
 
     public void clickSkill()
     {
+        ChoosedPlayer.targetEnemy = getSkillTarget(ChoosedPlayer.activeChar);
         battleManager.PerformAction(BattleAction.ActionType.Skill, ChoosedPlayer.activeChar, ChoosedPlayer.targetEnemy);
     }
 }
