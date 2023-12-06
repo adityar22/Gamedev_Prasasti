@@ -10,15 +10,20 @@ public class ChoosedPlayer
     public static List<Character> choosedChar = new List<Character>();
     public static List<Character> choosedEnemy = new List<Character>();
 
-    public static Character activeChar;
-    public static Character ActiveChar{
-        get{return activeChar;}
-        set{
+    public static int activeChar;
+    public static int ActiveChar
+    {
+        get { return activeChar; }
+        set
+        {
             activeChar = value;
             Battle.setTurnText(activeChar);
         }
     }
-    public static Character targetEnemy;
+    public static int targetEnemy;
+
+    public static int totalPlayer;
+    public static int totalEnemy;
 }
 
 public class Battle : MonoBehaviour
@@ -26,9 +31,19 @@ public class Battle : MonoBehaviour
     public static int statePhase;
     [SerializeField] private GameObject battlePhase;
     [SerializeField] private GameObject choosePhase;
+    [SerializeField] private GameObject resultPhase;
 
     [SerializeField] public GameObject[] player = new GameObject[] { };
     [SerializeField] public GameObject[] enemy = new GameObject[] { };
+
+    [SerializeField] public GameObject[] playerInfo = new GameObject[] { };
+    [SerializeField] public GameObject[] enemyInfo = new GameObject[] { };
+
+    [SerializeField] private GameObject[] playerHP = new GameObject[] { };
+    [SerializeField] private GameObject[] enemyHP = new GameObject[] { };
+
+    [SerializeField] private GameObject[] playerEnergy = new GameObject[] { };
+    [SerializeField] private GameObject[] enemyEnergy = new GameObject[] { };
 
     [SerializeField] public GameObject _charData;
     [SerializeField] public GameObject _playerData;
@@ -59,7 +74,8 @@ public class Battle : MonoBehaviour
         GameObject playerData = Instantiate(_playerData);
         PlayerCharacter playerCharacter = playerData.GetComponent<PlayerCharacter>();
 
-        for(int i = 0; i < teamCount; i++){
+        for (int i = 0; i < teamCount; i++)
+        {
             Character placeHolder = new Character();
             placeHolder.character = new CharModel();
             ChoosedPlayer.choosedChar.Add(placeHolder);
@@ -68,10 +84,14 @@ public class Battle : MonoBehaviour
         initChoose();
     }
 
-    void Update(){
-        if(choosed!=0){
+    void Update()
+    {
+        if (choosed != 0)
+        {
             btnStart.SetActive(true);
-        }else{
+        }
+        else
+        {
             btnStart.SetActive(false);
         }
 
@@ -80,6 +100,7 @@ public class Battle : MonoBehaviour
             Image imageComponent = this.enemy[i].GetComponent<Image>();
             Sprite yourSprite = ChoosedPlayer.choosedEnemy[i].character.attribut.idle;
 
+            this.enemyInfo[i].SetActive(true);
 
             if (imageComponent != null)
             {
@@ -97,10 +118,11 @@ public class Battle : MonoBehaviour
 
     public void initChoose()
     {
+        resultPhase.SetActive(false);
         battlePhase.SetActive(false);
         choosePhase.SetActive(true);
 
-        foreach(var character in PlayerCharacter.unlockedCharacters)
+        foreach (var character in PlayerCharacter.unlockedCharacters)
         {
             GameObject chooseInstantiated = Instantiate(chooseBox, choosePanel);
             ChooseItem instantiate = chooseInstantiated.GetComponent<ChooseItem>();
@@ -140,11 +162,72 @@ public class Battle : MonoBehaviour
         battleManager.StartBattle();
     }
 
-    public static void setTurnText(Character activeChar){
-        Battle.txtTurn.text = activeChar.character.name;
+    private void checkTotal(){
+        if(ChoosedPlayer.totalPlayer <= 0){
+            battlePhase.SetActive(false);
+            resultPhase.SetActive(true);
+        }
+        else if(ChoosedPlayer.totalEnemy <= 0){
+            battlePhase.SetActive(false);
+            resultPhase.SetActive(true);
+        }
     }
 
-    public static void setCommentText(string comment){
+    public void updateHPBar(int index, int indexPosition, Teams.team team)
+    {
+        if (team == Teams.team.Player)
+        {
+            Vector3 currentScale = this.playerHP[indexPosition].transform.localScale;
+            float currentHP = (float)(BattleManager.heroInBattle[index].HP / BattleManager.heroInBattle[index].character.stat.HP);
+
+            this.playerHP[indexPosition].transform.localScale = new Vector3(currentHP, currentScale.y, currentScale.z);
+
+            if(currentHP <= 0){
+                playerInfo[indexPosition].SetActive(false);
+                ChoosedPlayer.totalPlayer -= 1;
+                checkTotal();
+            }
+        }
+        else
+        {
+            Vector3 currentScale = this.enemyHP[indexPosition].transform.localScale;
+            float currentHP = (float)(BattleManager.heroInBattle[index].HP / BattleManager.heroInBattle[index].character.stat.HP);
+
+            this.enemyHP[indexPosition].transform.localScale = new Vector3(currentHP, currentScale.y, currentScale.z);
+
+            if(currentHP <= 0){
+                enemyInfo[indexPosition].SetActive(false);
+                ChoosedPlayer.totalEnemy -= 1;
+                checkTotal();
+            }
+        }
+    }
+
+    public void updateEnergyBar(int index, int indexPosition, Teams.team team)
+    {
+        if (team == Teams.team.Player)
+        {
+            Vector3 currentScale = this.playerEnergy[indexPosition].transform.localScale;
+            float currentEnergy = (float)(BattleManager.heroInBattle[index].Energy / BattleManager.heroInBattle[index].character.stat.Energy);
+
+            this.playerEnergy[indexPosition].transform.localScale = new Vector3(currentEnergy, currentScale.y, currentScale.z);
+        }
+        else
+        {
+            Vector3 currentScale = this.enemyEnergy[indexPosition].transform.localScale;
+            float currentEnergy = (float)(BattleManager.heroInBattle[index].Energy / BattleManager.heroInBattle[index].character.stat.Energy);
+
+            this.enemyEnergy[indexPosition].transform.localScale = new Vector3(currentEnergy, currentScale.y, currentScale.z);
+        }
+    }
+
+    public static void setTurnText(int activeChar)
+    {
+        Battle.txtTurn.text = BattleManager.heroInBattle[activeChar].character.name;
+    }
+
+    public static void setCommentText(string comment)
+    {
         Battle.txtComment.text = comment;
     }
 }

@@ -32,6 +32,8 @@ public class ChoosePlayer : MonoBehaviour
                 Image imageComponent = battle.player[teamIndex].GetComponent<Image>();
                 imageComponent.sprite = placeHolderChar;
 
+                battle.playerInfo[teamIndex].SetActive(true);
+
                 Battle.choosed += -1;
             }
         }
