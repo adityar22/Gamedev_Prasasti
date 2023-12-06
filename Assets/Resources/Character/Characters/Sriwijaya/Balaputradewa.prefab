@@ -44,37 +44,40 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1366e54edd5277f4f82647d55b5ef135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  name: Balaputradewa
-  kingdom: 1
-  type: 1
-  element: 1
-  tier: 2
-  stat:
-    level: 1
-    criticalStage: 0
-    exp: 14
-    baseAtk: 18
-    baseDef: 10
-    baseHP: 24
-    baseSpd: 13
-    baseAcc: 1
-    baseEva: 0.3
-    baseEnergy: 8
-  skill:
-    name: 
-    power: 0
-    consumeEnergy: 0
-    skillTarget: 0
-    skillEffectToStatus: 0
-    effectStatusRate: 0
-    skillEffectToStat: 0
-    effectStatRate: 0
-    statChange: 0
-    stageChange: 0
-    ratioChange: 0
-    description: 
-  attribut:
-    idle: {fileID: 0}
-    attackPose: {fileID: 0}
-    skillPose: {fileID: 0}
-    dialog: {fileID: 0}
+  character:
+    name: Balapuntradewa
+    kingdom: 1
+    type: 1
+    element: 1
+    tier: 2
+    target: 2
+    stat:
+      level: 1
+      criticalStage: 1
+      exp: 0
+      baseAtk: 15
+      baseDef: 8
+      baseHP: 16
+      baseSpd: 21
+      baseAcc: 1
+      baseEva: 0.2
+      baseEnergy: 8
+    skill:
+      name: Sarasvati's Judgement
+      power: 90
+      consumeEnergy: 5
+      skillTarget: 3
+      skillEffectToStatus: 0
+      effectStatusRate: 0
+      skillEffectToStat: 1
+      effectStatRate: 0.4
+      statChange: 0
+      stageChange: 0
+      ratioChange: 0
+      description: 
+    attribut:
+      profile: {fileID: 0}
+      idle: {fileID: 0}
+      attackPose: {fileID: 0}
+      skillPose: {fileID: 0}
+      dialog: {fileID: 0}

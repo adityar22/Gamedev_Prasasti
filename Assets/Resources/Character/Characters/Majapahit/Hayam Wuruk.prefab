@@ -66,7 +66,7 @@ MonoBehaviour:
       name: Kelud Parvata Roar
       power: 90
       consumeEnergy: 3
-      skillTarget: 0
+      skillTarget: 3
       skillEffectToStatus: 3
       effectStatusRate: 0.5
       skillEffectToStat: 2

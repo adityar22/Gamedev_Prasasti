@@ -66,7 +66,7 @@ MonoBehaviour:
       name: Palapa Terraquake
       power: 100
       consumeEnergy: 4
-      skillTarget: 0
+      skillTarget: 3
       skillEffectToStatus: 1
       effectStatusRate: 0.3
       skillEffectToStat: 0
