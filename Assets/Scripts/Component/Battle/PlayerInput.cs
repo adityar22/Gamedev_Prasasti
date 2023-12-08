@@ -23,8 +23,7 @@ public class PlayerInput : MonoBehaviour
 
     private void Update()
     {
-        // Handle player input for actions (basic attack, skill, item)
-        // For simplicity, you can use Input.GetKey or Input.GetButtonDown
+
     }
 
     public static void clickTeam(int id, int teamIndex)
@@ -35,12 +34,14 @@ public class PlayerInput : MonoBehaviour
         if (teamIndex < ChoosedPlayer.choosedChar.Count)
         {
             ChoosedPlayer.choosedChar[teamIndex].character = PlayerCharacter.unlockedCharacters[id];
+            ChoosedPlayer.choosedChar[teamIndex].playerId = id;
 
         }
         else
         {
-            Character input = new Character();
+            Fighter input = new Fighter();
             input.character = PlayerCharacter.unlockedCharacters[id];
+            input.playerId = id;
             ChoosedPlayer.choosedChar.Add(input);
         }
 
@@ -70,67 +71,76 @@ public class PlayerInput : MonoBehaviour
     private bool checkTargetExist(int index, Teams.team team)
     {
         int targetIndex = getTargetIndex(index, team);
-        if(index < ChoosedPlayer.choosedEnemy.Count){
-            if(BattleManager.heroInBattle[targetIndex].HP > 0){
+        if (index < ChoosedPlayer.choosedEnemy.Count)
+        {
+            if (BattleManager.heroInBattle[targetIndex].HP > 0)
+            {
                 return true;
             }
-            else{
+            else
+            {
                 return false;
             }
         }
-        else{
+        else
+        {
             return false;
         }
     }
     private int getAttackTarget(Fighter source)
     {
-        int index;
-        Debug.Log(source.character.target);
+        int[] order;
 
         switch (source.character.target)
         {
             case TargetAttack.Target.FrontLine:
-                index = random.Next(0, 1);
+                order = random.Next(2) == 0 ? new[] { 0, 1, 2 } : new[] { 1, 0, 2 };
                 break;
             case TargetAttack.Target.BackLine:
-                index = 2;
+                order = random.Next(2) == 0 ? new[] { 1, 2, 0 } : new[] { 2, 1, 0 };
                 break;
             case TargetAttack.Target.All:
-                index = random.Next(0, 2);
+                order = new[] { 0, 1, 2 };
+                for (int i = order.Length - 1; i > 0; i--)
+                {
+                    int j = random.Next(0, i + 1);
+                    int temp = order[i];
+                    order[i] = order[j];
+                    order[j] = temp;
+                }
                 break;
             default:
-                index = 0;
-                break;
+                throw new ArgumentException("Invalid value for parameter x");
         }
 
-        return checkTargetExist(index, source.charTeam) ? index : checkTargetExist(index != 0 ? 0 : random.Next(1, 2), source.charTeam) ? index != 0 ? 0 : random.Next(1, 2): getAttackTarget(source);
+        return checkTargetExist(order[0], source.charTeam) ? order[0] : checkTargetExist(order[1], source.charTeam) ? order[1] : checkTargetExist(order[2], source.charTeam) ? order[2] : getAttackTarget(source);
     }
 
-    private int getSkillTarget(Fighter source)
+    private void getSkillTarget(Fighter source)
     {
-        int index = 0;
+        ChoosedPlayer.targetChar = new int[source.character.skill.skillTarget == TargetSkill.targetSkill.All ? source.character.target == TargetAttack.Target.All ? 3 : 2 : 1];
 
-        switch (source.character.skill.skillTarget)
+        for (int i = 0; i < ChoosedPlayer.targetChar.Length; i++)
         {
-            case TargetSkill.targetSkill.FrontLine:
-                return index;
-                break;
-            case TargetSkill.targetSkill.BackLine:
-                return index;
-                break;
-            case TargetSkill.targetSkill.Single:
-                return index;
-                break;
-            case TargetSkill.targetSkill.All:
-                return index;
-                break;
-            default:
-                return index;
-                break;
+            switch (source.character.target)
+            {
+                case TargetAttack.Target.FrontLine:
+                    ChoosedPlayer.targetChar[i] = getTargetIndex(i, source.charTeam);
+                    break;
+                case TargetAttack.Target.BackLine:
+                    ChoosedPlayer.targetChar[i] = getTargetIndex(i == 0 ? i : 2, source.charTeam);
+                    break;
+                case TargetAttack.Target.All:
+                    ChoosedPlayer.targetChar[i] = getTargetIndex(i, source.charTeam);
+                    break;
+                default:
+                    break;
+            }
         }
     }
-    private int getTargetIndex(int index, Teams.team team){
-        int indexTarget = BattleManager.heroInBattle.FindIndex(a => a.charTeam != team && a.indexPosition == index );
+    private int getTargetIndex(int index, Teams.team team)
+    {
+        int indexTarget = BattleManager.heroInBattle.FindIndex(a => a.charTeam != team && a.indexPosition == index);
         return indexTarget;
     }
 
@@ -138,13 +148,18 @@ public class PlayerInput : MonoBehaviour
     {
         int index = getAttackTarget(BattleManager.heroInBattle[ChoosedPlayer.activeChar]);
         ChoosedPlayer.targetEnemy = getTargetIndex(index, BattleManager.heroInBattle[ChoosedPlayer.activeChar].charTeam);
+        Debug.Log("index attacker - target :" + ChoosedPlayer.activeChar + " " + ChoosedPlayer.targetEnemy);
         battleManager.PerformAction(BattleAction.ActionType.BasicAttack, BattleManager.heroInBattle[ChoosedPlayer.activeChar], BattleManager.heroInBattle[ChoosedPlayer.targetEnemy]);
     }
 
     public void clickSkill()
     {
-        int index = getSkillTarget(BattleManager.heroInBattle[ChoosedPlayer.activeChar]);
-        ChoosedPlayer.targetEnemy = getTargetIndex(index, BattleManager.heroInBattle[ChoosedPlayer.activeChar].charTeam);
+        getSkillTarget(BattleManager.heroInBattle[ChoosedPlayer.activeChar]);
         battleManager.PerformAction(BattleAction.ActionType.Skill, BattleManager.heroInBattle[ChoosedPlayer.activeChar], BattleManager.heroInBattle[ChoosedPlayer.targetEnemy]);
+    }
+
+    public void clickItem()
+    {
+
     }
 }

@@ -66,7 +66,7 @@ MonoBehaviour:
       name: "Inferno ch\u0101y\u0101prah\u0101ra\u1E25"
       power: 90
       consumeEnergy: 0
-      skillTarget: 2
+      skillTarget: 0
       skillEffectToStatus: 2
       effectStatusRate: 0.4
       skillEffectToStat: 2

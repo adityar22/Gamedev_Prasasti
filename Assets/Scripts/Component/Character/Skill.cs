@@ -2,16 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
 public class TargetSkill
 {
-    public enum targetSkill { FrontLine, BackLine, Single, All }
+    public enum targetSkill { Single, All }
 }
 
+[System.Serializable]
 public class EffectToStat
 {
-    public enum effectToStat { Buff, Debuff, None}
+    public enum effectToStat { Buff, Debuff, Heal, None}
 }
 
+[System.Serializable]
 public class ChangeStat
 {
     public enum changeStat { Atk, Def, Spd, Acc, Eva}
@@ -22,8 +25,6 @@ public class Skill
 {
     public string name;
     public double power;
-
-    public double consumeEnergy;
 
     public TargetSkill.targetSkill skillTarget;
 
