@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 
 public class RankTypes
 {
@@ -81,11 +82,15 @@ public class Stat
         }
     }
     [SerializeField] private double baseExp;
+    public double BaseExp
+    {
+        get { return baseExp; }
+    }
     public double targetExp
     {
         get
         {
-            return baseExp + (baseExp * (0.2 * level));
+            return (6.0 / 5) * Math.Pow(level+1, 3) - 15 * Math.Pow(level+1, 2) + (100 * (level+1)) - 140;
         }
     }
     public double totalExp
@@ -111,10 +116,11 @@ public class Stat
         set
         {
             selfExp += value;
-            if (selfExp > targetExp)
+            while (selfExp > targetExp)
             {
                 level += 1;
-                selfExp = 0;
+                double expRemain = selfExp - targetExp;
+                selfExp = expRemain;
             }
         }
     }
