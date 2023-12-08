@@ -34,12 +34,14 @@ public class PlayerInput : MonoBehaviour
         if (teamIndex < ChoosedPlayer.choosedChar.Count)
         {
             ChoosedPlayer.choosedChar[teamIndex].character = PlayerCharacter.unlockedCharacters[id];
+            ChoosedPlayer.choosedChar[teamIndex].playerId = id;
 
         }
         else
         {
-            Character input = new Character();
+            Fighter input = new Fighter();
             input.character = PlayerCharacter.unlockedCharacters[id];
+            input.playerId = id;
             ChoosedPlayer.choosedChar.Add(input);
         }
 
@@ -87,32 +89,33 @@ public class PlayerInput : MonoBehaviour
     }
     private int getAttackTarget(Fighter source)
     {
-        int index;
-        Debug.Log(source.character.target);
+        int[] order;
 
         switch (source.character.target)
         {
             case TargetAttack.Target.FrontLine:
-                index = random.Next(0, 2);
+                order = random.Next(2) == 0 ? new[] { 0, 1, 2 } : new[] { 1, 0, 2 };
                 break;
             case TargetAttack.Target.BackLine:
-                index = random.Next(1, 3);
+                order = random.Next(2) == 0 ? new[] { 1, 2, 0 } : new[] { 2, 1, 0 };
                 break;
             case TargetAttack.Target.All:
-                index = random.Next(0, 3);
+                order = new[] { 0, 1, 2 };
+                for (int i = order.Length - 1; i > 0; i--)
+                {
+                    int j = random.Next(0, i + 1);
+                    int temp = order[i];
+                    order[i] = order[j];
+                    order[j] = temp;
+                }
                 break;
             default:
-                index = 0;
-                break;
+                throw new ArgumentException("Invalid value for parameter x");
         }
 
-        return checkTargetExist(index, source.charTeam) ? index : checkTargetExist(index != 0 ? 0 : random.Next(1, 3), source.charTeam) ? index != 0 ? 0 : random.Next(1, 3) : getAttackTarget(source);
+        return checkTargetExist(order[0], source.charTeam) ? order[0] : checkTargetExist(order[1], source.charTeam) ? order[1] : checkTargetExist(order[2], source.charTeam) ? order[2] : getAttackTarget(source);
     }
 
-    private void addTargetEnemy()
-    {
-
-    }
     private void getSkillTarget(Fighter source)
     {
         ChoosedPlayer.targetChar = new int[source.character.skill.skillTarget == TargetSkill.targetSkill.All ? source.character.target == TargetAttack.Target.All ? 3 : 2 : 1];
@@ -145,7 +148,7 @@ public class PlayerInput : MonoBehaviour
     {
         int index = getAttackTarget(BattleManager.heroInBattle[ChoosedPlayer.activeChar]);
         ChoosedPlayer.targetEnemy = getTargetIndex(index, BattleManager.heroInBattle[ChoosedPlayer.activeChar].charTeam);
-        Debug.Log(ChoosedPlayer.activeChar+" "+ChoosedPlayer.targetEnemy);
+        Debug.Log("index attacker - target :" + ChoosedPlayer.activeChar + " " + ChoosedPlayer.targetEnemy);
         battleManager.PerformAction(BattleAction.ActionType.BasicAttack, BattleManager.heroInBattle[ChoosedPlayer.activeChar], BattleManager.heroInBattle[ChoosedPlayer.targetEnemy]);
     }
 

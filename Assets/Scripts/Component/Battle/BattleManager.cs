@@ -32,7 +32,6 @@ public class BattleAction
 /// Kode berikut digunakan untuk manage turn order dan aksi yang dipilih oleh player
 public class BattleManager : MonoBehaviour
 {
-    private List<Character> turnOrder;
     public static List<Fighter> heroInBattle;
     private bool hasAction;
     private static Battle battle;
@@ -58,7 +57,6 @@ public class BattleManager : MonoBehaviour
         // Combine both teams to determine turn order
         int indexHero = 0;
         int indexPosition = 0;
-        turnOrder = new List<Character>();
         // Initialize playerTeam and enemyTeam with characters
         foreach (var chars in ChoosedPlayer.choosedChar)
         {
@@ -71,7 +69,6 @@ public class BattleManager : MonoBehaviour
                 BattleManager.heroInBattle[indexHero].character = chars.character;
                 BattleManager.heroInBattle[indexHero].HP = chars.character.stat.HP;
                 BattleManager.heroInBattle[indexHero].Energy = 0.0;
-                turnOrder.Add(chars);
                 indexHero += 1;
                 indexPosition += 1;
                 ChoosedPlayer.totalPlayer += 1;
@@ -81,7 +78,7 @@ public class BattleManager : MonoBehaviour
         indexPosition = 0;
         foreach (var chars in ChoosedPlayer.choosedEnemy)
         {
-            if (chars)
+            if (chars.character != null)
             {
                 Fighter index = new Fighter();
                 BattleManager.heroInBattle.Add(index);
@@ -90,7 +87,6 @@ public class BattleManager : MonoBehaviour
                 BattleManager.heroInBattle[indexHero].character = chars.character;
                 BattleManager.heroInBattle[indexHero].HP = chars.character.stat.HP;
                 BattleManager.heroInBattle[indexHero].Energy = 0.0;
-                turnOrder.Add(chars);
                 indexHero += 1;
                 indexPosition += 1;
                 ChoosedPlayer.totalEnemy += 1;
@@ -98,7 +94,6 @@ public class BattleManager : MonoBehaviour
         }
 
         // Sort turnOrder based on character speed (higher speed goes first)
-        turnOrder.Sort((a, b) => b.character.stat.Spd.CompareTo(a.character.stat.Spd));
         heroInBattle.Sort((a, b) => b.character.stat.Spd.CompareTo(a.character.stat.Spd));
 
         // Start the first turn
@@ -295,20 +290,24 @@ public class BattleManager : MonoBehaviour
     {
         foreach (var index in ChoosedPlayer.targetChar)
         {
-            double interval = random.NextDouble() * (1.0 - 0.85) + 0.85;
+            if (heroInBattle[index].HP > 0)
+            {
+                double interval = random.NextDouble() * (1.0 - 0.85) + 0.85;
 
-            double basicDamage = (((2 * attacker.character.stat.level) / 5) + 2) * (attacker.character.skill.power * (attacker.character.stat.Atk / heroInBattle[index].character.stat.Def));
-            double typeEffective = ChartWeakness.ElementChart(attacker.character.element, heroInBattle[index].character.element);
-            double damage = ((basicDamage / 50) + 2) * typeEffective * isCritical(attacker) * intervenceState(attacker) * interval;
+                double basicDamage = (((2 * attacker.character.stat.level) / 5) + 2) * (attacker.character.skill.power * (attacker.character.stat.Atk / heroInBattle[index].character.stat.Def));
+                double typeEffective = ChartWeakness.ElementChart(attacker.character.element, heroInBattle[index].character.element);
+                double damage = ((basicDamage / 50) + 2) * typeEffective * isCritical(attacker) * intervenceState(attacker) * interval;
 
-            heroInBattle[index].HP -= damage;
-            Debug.Log(attacker.character.name + " give " + damage + " damages to " + heroInBattle[index].character.name);
-            Debug.Log(heroInBattle[index].character.name + " HP  " + heroInBattle[index].HP + " / " + heroInBattle[index].character.stat.HP + " left");
+                heroInBattle[index].HP -= damage;
+                Debug.Log(attacker.character.name + " give " + damage + " damages to " + heroInBattle[index].character.name);
+                Debug.Log(heroInBattle[index].character.name + " HP  " + heroInBattle[index].HP + " / " + heroInBattle[index].character.stat.HP + " left");
 
-            battle.updateHPBar(heroInBattle.FindIndex(a => a == heroInBattle[index]), heroInBattle[index].indexPosition, heroInBattle[index].charTeam, damage);
+                battle.updateHPBar(heroInBattle.FindIndex(a => a == heroInBattle[index]), heroInBattle[index].indexPosition, heroInBattle[index].charTeam, damage);
 
-            SkillBuffOrDebuff(attacker, heroInBattle[index]);
-            SkillStatusIntervence(attacker, heroInBattle[index]);
+                SkillBuffOrDebuff(attacker, heroInBattle[index]);
+                SkillStatusIntervence(attacker, heroInBattle[index]);
+            }
+
         }
 
         heroInBattle[ChoosedPlayer.activeChar].Energy = 0;

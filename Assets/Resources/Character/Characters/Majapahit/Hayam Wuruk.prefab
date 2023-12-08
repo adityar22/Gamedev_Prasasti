@@ -65,7 +65,6 @@ MonoBehaviour:
     skill:
       name: Kelud Parvata Roar
       power: 90
-      consumeEnergy: 3
       skillTarget: 1
       skillEffectToStatus: 3
       effectStatusRate: 0.5
@@ -76,6 +75,15 @@ MonoBehaviour:
       ratioChange: 0
       description: Hayam Wuruk melepaskan raungan mematikan yang menghasilkan badai
         api di sekitarnya, menyebabkan luka bakar pada musuh-musuh di sekitarnya.
+    abilities:
+    - name: King's Aura
+      abilityType: 0
+      abilityEffect: 0
+      statEffect: 0
+      stageChange: 0
+      ratioChange: 1.2
+      ratioHeal: 0
+      description: 
     attribut:
       profile: {fileID: 21300000, guid: 21b5982c4f3f50248938acd2f673f952, type: 3}
       idle: {fileID: 21300000, guid: 267092b83ae24d544b7236a849555a20, type: 3}

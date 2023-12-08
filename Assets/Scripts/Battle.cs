@@ -9,8 +9,8 @@ using TMPro;
 /// CHOOSE PHASE CODE
 public class ChoosedPlayer
 {
-    public static List<Character> choosedChar = new List<Character>();
-    public static List<Character> choosedEnemy = new List<Character>();
+    public static List<Fighter> choosedChar = new List<Fighter>();
+    public static List<Fighter> choosedEnemy = new List<Fighter>();
 
     public static int activeChar;
     public static int ActiveChar
@@ -74,6 +74,7 @@ public class Battle : MonoBehaviour
     public static TextMeshProUGUI txtDetailComment;
 
     [SerializeField] private TextMeshProUGUI txtResultTitle;
+    [SerializeField] private GameObject resultPanel;
 
     void Start()
     {
@@ -88,7 +89,7 @@ public class Battle : MonoBehaviour
 
         for (int i = 0; i < teamCount; i++)
         {
-            Character placeHolder = new Character();
+            Fighter placeHolder = new Fighter();
             placeHolder.character = new CharModel();
             ChoosedPlayer.choosedChar.Add(placeHolder);
         }
@@ -184,12 +185,30 @@ public class Battle : MonoBehaviour
         battleManager.StartBattle();
     }
 
+    private void setExpReward()
+    {
+        double totalExpReward = 0;
+        foreach (var player in ChoosedPlayer.choosedChar)
+        {
+            if (player.character.name != null)
+            {
+                GameObject chooseInstantiated = Instantiate(chooseBox, resultPanel.transform);
+                ChooseItem instantiate = chooseInstantiated.GetComponent<ChooseItem>();
+                instantiate.indexChar = ChoosedPlayer.choosedChar.IndexOf(player);
+            }
+        }
+    }
     private void setResultTitle()
     {
         txtResultTitle.text = ChoosedPlayer.totalPlayer > ChoosedPlayer.totalEnemy ? "You Win!" : "You Lose!";
+        if (ChoosedPlayer.totalPlayer > ChoosedPlayer.totalEnemy)
+        {
+            setExpReward();
+        }
     }
     private void checkTotal()
     {
+        Debug.Log("total player - enemy :" + ChoosedPlayer.totalPlayer + " " + ChoosedPlayer.totalEnemy);
         if (ChoosedPlayer.totalPlayer <= 0)
         {
             battlePhase.SetActive(false);
@@ -279,7 +298,8 @@ public class Battle : MonoBehaviour
         }
     }
 
-    public void setBattlePose(int index, int indexPosition, Teams.team team){
+    public void setBattlePose(int index, int indexPosition, Teams.team team)
+    {
 
     }
 

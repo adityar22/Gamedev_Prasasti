@@ -22,9 +22,9 @@ public class EnemySpawn : MonoBehaviour
         }
     }
 
-    private Character enemyGenerator(int index)
+    private Fighter enemyGenerator(int index)
     {
-        Character charEnemy = new Character();
+        Fighter charEnemy = new Fighter();
 
         double typeRate = random.NextDouble();
         
@@ -37,7 +37,7 @@ public class EnemySpawn : MonoBehaviour
                 double enemyRate = random.NextDouble();
                 if (enemy.chanceRate > enemyRate)
                 {
-                    charEnemy = enemy.charData;
+                    charEnemy.character = enemy.charData.character;
                     Debug.Log(charEnemy.character.name);
                     return charEnemy;
                 }
@@ -52,7 +52,7 @@ public class EnemySpawn : MonoBehaviour
                 double enemyRate = random.NextDouble();
                 if (enemy.chanceRate > enemyRate)
                 {
-                    charEnemy = enemy.charData;
+                    charEnemy.character = enemy.charData.character;
                     Debug.Log(charEnemy.character.name);
                     return charEnemy;
                 }

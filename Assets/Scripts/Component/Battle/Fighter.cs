@@ -7,6 +7,7 @@ public class Teams{
 }
 public class Fighter
 {
+    public int playerId;
     public Teams.team charTeam;
     public int indexPosition;
     public CharModel character;

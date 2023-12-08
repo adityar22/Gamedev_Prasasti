@@ -26,7 +26,7 @@ public class ChoosePlayer : MonoBehaviour
             ChoosePlayer.teamIndex = indexPosition;
             if (ChoosedPlayer.choosedChar[teamIndex].character != null && ChoosedPlayer.choosedChar[teamIndex].character.name != null)
             {
-                Character removed = new Character();
+                Fighter removed = new Fighter();
                 ChoosedPlayer.choosedChar[teamIndex] = removed;
 
                 Image imageComponent = battle.player[teamIndex].GetComponent<Image>();
