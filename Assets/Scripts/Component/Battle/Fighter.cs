@@ -12,4 +12,5 @@ public class Fighter
     public CharModel character;
     public double HP;
     public double Energy;
+    public BattleStatus battleStatus;
 }

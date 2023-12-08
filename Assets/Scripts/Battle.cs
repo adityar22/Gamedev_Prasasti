@@ -1,3 +1,5 @@
+using System;
+using System.Threading;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -21,6 +23,7 @@ public class ChoosedPlayer
         }
     }
     public static int targetEnemy;
+    public static int[] targetChar;
 
     public static int totalPlayer;
     public static int totalEnemy;
@@ -49,6 +52,9 @@ public class Battle : MonoBehaviour
     [SerializeField] public GameObject _playerData;
 
     [SerializeField] private Sprite placeHolderChar;
+    [SerializeField] private Sprite placeHolderDefeated;
+
+    [SerializeField] public Button[] btnAction = new Button[] { };
 
     public List<ChooseItem> chooseItemList;
     public GameObject chooseBox;
@@ -60,8 +66,14 @@ public class Battle : MonoBehaviour
 
     BattleManager battleManager;
 
+    public GameObject labelDamage;
+
     public static TextMeshProUGUI txtTurn;
+    public static TextMeshProUGUI txtNextTurn;
     public static TextMeshProUGUI txtComment;
+    public static TextMeshProUGUI txtDetailComment;
+
+    [SerializeField] private TextMeshProUGUI txtResultTitle;
 
     void Start()
     {
@@ -95,23 +107,26 @@ public class Battle : MonoBehaviour
             btnStart.SetActive(false);
         }
 
-        for (int i = 0; i < ChoosedPlayer.choosedEnemy.Count; i++)
+        if (choosePhase.activeSelf)
         {
-            Image imageComponent = this.enemy[i].GetComponent<Image>();
-            Sprite yourSprite = ChoosedPlayer.choosedEnemy[i].character.attribut.idle;
-
-            this.enemyInfo[i].SetActive(true);
-
-            if (imageComponent != null)
+            for (int i = 0; i < ChoosedPlayer.choosedEnemy.Count; i++)
             {
-                // Set the sprite of the Image component
-                imageComponent.sprite = yourSprite ? yourSprite : placeHolderChar;
+                Image imageComponent = this.enemy[i].GetComponent<Image>();
+                Sprite yourSprite = ChoosedPlayer.choosedEnemy[i].character.attribut.idle;
 
-                // Calculate the aspect ratio of the sprite
-                float aspectRatio = yourSprite ? yourSprite.rect.width / yourSprite.rect.height : placeHolderChar.rect.width / placeHolderChar.rect.height;
+                this.enemyInfo[i].SetActive(true);
 
-                // Set the size of the Image component based on the sprite's aspect ratio
-                imageComponent.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, imageComponent.rectTransform.rect.width / aspectRatio);
+                if (imageComponent != null)
+                {
+                    // Set the sprite of the Image component
+                    imageComponent.sprite = yourSprite ? yourSprite : placeHolderChar;
+
+                    // Calculate the aspect ratio of the sprite
+                    float aspectRatio = yourSprite ? yourSprite.rect.width / yourSprite.rect.height : placeHolderChar.rect.width / placeHolderChar.rect.height;
+
+                    // Set the size of the Image component based on the sprite's aspect ratio
+                    imageComponent.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, imageComponent.rectTransform.rect.width / aspectRatio);
+                }
             }
         }
     }
@@ -155,25 +170,41 @@ public class Battle : MonoBehaviour
 
         GameObject txtTurnObj = GameObject.Find("txtTurn");
         Battle.txtTurn = txtTurnObj.GetComponent<TextMeshProUGUI>();
+
+        GameObject txtNextTurnObj = GameObject.Find("txtNextTurn");
+        Battle.txtNextTurn = txtNextTurnObj.GetComponent<TextMeshProUGUI>();
+
         GameObject txtCommentObj = GameObject.Find("txtComment");
         Battle.txtComment = txtCommentObj.GetComponent<TextMeshProUGUI>();
+
+        GameObject txtDetailCommentObj = GameObject.Find("txtDetailComment");
+        Battle.txtDetailComment = txtDetailCommentObj.GetComponent<TextMeshProUGUI>();
 
         Battle.statePhase = 1;
         battleManager.StartBattle();
     }
 
-    private void checkTotal(){
-        if(ChoosedPlayer.totalPlayer <= 0){
+    private void setResultTitle()
+    {
+        txtResultTitle.text = ChoosedPlayer.totalPlayer > ChoosedPlayer.totalEnemy ? "You Win!" : "You Lose!";
+    }
+    private void checkTotal()
+    {
+        if (ChoosedPlayer.totalPlayer <= 0)
+        {
             battlePhase.SetActive(false);
             resultPhase.SetActive(true);
+            setResultTitle();
         }
-        else if(ChoosedPlayer.totalEnemy <= 0){
+        else if (ChoosedPlayer.totalEnemy <= 0)
+        {
             battlePhase.SetActive(false);
             resultPhase.SetActive(true);
+            setResultTitle();
         }
     }
 
-    public void updateHPBar(int index, int indexPosition, Teams.team team)
+    public void updateHPBar(int index, int indexPosition, Teams.team team, double damage)
     {
         if (team == Teams.team.Player)
         {
@@ -182,8 +213,21 @@ public class Battle : MonoBehaviour
 
             this.playerHP[indexPosition].transform.localScale = new Vector3(currentHP, currentScale.y, currentScale.z);
 
-            if(currentHP <= 0){
+            GameObject labelDamageInstantiate = Instantiate(labelDamage, player[indexPosition].transform);
+            LabelDamage damageTextObj = labelDamageInstantiate.GetComponent<LabelDamage>();
+            damageTextObj.txtDamage.text = "-" + damage.ToString("0.00") + " HP";
+
+            if (currentHP <= 0.0)
+            {
                 playerInfo[indexPosition].SetActive(false);
+
+                Image imageComponent = this.player[indexPosition].GetComponent<Image>();
+                Sprite yourSprite = BattleManager.heroInBattle[index].character.attribut.deathPose;
+                imageComponent.sprite = yourSprite ? yourSprite : placeHolderDefeated;
+
+                float aspectRatio = yourSprite ? yourSprite.rect.width / yourSprite.rect.height : placeHolderDefeated.rect.width / placeHolderDefeated.rect.height;
+                imageComponent.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, imageComponent.rectTransform.rect.width / aspectRatio);
+
                 ChoosedPlayer.totalPlayer -= 1;
                 checkTotal();
             }
@@ -195,8 +239,22 @@ public class Battle : MonoBehaviour
 
             this.enemyHP[indexPosition].transform.localScale = new Vector3(currentHP, currentScale.y, currentScale.z);
 
-            if(currentHP <= 0){
+            GameObject labelDamageInstantiate = Instantiate(labelDamage, enemy[indexPosition].transform);
+            labelDamageInstantiate.transform.Rotate(0, 180, 0);
+            LabelDamage damageTextObj = labelDamageInstantiate.GetComponent<LabelDamage>();
+            damageTextObj.txtDamage.text = "-" + damage.ToString("0.00") + " HP";
+
+            if (currentHP <= 0.0)
+            {
                 enemyInfo[indexPosition].SetActive(false);
+
+                Image imageComponent = this.enemy[indexPosition].GetComponent<Image>();
+                Sprite yourSprite = BattleManager.heroInBattle[index].character.attribut.deathPose;
+                imageComponent.sprite = yourSprite ? yourSprite : placeHolderDefeated;
+
+                float aspectRatio = yourSprite ? yourSprite.rect.width / yourSprite.rect.height : placeHolderDefeated.rect.width / placeHolderDefeated.rect.height;
+                imageComponent.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, imageComponent.rectTransform.rect.width / aspectRatio);
+
                 ChoosedPlayer.totalEnemy -= 1;
                 checkTotal();
             }
@@ -221,13 +279,23 @@ public class Battle : MonoBehaviour
         }
     }
 
+    public void setBattlePose(int index, int indexPosition, Teams.team team){
+
+    }
+
     public static void setTurnText(int activeChar)
     {
-        Battle.txtTurn.text = BattleManager.heroInBattle[activeChar].character.name;
+        Battle.txtTurn.text = BattleManager.heroInBattle[activeChar].charTeam == Teams.team.Player ? BattleManager.heroInBattle[activeChar].character.name : "Foe's " + BattleManager.heroInBattle[activeChar].character.name;
+        Battle.txtNextTurn.text = BattleManager.heroInBattle[activeChar == BattleManager.heroInBattle.Count - 1 ? 0 : activeChar + 1].charTeam == Teams.team.Player ? BattleManager.heroInBattle[activeChar == BattleManager.heroInBattle.Count - 1 ? 0 : activeChar + 1].character.name : "Foe's " + BattleManager.heroInBattle[activeChar == BattleManager.heroInBattle.Count - 1 ? 0 : activeChar + 1].character.name;
     }
 
     public static void setCommentText(string comment)
     {
         Battle.txtComment.text = comment;
+    }
+
+    public static void setDetailCommentText(string comment)
+    {
+        Battle.txtDetailComment.text = comment;
     }
 }

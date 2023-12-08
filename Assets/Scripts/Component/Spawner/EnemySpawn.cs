@@ -13,7 +13,7 @@ public class EnemySpawn : MonoBehaviour
         GameObject eventSystem = GameObject.Find("EventSystem");
         listEnemy = GetComponent<EnemyList>();
         random = new System.Random();
-        int countEnemy = random.Next(2, 3);
+        int countEnemy = random.Next(1, 4);
 
         Debug.Log(countEnemy);
         for (int i = 0; i < countEnemy; i++)

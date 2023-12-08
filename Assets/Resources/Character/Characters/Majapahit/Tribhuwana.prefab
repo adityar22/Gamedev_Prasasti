@@ -66,7 +66,7 @@ MonoBehaviour:
       name: "Zephyr b\u0101\u1E47a baireja"
       power: 70
       consumeEnergy: 3
-      skillTarget: 3
+      skillTarget: 1
       skillEffectToStatus: 0
       effectStatusRate: 0
       skillEffectToStat: 0
@@ -82,4 +82,7 @@ MonoBehaviour:
       idle: {fileID: 0}
       attackPose: {fileID: 0}
       skillPose: {fileID: 0}
+      skillEffect: {fileID: 0}
+      effectType: 0
+      deathPose: {fileID: 0}
       dialog: {fileID: 0}

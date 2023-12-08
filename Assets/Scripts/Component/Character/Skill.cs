@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class TargetSkill
 {
-    public enum targetSkill { FrontLine, BackLine, Single, All }
+    public enum targetSkill { Single, All }
 }
 
 public class EffectToStat
 {
-    public enum effectToStat { Buff, Debuff, None}
+    public enum effectToStat { Buff, Debuff, Heal, None}
 }
 
 public class ChangeStat
@@ -22,8 +22,6 @@ public class Skill
 {
     public string name;
     public double power;
-
-    public double consumeEnergy;
 
     public TargetSkill.targetSkill skillTarget;
 

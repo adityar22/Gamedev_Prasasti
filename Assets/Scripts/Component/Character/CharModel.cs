@@ -40,5 +40,6 @@ public class CharModel
     // base stat here
     [SerializeField] public Stat stat;
     [SerializeField] public Skill skill;
+    [SerializeField] public Ability[] abilities = new Ability[]{};
     [SerializeField] public AttributView attribut;
 }
