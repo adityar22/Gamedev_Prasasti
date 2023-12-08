@@ -53,11 +53,11 @@ MonoBehaviour:
     target: 0
     stat:
       level: 1
+      baseExp: 160
       criticalStage: 0
-      exp: 0
+      baseHP: 27
       baseAtk: 15
       baseDef: 13
-      baseHP: 27
       baseSpd: 13
       baseAcc: 1
       baseEva: 0.2
