@@ -1,10 +1,10 @@
+using System.Threading;
 using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 /// BATTLE PHASE CODE
-/// Kode berikut digunakan untuk mengidentifikasi action yang dapat dilakukan player
 public class BattleAction
 {
     public enum ActionType
@@ -32,10 +32,12 @@ public class BattleAction
 /// Kode berikut digunakan untuk manage turn order dan aksi yang dipilih oleh player
 public class BattleManager : MonoBehaviour
 {
-    private List<Character> turnOrder;
     public static List<Fighter> heroInBattle;
     private bool hasAction;
     private static Battle battle;
+    private static PlayerInput pInput;
+
+    public float chanceEnemyUseSkill;
 
     System.Random random;
 
@@ -43,6 +45,7 @@ public class BattleManager : MonoBehaviour
     {
         GameObject eventSystem = GameObject.Find("EventSystem");
         battle = eventSystem.GetComponent<Battle>();
+        pInput = eventSystem.GetComponent<PlayerInput>();
 
         random = new System.Random();
         InitializeBattle();
@@ -54,7 +57,6 @@ public class BattleManager : MonoBehaviour
         // Combine both teams to determine turn order
         int indexHero = 0;
         int indexPosition = 0;
-        turnOrder = new List<Character>();
         // Initialize playerTeam and enemyTeam with characters
         foreach (var chars in ChoosedPlayer.choosedChar)
         {
@@ -66,8 +68,7 @@ public class BattleManager : MonoBehaviour
                 BattleManager.heroInBattle[indexHero].indexPosition = indexPosition;
                 BattleManager.heroInBattle[indexHero].character = chars.character;
                 BattleManager.heroInBattle[indexHero].HP = chars.character.stat.HP;
-                BattleManager.heroInBattle[indexHero].Energy = chars.character.stat.Energy;
-                turnOrder.Add(chars);
+                BattleManager.heroInBattle[indexHero].Energy = 0.0;
                 indexHero += 1;
                 indexPosition += 1;
                 ChoosedPlayer.totalPlayer += 1;
@@ -77,7 +78,7 @@ public class BattleManager : MonoBehaviour
         indexPosition = 0;
         foreach (var chars in ChoosedPlayer.choosedEnemy)
         {
-            if (chars)
+            if (chars.character != null)
             {
                 Fighter index = new Fighter();
                 BattleManager.heroInBattle.Add(index);
@@ -85,8 +86,7 @@ public class BattleManager : MonoBehaviour
                 BattleManager.heroInBattle[indexHero].indexPosition = indexPosition;
                 BattleManager.heroInBattle[indexHero].character = chars.character;
                 BattleManager.heroInBattle[indexHero].HP = chars.character.stat.HP;
-                BattleManager.heroInBattle[indexHero].Energy = chars.character.stat.Energy;
-                turnOrder.Add(chars);
+                BattleManager.heroInBattle[indexHero].Energy = 0.0;
                 indexHero += 1;
                 indexPosition += 1;
                 ChoosedPlayer.totalEnemy += 1;
@@ -94,8 +94,7 @@ public class BattleManager : MonoBehaviour
         }
 
         // Sort turnOrder based on character speed (higher speed goes first)
-        turnOrder.Sort((a, b) => b.character.stat.Spd.CompareTo(a.character.stat.Spd));
-        heroInBattle.Sort((a,b)=> b.character.stat.Spd.CompareTo(a.character.stat.Spd));
+        heroInBattle.Sort((a, b) => b.character.stat.Spd.CompareTo(a.character.stat.Spd));
 
         // Start the first turn
         StartCoroutine(StartTurns());
@@ -107,13 +106,52 @@ public class BattleManager : MonoBehaviour
         foreach (var character in heroInBattle)
         {
             // Check if the character is still alive
-            if (character.character.stat.HP > 0)
+            if (character.HP > 0)
             {
+                Battle.setDetailCommentText("");
+                Battle.setCommentText("");
                 hasAction = false;
 
                 // Perform actions (BasicAttack, Skill, Item) based on player input or AI logic
                 ChoosedPlayer.ActiveChar = index;
-                Debug.Log("Now is " + heroInBattle[ChoosedPlayer.activeChar].character.name + "'s turn");
+
+                if (character.charTeam == Teams.team.Player)
+                {
+                    Debug.Log("Now is your " + heroInBattle[ChoosedPlayer.activeChar].character.name + "'s turn");
+                    foreach (var btn in battle.btnAction)
+                    {
+                        btn.interactable = true;
+                    }
+                    if (character.Energy < character.character.stat.Energy)
+                    {
+                        battle.btnAction[2].interactable = false;
+                    }
+                }
+                else
+                {
+                    Debug.Log("Now is foe's " + heroInBattle[ChoosedPlayer.activeChar].character.name + "'s turn");
+                    foreach (var btn in battle.btnAction)
+                    {
+                        btn.interactable = false;
+                    }
+                    float useSkill = (float)random.NextDouble();
+
+                    if (useSkill < chanceEnemyUseSkill)
+                    {
+                        if (character.Energy >= character.character.stat.Energy)
+                        {
+                            pInput.clickSkill();
+                        }
+                        else
+                        {
+                            pInput.clickAttack();
+                        }
+                    }
+                    else
+                    {
+                        pInput.clickAttack();
+                    }
+                }
 
                 // Wait until hasAction becomes true
                 while (!hasAction)
@@ -134,12 +172,12 @@ public class BattleManager : MonoBehaviour
         switch (actionType)
         {
             case BattleAction.ActionType.BasicAttack:
-                BasicAttack(source, target, false);
-                Battle.setCommentText(source.character.name+" use basic attack to "+target.character.name);
+                BasicAttack(source, target);
+                Battle.setCommentText(source.character.name + " use basic attack to " + target.character.name);
                 break;
             case BattleAction.ActionType.Skill:
-                BasicAttack(source, target, true);
-                Battle.setCommentText(source.character.name+" use "+source.character.skill.name+" to "+target.character.name);
+                SkillAttack(source);
+                Battle.setCommentText(source.character.name + " use " + source.character.skill.name);
                 break;
             case BattleAction.ActionType.Item:
                 // Implement item logic
@@ -190,7 +228,11 @@ public class BattleManager : MonoBehaviour
     private double isCritical(Fighter attacker)
     {
         double randomValue = random.NextDouble();
-        if (randomValue < criticalHitRatio(attacker)) { Debug.Log("It's a critical hit!"); }
+        if (randomValue < criticalHitRatio(attacker))
+        {
+            Debug.Log("It's a critical hit!");
+            Battle.setDetailCommentText(attacker.character.name + "'s It's a critical hit!");
+        }
 
         return randomValue < criticalHitRatio(attacker) ? 1.5 : 1.0;
     }
@@ -204,29 +246,72 @@ public class BattleManager : MonoBehaviour
         return landingPercentage <= actualAcc;
     }
 
-    private void BasicAttack(Fighter attacker, Fighter target, bool isSkill)
+    private void BasicAttack(Fighter attacker, Fighter target)
     {
         if (isLandingAttack(attacker, target))
         {
             double interval = random.NextDouble() * (1.0 - 0.85) + 0.85;
 
-            double basicDamage = (((2 * attacker.character.stat.level) / 5) + 2) * (isSkill ? attacker.character.skill.power * (attacker.character.stat.Atk / target.character.stat.Def) : (attacker.character.stat.Atk - (target.character.stat.Def * 0.2)));
+            double basicDamage = (((2 * attacker.character.stat.level) / 5) + 2) * (attacker.character.stat.Atk - (target.character.stat.Def * 0.2));
             double typeEffective = ChartWeakness.ElementChart(attacker.character.element, target.character.element);
-            double damage = (basicDamage / (isSkill ? 50 : 10) + 2) * typeEffective * isCritical(attacker) * intervenceState(attacker) * interval;
-            if (isSkill)
-            {
-                // call skill effect here
-            }
-            heroInBattle[ChoosedPlayer.targetEnemy].HP -= damage;
-            Debug.Log(attacker.character.name + " give "+ damage +" damages to "+target.character.name);
-            Debug.Log(target.character.name + " HP  "+ target.HP +" / "+target.character.stat.HP + " left");
+            double damage = ((basicDamage / 10) + 2) * typeEffective * isCritical(attacker) * intervenceState(attacker) * interval;
 
-            battle.updateHPBar(heroInBattle.FindIndex(a=> a==target), target.indexPosition, target.charTeam);
+            heroInBattle[ChoosedPlayer.targetEnemy].HP -= damage;
+
+            double addTargetEnergy = heroInBattle[ChoosedPlayer.targetEnemy].Energy < heroInBattle[ChoosedPlayer.targetEnemy].character.stat.Energy ? 0.5 * heroInBattle[ChoosedPlayer.targetEnemy].character.stat.Energy : 0.0;
+            double addAttackerEnergy = heroInBattle[ChoosedPlayer.activeChar].Energy < heroInBattle[ChoosedPlayer.activeChar].character.stat.Energy ? 0.2 * heroInBattle[ChoosedPlayer.activeChar].character.stat.Energy : 0.0;
+            heroInBattle[ChoosedPlayer.targetEnemy].Energy += heroInBattle[ChoosedPlayer.targetEnemy].Energy + addTargetEnergy <= heroInBattle[ChoosedPlayer.targetEnemy].character.stat.Energy ? addTargetEnergy : heroInBattle[ChoosedPlayer.targetEnemy].character.stat.Energy - heroInBattle[ChoosedPlayer.targetEnemy].Energy;
+            heroInBattle[ChoosedPlayer.activeChar].Energy += heroInBattle[ChoosedPlayer.targetEnemy].Energy + addAttackerEnergy <= heroInBattle[ChoosedPlayer.activeChar].character.stat.Energy ? addAttackerEnergy : heroInBattle[ChoosedPlayer.activeChar].character.stat.Energy - heroInBattle[ChoosedPlayer.activeChar].Energy;
+            battle.updateEnergyBar(heroInBattle.FindIndex(a => a == target), target.indexPosition, target.charTeam);
+            battle.updateEnergyBar(heroInBattle.FindIndex(a => a == attacker), attacker.indexPosition, attacker.charTeam);
+
+            Debug.Log(attacker.character.name + " give " + damage + " damages to " + target.character.name);
+
+            battle.updateHPBar(heroInBattle.FindIndex(a => a == target), target.indexPosition, target.charTeam, damage);
+
         }
         else
         {
             Debug.Log(attacker.character.name + "'s attack missed");
+            Battle.setDetailCommentText(attacker.character.name + "'s attack missed");
         }
+        hasAction = true;
+    }
+
+    private void SkillStatusIntervence(Fighter attacker, Fighter target)
+    {
+
+    }
+    private void SkillBuffOrDebuff(Fighter attacker, Fighter target)
+    {
+
+    }
+    private void SkillAttack(Fighter attacker)
+    {
+        foreach (var index in ChoosedPlayer.targetChar)
+        {
+            if (heroInBattle[index].HP > 0)
+            {
+                double interval = random.NextDouble() * (1.0 - 0.85) + 0.85;
+
+                double basicDamage = (((2 * attacker.character.stat.level) / 5) + 2) * (attacker.character.skill.power * (attacker.character.stat.Atk / heroInBattle[index].character.stat.Def));
+                double typeEffective = ChartWeakness.ElementChart(attacker.character.element, heroInBattle[index].character.element);
+                double damage = ((basicDamage / 50) + 2) * typeEffective * isCritical(attacker) * intervenceState(attacker) * interval;
+
+                heroInBattle[index].HP -= damage;
+                Debug.Log(attacker.character.name + " give " + damage + " damages to " + heroInBattle[index].character.name);
+                Debug.Log(heroInBattle[index].character.name + " HP  " + heroInBattle[index].HP + " / " + heroInBattle[index].character.stat.HP + " left");
+
+                battle.updateHPBar(heroInBattle.FindIndex(a => a == heroInBattle[index]), heroInBattle[index].indexPosition, heroInBattle[index].charTeam, damage);
+
+                SkillBuffOrDebuff(attacker, heroInBattle[index]);
+                SkillStatusIntervence(attacker, heroInBattle[index]);
+            }
+
+        }
+
+        heroInBattle[ChoosedPlayer.activeChar].Energy = 0;
+        battle.updateEnergyBar(heroInBattle.FindIndex(a => a == attacker), attacker.indexPosition, attacker.charTeam);
         hasAction = true;
     }
 }

@@ -56,17 +56,16 @@ MonoBehaviour:
       criticalStage: 1
       exp: 0
       baseAtk: 13
-      baseDef: 8
-      baseHP: 17
-      baseSpd: 12
+      baseDef: 9
+      baseHP: 19
+      baseSpd: 11
       baseAcc: 1
-      baseEva: 0.3
+      baseEva: 0.35
       baseEnergy: 7
     skill:
       name: Amavasya Strike
       power: 75
-      consumeEnergy: 0
-      skillTarget: 2
+      skillTarget: 1
       skillEffectToStatus: 0
       effectStatusRate: 0
       skillEffectToStat: 0
@@ -78,9 +77,21 @@ MonoBehaviour:
         lompatan dengan tombak membentuk bulan sabit, menyebabkan kerusakan besar
         pada musuh. Selain itu, keahlian ini meningkatkan kecepatan Chandra secara
         signifikan, memberinya keunggulan di medan pertempuran.
+    abilities:
+    - name: 
+      abilityType: 0
+      abilityEffect: 0
+      statEffect: 0
+      stageChange: 0
+      ratioChange: 0
+      ratioHeal: 0
+      description: 
     attribut:
       profile: {fileID: 21300000, guid: f56dc9b526f211e4d8c4a3bbf19a8e22, type: 3}
       idle: {fileID: 21300000, guid: d944340263eafed46a697f67b5049dd6, type: 3}
-      attackPose: {fileID: 0}
+      attackPose: {fileID: 21300000, guid: 06c280835f5fea34a9ca6d242bdb85da, type: 3}
       skillPose: {fileID: 0}
+      skillEffect: {fileID: 0}
+      effectType: 0
+      deathPose: {fileID: 0}
       dialog: {fileID: 0}

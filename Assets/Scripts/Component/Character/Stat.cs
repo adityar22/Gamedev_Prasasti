@@ -2,9 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public class RankTypes
+{
+    public enum rankType { Yodha, Virat, Mahayodha }
+}
+
+[System.Serializable]
 public class intervenceStatus
 {
-    public enum status { Normal, Paralyze, Poisoned, Burn}
+    public enum status { Normal, Paralyze, Poisoned, Burn }
 
     public static double intervenceAcc(int stage)
     {
@@ -43,11 +49,77 @@ public class intervenceStatus
         }
     }
 }
+
 [System.Serializable]
 public class Stat
 {
+    //Rank and Level Stat
     public int level = 1;
+    public int Level
+    {
+        get { return level; }
+    }
 
+    private RankTypes.rankType rankType;
+    public RankTypes.rankType RankType
+    {
+        get
+        {
+            if (Level > 0 && Level <= 16)
+            {
+                return RankTypes.rankType.Yodha;
+            }
+            else if (Level > 16 && Level <= 36)
+            {
+                return RankTypes.rankType.Virat;
+            }
+            else if (Level > 36 && Level <= 50)
+            {
+                return RankTypes.rankType.Mahayodha;
+            }
+            return RankTypes.rankType.Mahayodha;
+        }
+    }
+    [SerializeField] private double baseExp;
+    public double targetExp
+    {
+        get
+        {
+            return baseExp + (baseExp * (0.2 * level));
+        }
+    }
+    public double totalExp
+    {
+        get
+        {
+            double total = 0;
+            for (int i = 1; i < level; i++)
+            {
+                total += baseExp + baseExp * (0.2 * i);
+            }
+            return total + selfExp;
+        }
+    }
+
+    private double selfExp;
+    public double SelfExp
+    {
+        get
+        {
+            return selfExp;
+        }
+        set
+        {
+            selfExp += value;
+            if (selfExp > targetExp)
+            {
+                level += 1;
+                selfExp = 0;
+            }
+        }
+    }
+
+    //Modifier Stat
     public int criticalStage = 0;
 
     private intervenceStatus.status status;
@@ -71,8 +143,16 @@ public class Stat
         set { evaStage += value; }
     }
 
-    public double exp;
 
+    //HP Stat
+    public double baseHP;
+    public double HP
+    {
+        set { baseHP = baseHP - value; }
+        get { return baseHP + (baseHP * (level * 0.2)); }
+    }
+
+    // Basic Stat
     public double baseAtk;
     public double Atk
     {
@@ -83,17 +163,13 @@ public class Stat
     {
         get { return baseDef + (baseDef * (level * 0.05)); }
     }
-    public double baseHP;
-    public double HP
-    {
-        set { baseHP = baseHP - value; }
-        get { return baseHP + (baseHP * (level * 0.2)); }
-    }
     public double baseSpd;
     public double Spd
     {
-        get { return (baseSpd + (baseSpd * (level * 0.02)))*(Status == intervenceStatus.status.Paralyze ? 0.75 : 1.0); }
+        get { return (baseSpd + (baseSpd * (level * 0.02))) * (Status == intervenceStatus.status.Paralyze ? 0.75 : 1.0); }
     }
+
+    //Secondary Stat
     public double baseAcc;
     public double Acc
     {
@@ -104,6 +180,8 @@ public class Stat
     {
         get { return baseEva * intervenceStatus.intervenceAcc(EvaStage); }
     }
+
+
     public double baseEnergy;
     public double Energy
     {
