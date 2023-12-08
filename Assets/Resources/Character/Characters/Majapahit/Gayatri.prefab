@@ -53,11 +53,11 @@ MonoBehaviour:
     target: 2
     stat:
       level: 1
+      baseExp: 100
       criticalStage: 0
-      exp: 0
+      baseHP: 16
       baseAtk: 15
       baseDef: 8
-      baseHP: 16
       baseSpd: 10
       baseAcc: 0.8
       baseEva: 0.2
@@ -65,7 +65,6 @@ MonoBehaviour:
     skill:
       name: Aquastorm Santih
       power: 70
-      consumeEnergy: 3
       skillTarget: 1
       skillEffectToStatus: 0
       effectStatusRate: 0
@@ -76,6 +75,7 @@ MonoBehaviour:
       ratioChange: 0
       description: Gayatri menciptakan badai air yang di tengah kesunyian, memperangkap
         musuh sambil memberikan penurunan kecepatan.
+    abilities: []
     attribut:
       profile: {fileID: 0}
       idle: {fileID: 0}

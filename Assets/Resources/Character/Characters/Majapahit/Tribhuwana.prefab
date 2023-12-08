@@ -53,11 +53,11 @@ MonoBehaviour:
     target: 1
     stat:
       level: 1
+      baseExp: 99
       criticalStage: 0
-      exp: 0
+      baseHP: 16
       baseAtk: 15
       baseDef: 8
-      baseHP: 16
       baseSpd: 11
       baseAcc: 0.9
       baseEva: 0.3
@@ -65,7 +65,6 @@ MonoBehaviour:
     skill:
       name: "Zephyr b\u0101\u1E47a baireja"
       power: 70
-      consumeEnergy: 3
       skillTarget: 1
       skillEffectToStatus: 0
       effectStatusRate: 0
@@ -77,6 +76,7 @@ MonoBehaviour:
       description: Tribuwana melepaskan hujan panah angin yang cepat dan akurat,
         menyerang musuh-musuh dari kejauhan sambil membatasi gerakan mereka dengan
         kecepatan angin yang luar biasa.
+    abilities: []
     attribut:
       profile: {fileID: 0}
       idle: {fileID: 0}

@@ -50,13 +50,14 @@ MonoBehaviour:
     type: 3
     element: 1
     tier: 0
+    target: 0
     stat:
       level: 1
+      baseExp: 72
       criticalStage: 0
-      exp: 0
+      baseHP: 21
       baseAtk: 8
       baseDef: 8
-      baseHP: 21
       baseSpd: 10
       baseAcc: 0.8
       baseEva: 0.1
@@ -64,7 +65,6 @@ MonoBehaviour:
     skill:
       name: Yuga Blast
       power: 60
-      consumeEnergy: 4
       skillTarget: 0
       skillEffectToStatus: 2
       effectStatusRate: 0.3
@@ -74,9 +74,13 @@ MonoBehaviour:
       stageChange: 0
       ratioChange: 0
       description: 
+    abilities: []
     attribut:
       profile: {fileID: 0}
       idle: {fileID: 0}
       attackPose: {fileID: 0}
       skillPose: {fileID: 0}
+      skillEffect: {fileID: 0}
+      effectType: 0
+      deathPose: {fileID: 0}
       dialog: {fileID: 0}

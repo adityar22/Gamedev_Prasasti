@@ -5565,7 +5565,7 @@ MonoBehaviour:
   btnStart: {fileID: 484985687}
   labelDamage: {fileID: 802843406868119008, guid: de53230539db4774d96da6acfe8f19ee, type: 3}
   txtResultTitle: {fileID: 1482453044}
-  resultPanel: {fileID: 0}
+  resultPanel: {fileID: 690263743}
 --- !u!114 &1715482375
 MonoBehaviour:
   m_ObjectHideFlags: 0

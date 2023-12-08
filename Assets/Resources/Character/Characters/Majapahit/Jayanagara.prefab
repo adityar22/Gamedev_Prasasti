@@ -53,11 +53,11 @@ MonoBehaviour:
     target: 1
     stat:
       level: 1
+      baseExp: 180
       criticalStage: 1
-      exp: 0
+      baseHP: 18
       baseAtk: 16
       baseDef: 9
-      baseHP: 18
       baseSpd: 14
       baseAcc: 1
       baseEva: 0.3
@@ -65,7 +65,6 @@ MonoBehaviour:
     skill:
       name: "Inferno ch\u0101y\u0101prah\u0101ra\u1E25"
       power: 90
-      consumeEnergy: 0
       skillTarget: 0
       skillEffectToStatus: 2
       effectStatusRate: 0.4
@@ -77,6 +76,7 @@ MonoBehaviour:
       description: Jayanegara menyelinap di bayangan, muncul tiba-tiba di belakang
         musuh dengan pedang berapi, memberikan serangan dengan meninggalkan racun
         sebelum kembali menghilang.
+    abilities: []
     attribut:
       profile: {fileID: 0}
       idle: {fileID: 0}

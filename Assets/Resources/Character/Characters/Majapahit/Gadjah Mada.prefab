@@ -53,11 +53,11 @@ MonoBehaviour:
     target: 0
     stat:
       level: 1
+      baseExp: 110
       criticalStage: 0
-      exp: 0
+      baseHP: 24
       baseAtk: 13
       baseDef: 11
-      baseHP: 24
       baseSpd: 9
       baseAcc: 1
       baseEva: 0.2
@@ -65,7 +65,6 @@ MonoBehaviour:
     skill:
       name: Palapa Terraquake
       power: 100
-      consumeEnergy: 4
       skillTarget: 1
       skillEffectToStatus: 1
       effectStatusRate: 0.3
@@ -77,6 +76,7 @@ MonoBehaviour:
       description: Gadjah Mada memukul tanah dengan kekuatan gada legendarisnya,
         menciptakan gempa bumi yang menggetarkan musuh-musuh di sekitarnya dan meningkatkan
         daya tahan tubuhnya.
+    abilities: []
     attribut:
       profile: {fileID: 21300000, guid: 50ec27816767510429c5e392719b5b41, type: 3}
       idle: {fileID: 21300000, guid: a4e105ad971f4c94c83d36a0c7cbfc9f, type: 3}

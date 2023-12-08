@@ -185,6 +185,17 @@ public class Battle : MonoBehaviour
         battleManager.StartBattle();
     }
 
+    private double calculateGainExp(Fighter player)
+    {
+        double totalGainedExp = 0;
+        foreach (var enemy in ChoosedPlayer.choosedEnemy)
+        {
+            double gainedExp = (enemy.character.stat.BaseExp * enemy.character.stat.Level / 5.0) * (1.0 / ChoosedPlayer.choosedChar.Count) * (Math.Pow(((2 * enemy.character.stat.Level + 10) / (enemy.character.stat.Level + player.character.stat.Level + 10)), 3) + 2);
+            Debug.Log(player.character.name + " get " + gainedExp + " exp from defeated " + enemy.character.name);
+            totalGainedExp += gainedExp;
+        }
+        return totalGainedExp;
+    }
     private void setExpReward()
     {
         double totalExpReward = 0;
@@ -195,6 +206,8 @@ public class Battle : MonoBehaviour
                 GameObject chooseInstantiated = Instantiate(chooseBox, resultPanel.transform);
                 ChooseItem instantiate = chooseInstantiated.GetComponent<ChooseItem>();
                 instantiate.indexChar = ChoosedPlayer.choosedChar.IndexOf(player);
+                player.character.stat.SelfExp += calculateGainExp(player);
+                Debug.Log(player.character.name+" level: "+player.character.stat.Level);
             }
         }
     }

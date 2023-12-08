@@ -42,6 +42,4 @@ public class CharModel
     [SerializeField] public Skill skill;
     [SerializeField] public Ability[] abilities = new Ability[]{};
     [SerializeField] public AttributView attribut;
-
-    public double expReward;
 }
