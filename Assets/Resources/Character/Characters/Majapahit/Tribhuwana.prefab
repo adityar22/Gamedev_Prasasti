@@ -49,7 +49,7 @@ MonoBehaviour:
     kingdom: 0
     type: 2
     element: 3
-    tier: 1
+    tier: 0
     target: 1
     stat:
       level: 1
@@ -82,4 +82,7 @@ MonoBehaviour:
       idle: {fileID: 0}
       attackPose: {fileID: 0}
       skillPose: {fileID: 0}
+      skillEffect: {fileID: 0}
+      effectType: 0
+      deathPose: {fileID: 0}
       dialog: {fileID: 0}
