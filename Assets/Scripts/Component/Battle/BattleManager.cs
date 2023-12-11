@@ -280,34 +280,77 @@ public class BattleManager : MonoBehaviour
 
     private void SkillStatusIntervence(Fighter attacker, Fighter target)
     {
+        double actualRate = random.NextDouble();
+        if (actualRate < attacker.character.skill.effectStatusRate)
+        {
+            switch (attacker.character.skill.skillEffectToStatus)
+            {
+                case intervenceStatus.status.Burn:
+                    target.character.stat.Status = intervenceStatus.status.Burn;
+                    break;
+                case intervenceStatus.status.Paralyze:
+                    target.character.stat.Status = intervenceStatus.status.Paralyze;
+                    break;
+                case intervenceStatus.status.Poisoned:
+                    target.character.stat.Status = intervenceStatus.status.Poisoned;
+                    break;
+                default:
+                    target.character.stat.Status = intervenceStatus.status.Normal;
+                    break;
+            }
+            Debug.Log(target.character.name + " is " + target.character.stat.Status);
+        }
+    }
+    private void SkillBuffOrDebuff(){
 
     }
-    private void SkillBuffOrDebuff(Fighter attacker, Fighter target)
+    private void SkillStatChange(Fighter attacker, Fighter target)
     {
-
+        double actualRate = random.NextDouble();
+        if (actualRate < attacker.character.skill.effectStatRate)
+        {
+            switch (attacker.character.skill.skillEffectToStat)
+            {
+                case EffectToStat.effectToStat.Buff:
+                    
+                    break;
+                case EffectToStat.effectToStat.Debuff:
+                    
+                    break;
+                case EffectToStat.effectToStat.Heal:
+                    
+                    break;
+                default:
+                    
+                    break;
+            }
+            Debug.Log(target.character.name + " is " + target.character.stat.Status);
+        }
     }
     private void SkillAttack(Fighter attacker)
     {
         foreach (var index in ChoosedPlayer.targetChar)
         {
-            if (heroInBattle[index].HP > 0)
+            if (heroInBattle[index]!=null && heroInBattle[index].character!=null)
             {
-                double interval = random.NextDouble() * (1.0 - 0.85) + 0.85;
+                if (heroInBattle[index].HP > 0)
+                {
+                    double interval = random.NextDouble() * (1.0 - 0.85) + 0.85;
 
-                double basicDamage = (((2 * attacker.character.stat.level) / 5) + 2) * (attacker.character.skill.power * (attacker.character.stat.Atk / heroInBattle[index].character.stat.Def));
-                double typeEffective = ChartWeakness.ElementChart(attacker.character.element, heroInBattle[index].character.element);
-                double damage = ((basicDamage / 50) + 2) * typeEffective * isCritical(attacker) * intervenceState(attacker) * interval;
+                    double basicDamage = (((2 * attacker.character.stat.level) / 5) + 2) * (attacker.character.skill.power * (attacker.character.stat.Atk / heroInBattle[index].character.stat.Def));
+                    double typeEffective = ChartWeakness.ElementChart(attacker.character.element, heroInBattle[index].character.element);
+                    double damage = ((basicDamage / 50) + 2) * typeEffective * isCritical(attacker) * intervenceState(attacker) * interval;
 
-                heroInBattle[index].HP -= damage;
-                Debug.Log(attacker.character.name + " give " + damage + " damages to " + heroInBattle[index].character.name);
-                Debug.Log(heroInBattle[index].character.name + " HP  " + heroInBattle[index].HP + " / " + heroInBattle[index].character.stat.HP + " left");
+                    heroInBattle[index].HP -= damage;
+                    Debug.Log(attacker.character.name + " give " + damage + " damages to " + heroInBattle[index].character.name);
+                    Debug.Log(heroInBattle[index].character.name + " HP  " + heroInBattle[index].HP + " / " + heroInBattle[index].character.stat.HP + " left");
 
-                battle.updateHPBar(heroInBattle.FindIndex(a => a == heroInBattle[index]), heroInBattle[index].indexPosition, heroInBattle[index].charTeam, damage);
+                    battle.updateHPBar(heroInBattle.FindIndex(a => a == heroInBattle[index]), heroInBattle[index].indexPosition, heroInBattle[index].charTeam, damage);
 
-                SkillBuffOrDebuff(attacker, heroInBattle[index]);
-                SkillStatusIntervence(attacker, heroInBattle[index]);
+                    SkillStatChange(attacker, heroInBattle[index]);
+                    SkillStatusIntervence(attacker, heroInBattle[index]);
+                }
             }
-
         }
 
         heroInBattle[ChoosedPlayer.activeChar].Energy = 0;

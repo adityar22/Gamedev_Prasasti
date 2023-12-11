@@ -44,4 +44,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b06f37fd3e63cd4b99a828df7ccbc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listChapter: []
+  listChapter:
+  - title: Prolog
+    kingdom: 
+    subList:
+    - subtitle: 
+      background: {fileID: 0}
+      dialogList:
+      - characterIndex: -1
+        dialogText: Shandy kebingungan sembari melihat sekelilingnya.
+        isQuestion: 0
+      - characterIndex: -1
+        dialogText: "*tap\u2026 tap..* Terdengar langkah kaki dari balik pepohonan
+          yang kemudian disusul sosok pemuda dengan penampilan layaknya prajurit
+          kerajaan"
+        isQuestion: 0
+      - characterIndex: 2
+        dialogText: "\u201CKau pasti tersesat\u201D"
+        isQuestion: 0
+      - characterIndex: 0
+        dialogText: "\u201CSiapa dirimu?\u201D"
+        isQuestion: 0
+      - characterIndex: 2
+        dialogText: "\u201CAku Candra, prajurit Kerajaan Majapahit, Kau pasti bukan
+          berasal dari wilayah ini kan?\u201D"
+        isQuestion: 0
+      - characterIndex: 2
+        dialogText: "\u201CAku akan membantumu dan membimbingmu kembali ke tempat
+          asalmu\u201D"
+        isQuestion: 0
+      - characterIndex: 0
+        dialogText: "\u201CTunggu dulu, ini dimana?!\u201D"
+        isQuestion: 0
+      - characterIndex: 0
+        dialogText: "\u201CDan dari mana kau tau aku bukan berasal dari sini?!\u201D"
+        isQuestion: 0
+      - characterIndex: 2
+        dialogText: "\u201CKau tampak kebingungan, lagipula pakaianmu aneh\u201D"
+        isQuestion: 0
+      - characterIndex: 0
+        dialogText: (Semua hal ini aneh, kurasa otakku belum bisa mencerna seluruhnya)
+        isQuestion: 0
+      - characterIndex: 0
+        dialogText: "(Tunggu\u2026 Kerajaan Majapahit?...Apakah aku\u2026 terlempar
+          ke masa lalu?)"
+        isQuestion: 0
+      bgm: {fileID: 0}
+    - subtitle: 
+      background: {fileID: 0}
+      dialogList:
+      - characterIndex: -1
+        dialogText: Shandy kebingungan sembari melihat sekelilingnya.
+        isQuestion: 0
+      - characterIndex: -1
+        dialogText: "*tap\u2026 tap..* Terdengar langkah kaki dari balik pepohonan
+          yang kemudian disusul sosok pemuda dengan penampilan layaknya prajurit
+          kerajaan"
+        isQuestion: 0
+      - characterIndex: 2
+        dialogText: "\u201CKau pasti tersesat\u201D"
+        isQuestion: 0
+      - characterIndex: 0
+        dialogText: "\u201CSiapa dirimu?\u201D"
+        isQuestion: 0
+      - characterIndex: 2
+        dialogText: "\u201CAku Candra, prajurit Kerajaan Majapahit, Kau pasti bukan
+          berasal dari wilayah ini kan?\u201D"
+        isQuestion: 0
+      - characterIndex: 2
+        dialogText: "\u201CAku akan membantumu dan membimbingmu kembali ke tempat
+          asalmu\u201D"
+        isQuestion: 0
+      - characterIndex: 0
+        dialogText: "\u201CTunggu dulu, ini dimana?!\u201D"
+        isQuestion: 0
+      - characterIndex: 0
+        dialogText: "\u201CDan dari mana kau tau aku bukan berasal dari sini?!\u201D"
+        isQuestion: 0
+      - characterIndex: 2
+        dialogText: "\u201CKau tampak kebingungan, lagipula pakaianmu aneh\u201D"
+        isQuestion: 0
+      - characterIndex: 0
+        dialogText: (Semua hal ini aneh, kurasa otakku belum bisa mencerna seluruhnya)
+        isQuestion: 0
+      - characterIndex: 0
+        dialogText: "(Tunggu\u2026 Kerajaan Majapahit?...Apakah aku\u2026 terlempar
+          ke masa lalu?)"
+        isQuestion: 0
+      bgm: {fileID: 0}

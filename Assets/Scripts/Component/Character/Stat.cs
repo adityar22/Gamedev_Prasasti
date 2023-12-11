@@ -90,7 +90,7 @@ public class Stat
     {
         get
         {
-            return (6.0 / 5) * Math.Pow(level+1, 3) - 15 * Math.Pow(level+1, 2) + (100 * (level+1)) - 140;
+            return (6.0 / 5) * Math.Pow(level + 1, 3) - 15 * Math.Pow(level + 1, 2) + (100 * (level + 1)) - 140;
         }
     }
     public double totalExp
@@ -135,21 +135,6 @@ public class Stat
         set { status = value; }
     }
 
-    private int accStage;
-    public int AccStage
-    {
-        get { return accStage; }
-        set { accStage += value; }
-    }
-
-    private int evaStage;
-    public int EvaStage
-    {
-        get { return evaStage; }
-        set { evaStage += value; }
-    }
-
-
     //HP Stat
     public double baseHP;
     public double HP
@@ -160,33 +145,48 @@ public class Stat
 
     // Basic Stat
     public double baseAtk;
+    public double atkMod = 1.0;
     public double Atk
     {
-        get { return baseAtk + (baseAtk * (level * 0.1)); }
+        get { return (baseAtk + (baseAtk * (level * 0.1))) * atkMod * (Status == intervenceStatus.status.Burn ? 0.75 : 1.0); }
     }
     public double baseDef;
+    public double defMod = 1.0;
     public double Def
     {
-        get { return baseDef + (baseDef * (level * 0.05)); }
+        get { return (baseDef + (baseDef * (level * 0.05))) * defMod * (Status == intervenceStatus.status.Poisoned ? 0.75 : 1.0); }
     }
     public double baseSpd;
+    public double spdMod = 1.0;
     public double Spd
     {
-        get { return (baseSpd + (baseSpd * (level * 0.02))) * (Status == intervenceStatus.status.Paralyze ? 0.75 : 1.0); }
+        get { return (baseSpd + (baseSpd * (level * 0.02))) * spdMod * (Status == intervenceStatus.status.Paralyze ? 0.75 : 1.0); }
     }
 
     //Secondary Stat
+    private int accStage;
+    public int AccStage
+    {
+        get { return accStage; }
+        set { accStage += value; }
+    }
     public double baseAcc;
     public double Acc
     {
         get { return baseAcc * intervenceStatus.intervenceAcc(AccStage); }
+    }
+
+    private int evaStage;
+    public int EvaStage
+    {
+        get { return evaStage; }
+        set { evaStage += value; }
     }
     public double baseEva;
     public double Eva
     {
         get { return baseEva * intervenceStatus.intervenceAcc(EvaStage); }
     }
-
 
     public double baseEnergy;
     public double Energy

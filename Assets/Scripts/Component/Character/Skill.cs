@@ -33,10 +33,12 @@ public class Skill
 
     public EffectToStat.effectToStat skillEffectToStat;
     public double effectStatRate;
+    
     public ChangeStat.changeStat statChange;
     public int stageChange;
     public double ratioChange;
 
     [TextArea]
     public string description;
+    public Sprite skillIcon;
 }

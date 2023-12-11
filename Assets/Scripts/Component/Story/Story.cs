@@ -10,14 +10,16 @@ public class Story : MonoBehaviour
     public class Dialog
     {
         public int characterIndex;
+        [TextArea]
         public string dialogText;
         public bool isQuestion;
+        public bool isTransition;
+        public Sprite background;
     }
     [System.Serializable]
     public class SubChapter
     {
         public string subtitle;
-        public Sprite background;
         public List<Dialog> dialogList;
         public AudioClip bgm;
     }
