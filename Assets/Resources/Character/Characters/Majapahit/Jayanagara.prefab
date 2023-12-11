@@ -57,8 +57,11 @@ MonoBehaviour:
       criticalStage: 1
       baseHP: 18
       baseAtk: 16
+      atkMod: 1
       baseDef: 9
+      defMod: 1
       baseSpd: 14
+      spdMod: 1
       baseAcc: 1
       baseEva: 0.3
       baseEnergy: 7
@@ -76,10 +79,11 @@ MonoBehaviour:
       description: Jayanegara menyelinap di bayangan, muncul tiba-tiba di belakang
         musuh dengan pedang berapi, memberikan serangan dengan meninggalkan racun
         sebelum kembali menghilang.
+      skillIcon: {fileID: 0}
     abilities: []
     attribut:
       profile: {fileID: 0}
-      idle: {fileID: 0}
+      idle: {fileID: 21300000, guid: 316d83e8a23166e4a8bab4e1403db4d8, type: 3}
       attackPose: {fileID: 0}
       skillPose: {fileID: 0}
       skillEffect: {fileID: 0}

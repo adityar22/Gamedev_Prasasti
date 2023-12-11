@@ -6,20 +6,32 @@ using System.Linq;
 
 public class PlayerCharacter : MonoBehaviour
 {
-    public static List<CharModel> unlockedCharacters = new List<CharModel>();
+    public List<CharModel> unlockedCharacters = new List<CharModel>();
+
     CharData dataChar;
 
     // Start is called before the first frame update
     void Start()
     {
         /// DEBUG PREFS
-        GameObject eventSystem = GameObject.Find("charData");
-        dataChar = eventSystem.GetComponent<CharData>();
+
+        // PlayerPrefs.DeleteKey("prefsState");
+        // PlayerPrefs.DeleteKey("UnlockedCharacterList");
+        // Debug.Log("Try to delete player data");
+    }
+
+    public void LoadCharacter()
+    {
+        GameObject eventSystem = GameObject.Find("EventSystem");
+        Battle battle = eventSystem.GetComponent<Battle>();
+        GameObject _charDataObj = battle._charData;
+        dataChar = _charDataObj.GetComponent<CharData>();
 
         if (getIsInit())
         {
-            SaveCharacter(0);
-            SaveCharacter(1);
+            SaveCharacter(dataChar.charData[0].character);
+            SaveCharacter(dataChar.charData[1].character);
+            SaveCharacter(dataChar.charData[2].character);
         }
 
         List<CharModel> playerPrefsLoad = GetUnlockedCharacterList();
@@ -36,33 +48,32 @@ public class PlayerCharacter : MonoBehaviour
             unlockedCharacters.Add(chars.character);
         }
 
-        // PlayerPrefs.DeleteKey("prefsState");
-        // PlayerPrefs.DeleteKey("UnlockedCharacterList");
-        // Debug.Log("Try to delete player data");
+        Debug.Log("Total loaded character: " + unlockedCharacters.Count);
     }
 
-    public void SaveCharacter(int index)
+    public void SaveCharacter(CharModel toSaveCharacter)
     {
         // Cek apakah karakter sudah ada dalam list
-        int existingIndex = unlockedCharacters.FindIndex(c => c.name == dataChar.charData[index].character.name);
+        int existingIndex = unlockedCharacters.FindIndex(c => c.name == toSaveCharacter.name);
+        Debug.Log(existingIndex);
 
         if (existingIndex != -1)
         {
             // Jika karakter sudah ada, update data karakter
-            unlockedCharacters[existingIndex] = dataChar.charData[index].character;
+            unlockedCharacters[existingIndex] = toSaveCharacter;
 
         }
         else
         {
             // Jika karakter belum ada, tambahkan ke list
-            unlockedCharacters.Add(dataChar.charData[index].character);
+            unlockedCharacters.Add(toSaveCharacter);
         }
         // Simpan list karakter ke PlayerPrefs
-        SaveCharacterList(index);
+        SaveCharacterList();
     }
 
     // Simpan list karakter ke PlayerPrefs
-    private void SaveCharacterList(int index)
+    private void SaveCharacterList()
     {
         string charListData = "";
         foreach (var data in unlockedCharacters)
@@ -77,10 +88,11 @@ public class PlayerCharacter : MonoBehaviour
     {
         string initPrefs = PlayerPrefs.GetString("prefsState", "");
 
-        bool isInit = !String.IsNullOrEmpty(initPrefs) && initPrefs != "" ? false : true;
+        bool isInit = initPrefs != "hasInit" ? true : false;
         PlayerPrefs.SetString("prefsState", "hasInit");
         return isInit;
     }
+
 
     // Mendapatkan list karakter yang di-unlock oleh player
     public static List<CharModel> GetUnlockedCharacterList()
@@ -89,15 +101,10 @@ public class PlayerCharacter : MonoBehaviour
         string characterListData = PlayerPrefs.GetString("UnlockedCharacterList", "");
         if (characterListData != "" && characterListData != "{}")
         {
-            // Debug.Log("Get Player Data");
-            // Debug.Log(characterListData);
-
-
             string[] jsonParts = characterListData.Split(new string[] { " <sep> " }, System.StringSplitOptions.RemoveEmptyEntries);
 
             foreach (var part in jsonParts)
             {
-                // Debug.Log(part);
                 if (!string.IsNullOrEmpty(part))
                 {
                     CharModel charLoad = JsonUtility.FromJson<CharModel>(part);

@@ -75,6 +75,10 @@ public class Battle : MonoBehaviour
 
     [SerializeField] private TextMeshProUGUI txtResultTitle;
     [SerializeField] private GameObject resultPanel;
+    [SerializeField] private GameObject textRewardPanel;
+    [SerializeField] private GameObject textExpReward;
+
+    public PlayerCharacter playerCharacter;
 
     void Start()
     {
@@ -85,7 +89,8 @@ public class Battle : MonoBehaviour
         CharData dataChar = charData.GetComponent<CharData>();
 
         GameObject playerData = Instantiate(_playerData);
-        PlayerCharacter playerCharacter = playerData.GetComponent<PlayerCharacter>();
+        playerCharacter = playerData.GetComponent<PlayerCharacter>();
+        playerCharacter.LoadCharacter();
 
         for (int i = 0; i < teamCount; i++)
         {
@@ -138,30 +143,13 @@ public class Battle : MonoBehaviour
         battlePhase.SetActive(false);
         choosePhase.SetActive(true);
 
-        foreach (var character in PlayerCharacter.unlockedCharacters)
+        foreach (var character in playerCharacter.unlockedCharacters)
         {
             GameObject chooseInstantiated = Instantiate(chooseBox, choosePanel);
             ChooseItem instantiate = chooseInstantiated.GetComponent<ChooseItem>();
-            instantiate.indexChar = PlayerCharacter.unlockedCharacters.IndexOf(character);
+            instantiate.indexChar = playerCharacter.unlockedCharacters.IndexOf(character);
+            instantiate.character = character;
         }
-
-        // foreach(var enemy in ChoosedPlayer.choosedEnemy){
-        //     Image imageComponent = this.enemy[ChoosedPlayer.choosedEnemy.FindIndex(c => c == enemy)].GetComponent<Image>();
-        //     Sprite yourSprite = enemy.character.attribut.idle;
-
-
-        //     if (imageComponent != null)
-        //     {
-        //         // Set the sprite of the Image component
-        //         imageComponent.sprite = yourSprite ? yourSprite : placeHolderChar;
-
-        //         // Calculate the aspect ratio of the sprite
-        //         float aspectRatio = yourSprite ? yourSprite.rect.width / yourSprite.rect.height : placeHolderChar.rect.width / placeHolderChar.rect.height;
-
-        //         // Set the size of the Image component based on the sprite's aspect ratio
-        //         imageComponent.rectTransform.SetSizeWithCurrentAnchors(RectTransform.Axis.Vertical, imageComponent.rectTransform.rect.width / aspectRatio);
-        //     }
-        // }
     }
 
     public void initBattle()
@@ -194,6 +182,10 @@ public class Battle : MonoBehaviour
             Debug.Log(player.character.name + " get " + gainedExp + " exp from defeated " + enemy.character.name);
             totalGainedExp += gainedExp;
         }
+
+        GameObject textRewardObj = Instantiate(textExpReward, textRewardPanel.transform);
+        TextMeshProUGUI txtReward = textRewardObj.GetComponent<TextMeshProUGUI>();
+        txtReward.text = "+"+totalGainedExp.ToString("0.00")+" EXP";
         return totalGainedExp;
     }
     private void setExpReward()
@@ -206,8 +198,11 @@ public class Battle : MonoBehaviour
                 GameObject chooseInstantiated = Instantiate(chooseBox, resultPanel.transform);
                 ChooseItem instantiate = chooseInstantiated.GetComponent<ChooseItem>();
                 instantiate.indexChar = ChoosedPlayer.choosedChar.IndexOf(player);
+                instantiate.character = player.character;
+
                 player.character.stat.SelfExp += calculateGainExp(player);
                 Debug.Log(player.character.name+" level: "+player.character.stat.Level);
+                playerCharacter.SaveCharacter(player.character);
             }
         }
     }

@@ -28,19 +28,19 @@ public class PlayerInput : MonoBehaviour
 
     public static void clickTeam(int id, int teamIndex)
     {
-        GameObject _charData = GameObject.Find("charData");
+        GameObject _charData = GameObject.Find("charData(Clone)");
         CharData data = _charData.GetComponent<CharData>();
 
         if (teamIndex < ChoosedPlayer.choosedChar.Count)
         {
-            ChoosedPlayer.choosedChar[teamIndex].character = PlayerCharacter.unlockedCharacters[id];
+            ChoosedPlayer.choosedChar[teamIndex].character = battle.playerCharacter.unlockedCharacters[id];
             ChoosedPlayer.choosedChar[teamIndex].playerId = id;
 
         }
         else
         {
             Fighter input = new Fighter();
-            input.character = PlayerCharacter.unlockedCharacters[id];
+            input.character = battle.playerCharacter.unlockedCharacters[id];
             input.playerId = id;
             ChoosedPlayer.choosedChar.Add(input);
         }

@@ -9,8 +9,10 @@ using UnityEngine.Video;
 public class Dialog : MonoBehaviour
 {
     // init character data
+    public GameObject charData;
     private CharData character;
     // init story data
+    public GameObject storyData;
     private Story story;
 
     // init story state
@@ -62,11 +64,11 @@ public class Dialog : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        GameObject charData = GameObject.Find("charData");
-        this.character = charData.GetComponent<CharData>();
+        GameObject charDataObj = Instantiate(charData);
+        this.character = charDataObj.GetComponent<CharData>();
 
-        GameObject storyData = GameObject.Find("storyData");
-        this.story = storyData.GetComponent<Story>();
+        GameObject storyDataObj = Instantiate(storyData);
+        this.story = storyDataObj.GetComponent<Story>();
 
         ActiveDialog += 1;
     }
@@ -74,7 +76,7 @@ public class Dialog : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     void onChangeDialog()
@@ -87,12 +89,20 @@ public class Dialog : MonoBehaviour
         textChar.text = this.character.charData[charId].name;
         textDialog.text = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].dialogText;
         imgChar.sprite = this.character.charData[charId].character.attribut.dialog;
+
+        if (this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].isTransition)
+        {
+            imgBg.sprite = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].background;
+        }
+        
+        if(this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].isQuestion){
+
+        }
     }
 
     void onChangeSubChapter()
     {
         ActiveDialog = 0;
-        imgBg.sprite = this.story.listChapter[ActiveChapter].subList[ActiveSub].background;
 
         audio.Stop();
         audio.clip = this.story.listChapter[ActiveChapter].subList[ActiveSub].bgm;
@@ -107,7 +117,7 @@ public class Dialog : MonoBehaviour
     public void onClickDialogControl(int state)
     {
         ActiveDialog += ActiveDialog <= this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList.Count - 1 ? state : 0;
-        if(ActiveDialog >= this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList.Count - 1)
+        if (ActiveDialog >= this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList.Count - 1)
         {
             ActiveSub += ActiveSub <= this.story.listChapter[ActiveChapter].subList.Count - 1 ? state : 0;
         }
