@@ -32,6 +32,7 @@ public class ChoosedPlayer
 
 public class Battle : MonoBehaviour
 {
+    public static bool isTutorial;
     public static bool isAdventure;
     public static int activeChapter;
     public static int activeSubChapter;
@@ -217,6 +218,11 @@ public class Battle : MonoBehaviour
         {
             setExpReward();
         }
+        ChoosedPlayer.choosedEnemy = new List<Fighter>();
+        ChoosedPlayer.choosedChar = new List<Fighter>();
+        ChoosedPlayer.totalEnemy = 0;
+        ChoosedPlayer.totalPlayer = 0;
+        PlayerInput.choosedArea = 0;
     }
     private void checkTotal()
     {

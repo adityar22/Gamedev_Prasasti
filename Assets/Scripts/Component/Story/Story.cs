@@ -36,7 +36,7 @@ public class Story : MonoBehaviour
         public AudioClip bgm;
         public bool isBattlePhase;
         public Character[] indexEnemy = new Character[]{};
-        public int[] indexUnlockedCharacter = new int[] { };
+        public Character[] indexUnlockedCharacter = new Character[] { };
     }
     [System.Serializable]
     public class Chapter
@@ -44,6 +44,7 @@ public class Story : MonoBehaviour
         public string title;
         public string kingdom;
         public List<SubChapter> subList;
+        public Character[] indexEnemy = new Character[]{};
     }
     public List<Chapter> listChapter;
 }

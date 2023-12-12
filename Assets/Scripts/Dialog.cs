@@ -69,6 +69,10 @@ public class Dialog : MonoBehaviour
     [SerializeField] GameObject btnAnswer;
     GameObject[] answer;
 
+    // init notification component
+    [SerializeField] GameObject notifPanel;
+    [SerializeField] TextMeshProUGUI txtNotif;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -80,7 +84,6 @@ public class Dialog : MonoBehaviour
 
         ActiveChapter = hasBattle ? Battle.activeChapter : setChapter;
         ActiveSub += hasBattle ? Battle.activeSubChapter + 1 : 1;
-        ActiveDialog += 1;
     }
 
     // Update is called once per frame
@@ -89,8 +92,27 @@ public class Dialog : MonoBehaviour
 
     }
 
+    IEnumerator ShowUnlockedCharacters()
+    {
+        foreach (var newChara in this.story.listChapter[ActiveChapter].subList[ActiveSub].indexUnlockedCharacter)
+        {
+            notifPanel.SetActive(true);
+            txtNotif.text = "Unlocked new character: " + newChara.character.name;
+
+            yield return new WaitForSeconds(0.5f);
+
+            notifPanel.SetActive(false);
+        }
+    }
     void onChangeDialog()
     {
+        bool isEnd = ActiveDialog == this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList.Count - 2;
+        if (isEnd && this.story.listChapter[ActiveChapter].subList[ActiveSub].indexUnlockedCharacter.Length > 0)
+        {
+            StartCoroutine(ShowUnlockedCharacters());
+        }
+
+
         bool state = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].isQuestion;
         questionPanel.SetActive(state);
         btnDialogControl.interactable = !state;
@@ -134,7 +156,7 @@ public class Dialog : MonoBehaviour
         {
             ActiveDialog = 0;
         }
-        else
+        else if (!hasBattle)
         {
             int i = 0;
             foreach (var index in this.story.listChapter[ActiveChapter].subList[ActiveSub].indexEnemy)
@@ -148,6 +170,11 @@ public class Dialog : MonoBehaviour
             hasBattle = true;
             SceneManager.LoadScene("Battle");
         }
+        else
+        {
+            ActiveDialog = 0;
+            hasBattle = false;
+        }
     }
 
     void onChangeChapter()
@@ -157,11 +184,42 @@ public class Dialog : MonoBehaviour
 
     public void onClickDialogControl(int state)
     {
-        ActiveDialog += ActiveDialog <= this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList.Count - 1 ? state : 0;
-        if (ActiveDialog >= this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList.Count - 1)
+        int dialogState = ActiveDialog + state;
+        if (dialogState < this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList.Count)
         {
-            ActiveSub += ActiveSub <= this.story.listChapter[ActiveChapter].subList.Count - 1 ? state : 0;
+            ActiveDialog += state;
         }
+        else
+        {
+            int subState = ActiveSub + state;
+            if (subState < this.story.listChapter[ActiveChapter].subList.Count)
+            {
+                ActiveSub += state;
+            }
+            else
+            {
+                int i = 0;
+                foreach (var index in this.story.listChapter[ActiveChapter].indexEnemy)
+                {
+                    EnemySpawn.setIndex[i] = index;
+                    i += 1;
+                }
+                Battle.isAdventure = false;
+                Battle.activeChapter = ActiveChapter;
+                Battle.activeSubChapter = ActiveSub;
+                hasBattle = true;
+                SceneManager.LoadScene("Battle");
+            }
+        }
+        // ActiveDialog += ActiveDialog <= this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList.Count - 1 ? state : 0;
+        // if (ActiveDialog >= this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList.Count - 1)
+        // {
+        //     ActiveSub += ActiveSub <= this.story.listChapter[ActiveChapter].subList.Count - 1 ? state : 0;
+        //     if (ActiveSub >= this.story.listChapter[ActiveChapter].subList.Count - 1)
+        //     {
+
+        //     }
+        // }
     }
 
     public void onClickAnswer(string answer)
