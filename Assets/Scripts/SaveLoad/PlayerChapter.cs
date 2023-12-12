@@ -4,10 +4,20 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
 
-public class PlayerChapter: MonoBehaviour
+public class PlayerChapter : MonoBehaviour
 {
     public static bool isInit;
     public static int lastChapter;
 
-    
+    void Start()
+    {
+
+    }
+
+    public void LoadChapter()
+    {
+        string initPrefs = PlayerPrefs.GetString("prefsChapterState", "");
+        isInit = initPrefs != "hasInit" ? true : false;
+    }
+
 }
