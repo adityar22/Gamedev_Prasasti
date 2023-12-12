@@ -57,23 +57,29 @@ MonoBehaviour:
       criticalStage: 1
       baseHP: 8
       baseAtk: 8
+      atkMod: 1
       baseDef: 4
+      defMod: 1
       baseSpd: 15
+      spdMod: 1
       baseAcc: 1
       baseEva: 0.28
       baseEnergy: 4
     skill:
-      name: 
+      name: Tamaharastra
       power: 60
       skillTarget: 0
       skillEffectToStatus: 0
       effectStatusRate: 0
       skillEffectToStat: 0
-      effectStatRate: 0
+      effectStatRate: 0.4
       statChange: 0
       stageChange: 0
       ratioChange: 0
-      description: 
+      description: 'Dengan ditutupi oleh kabut mistis, Sri Sanggramawijaya perlahan
+        mendekati backline lawan dan menyerang secara tiba tiba. Menyebabkan efek
+        serangan critical '
+      skillIcon: {fileID: 0}
     abilities: []
     attribut:
       profile: {fileID: 0}

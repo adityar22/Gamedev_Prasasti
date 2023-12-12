@@ -53,20 +53,22 @@ MonoBehaviour:
     target: 1
     stat:
       level: 1
+      baseExp: 0
       criticalStage: 0
-      exp: 0
-      baseAtk: 17
-      baseDef: 5
       baseHP: 10
+      baseAtk: 17
+      atkMod: 1
+      baseDef: 5
+      defMod: 1
       baseSpd: 19
+      spdMod: 1
       baseAcc: 1
       baseEva: 0.3
       baseEnergy: 9
     skill:
       name: Dharma Quiver
       power: 110
-      consumeEnergy: 4
-      skillTarget: 2
+      skillTarget: 1
       skillEffectToStatus: 0
       effectStatusRate: 0
       skillEffectToStat: 2
@@ -77,6 +79,8 @@ MonoBehaviour:
       description: Menggunakan panah yang diisi dengan prinsip-prinsip Dharma, Samaratungga
         memberikan efek status positif kepada sekutunya dan merugikan musuh yang
         terkena panahnya
+      skillIcon: {fileID: 0}
+    abilities: []
     attribut:
       profile: {fileID: 0}
       idle: {fileID: 0}
