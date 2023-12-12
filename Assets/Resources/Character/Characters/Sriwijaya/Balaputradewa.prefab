@@ -53,20 +53,22 @@ MonoBehaviour:
     target: 2
     stat:
       level: 1
+      baseExp: 0
       criticalStage: 1
-      exp: 0
-      baseAtk: 15
-      baseDef: 8
       baseHP: 16
+      baseAtk: 15
+      atkMod: 1
+      baseDef: 8
+      defMod: 1
       baseSpd: 21
+      spdMod: 1
       baseAcc: 1
       baseEva: 0.2
       baseEnergy: 8
     skill:
       name: Sarasvati's Judgement
       power: 90
-      consumeEnergy: 5
-      skillTarget: 3
+      skillTarget: 0
       skillEffectToStatus: 0
       effectStatusRate: 0
       skillEffectToStat: 1
@@ -74,10 +76,16 @@ MonoBehaviour:
       statChange: 0
       stageChange: 0
       ratioChange: 0
-      description: 
+      description: Tombak Balapuntradewa memancarkan pilar air yang melukai lawan,
+        mengurangi kemampuan lawan untuk menyerang
+      skillIcon: {fileID: 0}
+    abilities: []
     attribut:
       profile: {fileID: 0}
       idle: {fileID: 0}
       attackPose: {fileID: 0}
       skillPose: {fileID: 0}
+      skillEffect: {fileID: 0}
+      effectType: 0
+      deathPose: {fileID: 0}
       dialog: {fileID: 0}

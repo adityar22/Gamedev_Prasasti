@@ -57,8 +57,11 @@ MonoBehaviour:
       criticalStage: 0
       baseHP: 12
       baseAtk: 7
+      atkMod: 1
       baseDef: 6
+      defMod: 1
       baseSpd: 5
+      spdMod: 1
       baseAcc: 0.92
       baseEva: 0.2
       baseEnergy: 4
@@ -66,14 +69,16 @@ MonoBehaviour:
       name: Raden's Wrath
       power: 100
       skillTarget: 1
-      skillEffectToStatus: 3
+      skillEffectToStatus: 0
       effectStatusRate: 0
       skillEffectToStat: 0
-      effectStatRate: 0
+      effectStatRate: 0.4
       statChange: 0
       stageChange: 0
       ratioChange: 0
-      description: 
+      description: Amarah raden patih memunculkan kekuatan sakral yang meningkatkan
+        kemapuan serangan raden patih
+      skillIcon: {fileID: 0}
     abilities: []
     attribut:
       profile: {fileID: 0}
