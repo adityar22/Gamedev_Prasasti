@@ -720,8 +720,393 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
+        characterIndex: 3
+        dialogText: Namun, Prasasti ini pecah dan tersebar di berbagai tempat dan
+          lini waktu dari berbagai kerajaan
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Penyebab prasasti ini pecah tidak disebutkan dalam surat tersebut
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: "Namun, pecahnya prasasti ini menyebabkan hilangnya keseimbangan
+          sehingga memunculkan kekacauan dan \nancaman di kerajaanku"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Kekacauan dan ancaman ini tidak akan selesai sampai kepingan
+          Prasasti itu terkumpul menjadi satu kesatuan
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Maka, mulailah perjalanan kami untuk mengumpulkan kepingan kepingan
+          lain demi mengatasi bencana ini
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: '*Hayam Wuruk mengambil nafas sejenak*'
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Dan kau, Shandy, akan membantu kami dalam mengumpulkan bagian
+          tersebut
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: Sontak Shandy kaget mendengar hal ini
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 1
+        dialogText: (Prasasti? Kekuatan? apa - apaan ini, bagaimana bisa prasasti
+          mempunyai kekuatan mempersatukan nusantara)
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
         characterIndex: 0
-        dialogText: 
+        dialogText: Aku masih bingung dengan kejadian ini
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: Jadi paduka menyuruh aku untuk mengumpulkan keseluruhan pecahan
+          dan menyatukan pecahan itu?
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Benar sekali
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: Mengapa harus aku membantu paduka? Memang prajurit paduka tidak
+          bisa mengumpulkan pecahan itu sendiri
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: Tidak tidak, pertanyaan ku lebih kearah mengapa harus aku membantu
+          kamu mengumpulkan pecahan prasasti itu *nada tinggi*
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: DIAM, LANCANG SEKALI KAMU DIHADAPAN PADUKA *sambil mengarahkan
+          tombak ke arah shandy*
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Tenang prajurit Chandra, Shandy pasti panik sehingga belum bisa
+          mengerti kondisi saat ini
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Biar ku selesaikan isi dari surat itu.
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Dalam surat disebutkan bahwa petunjuk untuk mengumpulkan kepingan
+          lain akan muncul bersamaan dengan munculnya seorang pemuda misterius
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Mengetahui hal ini, aku menyuruh prajurit chandra untuk berjaga
+          di sekitar pura tempat pecahan ditemukan
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Dan benar juga, tidak berselang lama, Prajurit Chandra menemukanmu
+          di dekat pura
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Untuk itu, kamu memegang peran penting dalam menyelamatkan kerajaanku
+          ini
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: ( Mungkin, penyebab aku pindah ke masa lalu juga akibat dari
+          pecahnya prasasti ini?)
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: '( Agar dapat kembali ke tempat asalku, mungkin aku harus mengumpulkan
+          pecahan-pecahan prasasti ini)
+
+'
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: Tapi, aku tidak tahu bagaimana aku bisa membantu dalam mengumpulkan
+          pecahan prasasti ini
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Tidak apa apa, kita akan bersama sama mencari tahu cara mengumpulkan
+          pecahan-pecahan prasasti
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Untuk pertama, coba kamu melihat pecahan prasasti tersebut
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: prajurit Chandra!
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: SIAP PADUKA!
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Bawa shandy ke tempat pecahan prasasti disimpan
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: Baik Paduka
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: Shandy dan Chandra pergi meninggalkan ruang tahta
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: Sudah kubilang jangan bertindak gegabah dihadapan paduka! *nada
+          sedikit marah*
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: Maaf chandra, aku masih syok dengan semua kejadian ini
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: Untung saja Yang Mulia Paduka tidak marah terhadapmu
         isQuestion: 0
         answers:
           answer: 
@@ -742,8 +1127,9 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: 2
+        dialogText: Kalau sampai paduka marah, kamu sudah jadi makanan untuk peliharaan
+          paduka sekarang
         isQuestion: 0
         answers:
           answer: 
@@ -754,7 +1140,18 @@ MonoBehaviour:
         soundEffect: {fileID: 0}
       - bgText: 0
         characterIndex: 0
-        dialogText: 
+        dialogText: '*gulp*'
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: Pokoknya jangan diulang lagi, mengerti?
         isQuestion: 0
         answers:
           answer: 
@@ -765,7 +1162,41 @@ MonoBehaviour:
         soundEffect: {fileID: 0}
       - bgText: 0
         characterIndex: 0
-        dialogText: 
+        dialogText: Iya iya mengerti
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: Shandy dan Chandra berjalan ke arah tempat pecahan disimpan
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 1
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: Shandy dan Chandra sampai di tempat pecahan disimpan
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: Terlihat ada suatu benda seperti pecahan batu yang terletak di
+          tengah ruangan
         isQuestion: 0
         answers:
           answer: 
@@ -776,7 +1207,18 @@ MonoBehaviour:
         soundEffect: {fileID: 0}
       - bgText: 0
         characterIndex: 0
-        dialogText: 
+        dialogText: Apakah itu pecahanya, chandra?
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: Ya benar, coba kau mendekat ke pecahan itu
         isQuestion: 0
         answers:
           answer: 
@@ -787,7 +1229,51 @@ MonoBehaviour:
         soundEffect: {fileID: 0}
       - bgText: 0
         characterIndex: 0
-        dialogText: 
+        dialogText: Perlahan - lahan, shandy pun bergerak ke arah pecahan
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: '*kriiinggggggggg*'
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: '*sontak kaget chandra dan shandy*'
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: Suara apa i-
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 1
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: ...
         isQuestion: 0
         answers:
           answer: 
@@ -798,7 +1284,30 @@ MonoBehaviour:
         soundEffect: {fileID: 0}
       - bgText: 0
         characterIndex: 0
-        dialogText: 
+        dialogText: Apa yang terjadi?
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: Dimana ini?
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: Mendengar ada suara orang lain, shandy menoleh ke arah suara
+          itu?
         isQuestion: 0
         answers:
           answer: 
@@ -809,7 +1318,7 @@ MonoBehaviour:
         soundEffect: {fileID: 0}
       - bgText: 0
         characterIndex: 0
-        dialogText: 
+        dialogText: Chandra? Apa yang terjadi? Dimana kita sekarang?
         isQuestion: 0
         answers:
           answer: 
@@ -819,8 +1328,8 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: -1
+        dialogText: Chandra melihat ke sekeliling dia
         isQuestion: 0
         answers:
           answer: 
@@ -830,8 +1339,8 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: 2
+        dialogText: Aku pun juga tidak tahu apa yang terjadi
         isQuestion: 0
         answers:
           answer: 
@@ -841,8 +1350,8 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: -1
+        dialogText: Tiba tiba Chandra teringat akan suatu hal
         isQuestion: 0
         answers:
           answer: 
@@ -852,8 +1361,8 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: 2
+        dialogText: Tunggu, aku jadi teringat suatu hal
         isQuestion: 0
         answers:
           answer: 
@@ -863,8 +1372,19 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: 2
+        dialogText: Aku ingat
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 1
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: ...
         isQuestion: 0
         answers:
           answer: 
@@ -874,8 +1394,8 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: 1
+        dialogText: HAHHHHH DIMANA AKUUUUUU?
         isQuestion: 0
         answers:
           answer: 
@@ -885,8 +1405,8 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: 1
+        dialogText: HAHHHHH DIMANA AKUUUUUU?
         isQuestion: 0
         answers:
           answer: 
@@ -896,8 +1416,9 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: -1
+        dialogText: '*Aruna kebingungan melihat pemandangan yang belum pernah ia
+          lihat sebelumnya'
         isQuestion: 0
         answers:
           answer: 
@@ -907,8 +1428,8 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: -1
+        dialogText: AHHHHHHHHH *Terdengar suara jeritan anak kecil*
         isQuestion: 0
         answers:
           answer: 
@@ -918,8 +1439,9 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: -1
+        dialogText: Aruna melihat ke arah sumber suara tersebut sembari menyadari
+          bahwa ada seorang bocil yang hampir terkena reruntuhan bangunan
         isQuestion: 0
         answers:
           answer: 
@@ -929,8 +1451,9 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: -1
+        dialogText: Aruna menyelamatkan anak kecil tersebut, dan menyadari bahwa
+          nampak ada portal besar yang muncul di dekatnya
         isQuestion: 0
         answers:
           answer: 
@@ -940,8 +1463,9 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: 1
+        dialogText: "\u2018Perasaan ini\u2019, \u2018sama seperti saat aku terbawa
+          ke dunia yang asing ini\u2019"
         isQuestion: 0
         answers:
           answer: 
@@ -951,8 +1475,28 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: -1
+        dialogText: '*Tiba-tiba muncul aura pahlawan yang hendak menyerang ke arah
+          Aruna'
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      bgm: {fileID: 0}
+      isBattlePhase: 1
+      indexEnemy:
+      - {fileID: 5645772200162966460, guid: 49956acb57f5b6148bd76db7547187d9, type: 3}
+      - {fileID: 5645772200162966460, guid: 49956acb57f5b6148bd76db7547187d9, type: 3}
+      indexUnlockedCharacter: 
+    - subtitle: Future Horizon
+      dialogList:
+      - bgText: 0
+        characterIndex: -1
+        dialogText: '*setelah musuh dikalahkan, portal ikut hancur dan tertutup'
         isQuestion: 0
         answers:
           answer: 
@@ -962,8 +1506,8 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: -1
+        dialogText: '*muncul sesuatu surat sebagai guide dari Aruna'
         isQuestion: 0
         answers:
           answer: 
@@ -973,261 +1517,9 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: 1
+        dialogText: Mungkin dengan mengikuti semua ini, aku akan dapat menemukan
+          jawaban dan kembali ke asalku
         isQuestion: 0
         answers:
           answer: 

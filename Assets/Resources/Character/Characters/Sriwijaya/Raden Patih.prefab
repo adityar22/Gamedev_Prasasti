@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &2221606618715061456
+--- !u!1 &8042637533770683353
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,22 +8,22 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 936764531054461693}
-  - component: {fileID: 598869940826811593}
+  - component: {fileID: 464525702755914013}
+  - component: {fileID: 9171255098989875398}
   m_Layer: 0
-  m_Name: Raden Patah
+  m_Name: Raden Patih
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &936764531054461693
+--- !u!4 &464525702755914013
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2221606618715061456}
+  m_GameObject: {fileID: 8042637533770683353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -32,49 +32,48 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &598869940826811593
+--- !u!114 &9171255098989875398
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2221606618715061456}
+  m_GameObject: {fileID: 8042637533770683353}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1366e54edd5277f4f82647d55b5ef135, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   character:
-    name: Raden Patah
-    kingdom: 2
+    name: Raden Patih
+    kingdom: 1
     type: 4
-    element: 3
-    tier: 2
-    target: 1
+    element: 0
+    tier: 0
+    target: 0
     stat:
       level: 1
-      baseExp: 0
+      baseExp: 75
       criticalStage: 0
-      baseHP: 34
-      baseAtk: 16
-      baseDef: 17
-      baseSpd: 8
-      baseAcc: 0.87
-      baseEva: 0.23
-      baseEnergy: 8
+      baseHP: 12
+      baseAtk: 7
+      baseDef: 6
+      baseSpd: 5
+      baseAcc: 0.92
+      baseEva: 0.2
+      baseEnergy: 4
     skill:
-      name: Sword of Nidarzana
-      power: 90
-      skillTarget: 0
-      skillEffectToStatus: 2
-      effectStatusRate: 0.2
-      skillEffectToStat: 1
-      effectStatRate: 0.3
-      statChange: 3
+      name: Raden's Wrath
+      power: 100
+      skillTarget: 1
+      skillEffectToStatus: 3
+      effectStatusRate: 0
+      skillEffectToStat: 0
+      effectStatRate: 0
+      statChange: 0
       stageChange: 0
       ratioChange: 0
-      description: Dengan menggumamkan kata Nidarzana, pedang raden patah akan menghasilkan
-        kabut beracun yang membuat gerakan lawan kaku
+      description: 
     abilities: []
     attribut:
       profile: {fileID: 0}

@@ -49,7 +49,7 @@ MonoBehaviour:
     kingdom: 0
     type: 3
     element: 1
-    tier: 1
+    tier: 0
     target: 2
     stat:
       level: 1

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4648399908739420087}
+  - component: {fileID: 1712774041184687171}
   m_Layer: 0
   m_Name: Arya Penangsang
   m_TagString: Untagged
@@ -31,3 +32,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1712774041184687171
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6797931050170712867}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1366e54edd5277f4f82647d55b5ef135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character:
+    name: Arya Penangsang
+    kingdom: 2
+    type: 1
+    element: 4
+    tier: 1
+    target: 0
+    stat:
+      level: 1
+      baseExp: 100
+      criticalStage: 0
+      baseHP: 20
+      baseAtk: 10
+      baseDef: 8
+      baseSpd: 7
+      baseAcc: 0.89
+      baseEva: 0.27
+      baseEnergy: 5
+    skill:
+      name: Kroba Thrust
+      power: 110
+      skillTarget: 0
+      skillEffectToStatus: 0
+      effectStatusRate: 0.5
+      skillEffectToStat: 1
+      effectStatRate: 0.37
+      statChange: 1
+      stageChange: 0
+      ratioChange: 0
+      description: Arya Penangsang mengankat tombak saktinya memberikan Pierce damage
+        yang menembus defense musuh
+    abilities: []
+    attribut:
+      profile: {fileID: 0}
+      idle: {fileID: 0}
+      attackPose: {fileID: 0}
+      skillPose: {fileID: 0}
+      skillEffect: {fileID: 0}
+      effectType: 0
+      deathPose: {fileID: 0}
+      dialog: {fileID: 0}
