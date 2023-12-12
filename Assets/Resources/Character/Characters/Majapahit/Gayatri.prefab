@@ -78,7 +78,7 @@ MonoBehaviour:
       ratioChange: 0
       description: Gayatri menciptakan badai air yang di tengah kesunyian, memperangkap
         musuh sambil memberikan penurunan kecepatan.
-      skillIcon: {fileID: 0}
+      skillIcon: {fileID: 21300000, guid: 47ad3ab811da37f47a63849c22cc953f, type: 3}
     abilities: []
     attribut:
       profile: {fileID: 0}

@@ -57,8 +57,11 @@ MonoBehaviour:
       criticalStage: 0
       baseHP: 27
       baseAtk: 15
+      atkMod: 1
       baseDef: 13
+      defMod: 1
       baseSpd: 13
+      spdMod: 1
       baseAcc: 1
       baseEva: 0.2
       baseEnergy: 7
@@ -75,6 +78,7 @@ MonoBehaviour:
       ratioChange: 0
       description: Hayam Wuruk melepaskan raungan mematikan yang menghasilkan badai
         api di sekitarnya, menyebabkan luka bakar pada musuh-musuh di sekitarnya.
+      skillIcon: {fileID: 21300000, guid: 59dd67ce0fec94d4ab8c37bf0d45bf5e, type: 3}
     abilities:
     - name: King's Aura
       abilityType: 0
