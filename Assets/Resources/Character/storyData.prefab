@@ -672,54 +672,6 @@ MonoBehaviour:
     - subtitle: Begin of The Journey
       dialogList:
       - bgText: 0
-        characterIndex: 3
-        dialogText: Bagaimana kami bisa yakin ini sebagai penyebab bencana? Karena
-          bersamaan ditemukannya prasasti itu, terdapat surat yang terletak dekat
-          prasasti
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 1
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 3
-        dialogText: 'Pecahan ini merupakan salah satu bagian dari sebuah Prasasti. '
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 3
-        dialogText: Prasasti ini berfungsi untuk menjaga keseimbangan dan eksistensi
-          kerajaan-kerajaan masa lampau di nusantara.
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 3
-        dialogText: Namun, Prasasti ini pecah dan tersebar di berbagai tempat dan
-          lini waktu dari berbagai kerajaan
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
         characterIndex: 0
         dialogText: 
         isQuestion: 0
@@ -1203,6 +1155,201 @@ MonoBehaviour:
         background: {fileID: 0}
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      bgm: {fileID: 0}
+      isBattlePhase: 1
+      indexEnemy:
+      - {fileID: 5645772200162966460, guid: 49956acb57f5b6148bd76db7547187d9, type: 3}
+      - {fileID: 5645772200162966460, guid: 49956acb57f5b6148bd76db7547187d9, type: 3}
+      indexUnlockedCharacter: 
+    - subtitle: Future Horizon
+      dialogList:
       - bgText: 0
         characterIndex: 0
         dialogText: 
