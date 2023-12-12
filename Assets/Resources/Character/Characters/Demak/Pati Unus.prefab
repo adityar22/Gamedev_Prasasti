@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7544071872824430412}
+  - component: {fileID: 4675760493879912681}
   m_Layer: 0
   m_Name: Pati Unus
   m_TagString: Untagged
@@ -31,3 +32,56 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4675760493879912681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6285847128305873089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1366e54edd5277f4f82647d55b5ef135, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character:
+    name: Pati Unus
+    kingdom: 2
+    type: 0
+    element: 0
+    tier: 1
+    target: 2
+    stat:
+      level: 1
+      baseExp: 95
+      criticalStage: 0
+      baseHP: 20
+      baseAtk: 13
+      baseDef: 10
+      baseSpd: 10
+      baseAcc: 0.9
+      baseEva: 0.2
+      baseEnergy: 7
+    skill:
+      name: Bhrama Slash
+      power: 95
+      skillTarget: 1
+      skillEffectToStatus: 1
+      effectStatusRate: 0.3
+      skillEffectToStat: 1
+      effectStatRate: 0
+      statChange: 3
+      stageChange: 0
+      ratioChange: 0
+      description: Pati unus memanggil kekuatan Bhrama yang menciptakan  terhadap
+        lawan
+    abilities: []
+    attribut:
+      profile: {fileID: 0}
+      idle: {fileID: 0}
+      attackPose: {fileID: 0}
+      skillPose: {fileID: 0}
+      skillEffect: {fileID: 0}
+      effectType: 0
+      deathPose: {fileID: 0}
+      dialog: {fileID: 0}
