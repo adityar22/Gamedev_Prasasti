@@ -2066,6 +2066,8 @@ MonoBehaviour:
   audio: {fileID: 1814279613}
   questionPanel: {fileID: 259571197}
   btnAnswer: {fileID: 945175245815984817, guid: 706fb11cc9298fc44adea046ab6217dd, type: 3}
+  notifPanel: {fileID: 567199514}
+  txtNotif: {fileID: 1529378455}
 --- !u!1 &1814279612
 GameObject:
   m_ObjectHideFlags: 0

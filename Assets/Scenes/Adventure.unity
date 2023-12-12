@@ -499,7 +499,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 114658503893516242, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _latitudeLongitude.Array.data[0]
-      value: -7.758223186499022, 110.37277649411436
+      value: -7.763355636516403, 110.37267282317596
       objectReference: {fileID: 0}
     - target: {fileID: 114658503893516242, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
       propertyPath: _latitudeLongitude.Array.data[1]
@@ -798,6 +798,7 @@ GameObject:
   - component: {fileID: 558371713}
   - component: {fileID: 558371712}
   - component: {fileID: 558371715}
+  - component: {fileID: 558371716}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -869,6 +870,21 @@ MonoBehaviour:
   txtTime: {fileID: 608871505}
   txtLocation: {fileID: 97676113}
   map: {fileID: 0}
+--- !u!114 &558371716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 558371711}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 980c6c9bf58090a438b11be731014619, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  monumentData: {fileID: 4450353953583850665, guid: b5debd6a198bc2b4c9e820e0c475f1f4, type: 3}
+  monumentIcon: {fileID: 5229275877359837140, guid: 81366503af89cf44abbd71f3c3691796, type: 3}
+  map: {fileID: 1458849381}
 --- !u!1 &587357463 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1065618987163410, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
@@ -2264,6 +2280,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SceneTarget: Setting
+--- !u!114 &1458849381 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 114105500206378512, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}
+  m_PrefabInstance: {fileID: 180097373}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd961b1c9541a4cee99686069ecce852, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1601902595 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114658503893516242, guid: 35ce2bb4caba9434db5e656796b632b1, type: 3}

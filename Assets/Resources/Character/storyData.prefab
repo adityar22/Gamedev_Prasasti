@@ -179,7 +179,7 @@ MonoBehaviour:
       bgm: {fileID: 8300000, guid: f2eb93d5df518a046bf75e64ba12c285, type: 3}
       isBattlePhase: 0
       indexEnemy: []
-      indexUnlockedCharacter: 
+      indexUnlockedCharacter: []
     - subtitle: Crushed Dream
       dialogList:
       - bgText: 1
@@ -443,7 +443,7 @@ MonoBehaviour:
       bgm: {fileID: 0}
       isBattlePhase: 0
       indexEnemy: []
-      indexUnlockedCharacter: 
+      indexUnlockedCharacter: []
     - subtitle: A Real Past
       dialogList:
       - bgText: 0
@@ -454,8 +454,8 @@ MonoBehaviour:
         answers:
           answer: 
           options: []
-        isTransition: 0
-        background: {fileID: 0}
+        isTransition: 1
+        background: {fileID: 21300000, guid: 72e132049d267bc48aef0f2867f5b0f2, type: 3}
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
@@ -522,8 +522,8 @@ MonoBehaviour:
         answers:
           answer: 
           options: []
-        isTransition: 0
-        background: {fileID: 0}
+        isTransition: 1
+        background: {fileID: 21300000, guid: e4421efbdc3fb574a80ab7167f48097a, type: 3}
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
@@ -668,12 +668,27 @@ MonoBehaviour:
       bgm: {fileID: 0}
       isBattlePhase: 0
       indexEnemy: []
-      indexUnlockedCharacter: 0200000003000000
+      indexUnlockedCharacter:
+      - {fileID: 559299343314850929, guid: c6e86803134d3794cb2a2cf48cbbf9d0, type: 3}
+      - {fileID: 1526813620762953848, guid: 00fae6de8ef02d849b01f069328aa4c5, type: 3}
     - subtitle: Begin of The Journey
       dialogList:
       - bgText: 0
         characterIndex: 0
-        dialogText: 
+        dialogText: Bagaimana kami bisa yakin ini sebagai penyebab bencana? Karena
+          bersamaan ditemukannya prasasti itu, terdapat surat yang terletak dekat
+          prasasti
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 1
+        background: {fileID: 21300000, guid: e4421efbdc3fb574a80ab7167f48097a, type: 3}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: 'Pecahan ini merupakan salah satu bagian dari sebuah Prasasti. '
         isQuestion: 0
         answers:
           answer: 
@@ -683,140 +698,9 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
+        characterIndex: 3
+        dialogText: Prasasti ini berfungsi untuk menjaga keseimbangan dan eksistensi
+          kerajaan-kerajaan masa lampau di nusantara.
         isQuestion: 0
         answers:
           answer: 
@@ -1222,17 +1106,6 @@ MonoBehaviour:
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
         characterIndex: 2
         dialogText: Kalau sampai paduka marah, kamu sudah jadi makanan untuk peliharaan
           paduka sekarang
@@ -1285,7 +1158,7 @@ MonoBehaviour:
           answer: 
           options: []
         isTransition: 1
-        background: {fileID: 0}
+        background: {fileID: 21300000, guid: 01c0e8f5b08a4514dabed9615e4f6632, type: 3}
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
@@ -1384,8 +1257,8 @@ MonoBehaviour:
         answers:
           answer: 
           options: []
-        isTransition: 0
-        background: {fileID: 0}
+        isTransition: 1
+        background: {fileID: 21300000, guid: 0b3e828648c2e0a4bb7caa837da2f3e2, type: 3}
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
@@ -1406,8 +1279,8 @@ MonoBehaviour:
         answers:
           answer: 
           options: []
-        isTransition: 0
-        background: {fileID: 0}
+        isTransition: 1
+        background: {fileID: 21300000, guid: b536f12db2a69854c9a3da74b0f9aeb7, type: 3}
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
@@ -1495,19 +1368,8 @@ MonoBehaviour:
         answers:
           answer: 
           options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 1
-        dialogText: HAHHHHH DIMANA AKUUUUUU?
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
+        isTransition: 1
+        background: {fileID: 21300000, guid: 0b3e828648c2e0a4bb7caa837da2f3e2, type: 3}
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
@@ -1529,8 +1391,8 @@ MonoBehaviour:
         answers:
           answer: 
           options: []
-        isTransition: 0
-        background: {fileID: 0}
+        isTransition: 1
+        background: {fileID: 21300000, guid: b4f17fcdf1789564da749b23078a5fa3, type: 3}
         hasSoundEffect: 0
         soundEffect: {fileID: 0}
       - bgText: 0
@@ -1547,7 +1409,7 @@ MonoBehaviour:
       - bgText: 0
         characterIndex: -1
         dialogText: Aruna melihat ke arah sumber suara tersebut sembari menyadari
-          bahwa ada seorang bocil yang hampir terkena reruntuhan bangunan
+          bahwa ada seorang anak kecil yang hampir terkena reruntuhan bangunan
         isQuestion: 0
         answers:
           answer: 
@@ -1597,7 +1459,8 @@ MonoBehaviour:
       indexEnemy:
       - {fileID: 5645772200162966460, guid: 49956acb57f5b6148bd76db7547187d9, type: 3}
       - {fileID: 5645772200162966460, guid: 49956acb57f5b6148bd76db7547187d9, type: 3}
-      indexUnlockedCharacter: 
+      indexUnlockedCharacter:
+      - {fileID: 5566065624795018748, guid: 939234b6e19cfdb499b02d015085ed03, type: 3}
     - subtitle: Future Horizon
       dialogList:
       - bgText: 0
@@ -1639,45 +1502,4 @@ MonoBehaviour:
       indexEnemy:
       - {fileID: 5645772200162966460, guid: 49956acb57f5b6148bd76db7547187d9, type: 3}
       - {fileID: 5645772200162966460, guid: 49956acb57f5b6148bd76db7547187d9, type: 3}
-      indexUnlockedCharacter: 
-    - subtitle: Future Horizon
-      dialogList:
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      - bgText: 0
-        characterIndex: 0
-        dialogText: 
-        isQuestion: 0
-        answers:
-          answer: 
-          options: []
-        isTransition: 0
-        background: {fileID: 0}
-        hasSoundEffect: 0
-        soundEffect: {fileID: 0}
-      bgm: {fileID: 0}
-      isBattlePhase: 1
-      indexEnemy:
-      - {fileID: 5645772200162966460, guid: 49956acb57f5b6148bd76db7547187d9, type: 3}
-      - {fileID: 5645772200162966460, guid: 49956acb57f5b6148bd76db7547187d9, type: 3}
-      indexUnlockedCharacter: 
+      indexUnlockedCharacter: []
