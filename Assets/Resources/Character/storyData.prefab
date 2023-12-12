@@ -44,4 +44,1201 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b06f37fd3e63cd4b99a828df7ccbc81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  listChapter: []
+  listChapter:
+  - title: Prolog
+    kingdom: Majapahit
+    subList:
+    - subtitle: Anytime, Anywhere
+      dialogList:
+      - bgText: 0
+        characterIndex: -1
+        dialogText: Shandy kebingungan sembari melihat sekelilingnya.
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 1
+        background: {fileID: 21300000, guid: 7372831975d5f524ab23ed9633a08a9b, type: 3}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: "*tap\u2026 tap..* Terdengar langkah kaki dari balik pepohonan
+          yang kemudian disusul sosok pemuda dengan penampilan layaknya prajurit
+          kerajaan"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: "\u201CKau pasti tersesat\u201D"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: "\u201CSiapa dirimu?\u201D"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: "\u201CAku Candra, prajurit Kerajaan Majapahit, Kau pasti bukan
+          berasal dari wilayah ini kan?\u201D"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: "\u201CAku akan membantumu dan membimbingmu kembali ke tempat
+          asalmu\u201D"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: "\u201CTunggu dulu, ini dimana?!\u201D"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: "\u201CDan dari mana kau tau aku bukan berasal dari sini?!\u201D"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: "\u201CKau tampak kebingungan, lagipula pakaianmu aneh\u201D"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: (Semua hal ini aneh, kurasa otakku belum bisa mencerna seluruhnya)
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: "(Tunggu\u2026 Kerajaan Majapahit?...Apakah aku\u2026 terlempar
+          ke masa lalu?)"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      bgm: {fileID: 8300000, guid: f2eb93d5df518a046bf75e64ba12c285, type: 3}
+      isBattlePhase: 0
+      indexEnemy: []
+      indexUnlockedCharacter: 
+    - subtitle: Crushed Dream
+      dialogList:
+      - bgText: 1
+        characterIndex: -1
+        dialogText: Nak, pilihanmu tidak ada masa depannya
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 1
+        background: {fileID: 21300000, guid: 0b3e828648c2e0a4bb7caa837da2f3e2, type: 3}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 1
+        characterIndex: -1
+        dialogText: Mau kerja jadi apa kamu
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 1
+        characterIndex: -1
+        dialogText: Belajar kaya gitu buat apa
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 1
+        characterIndex: -1
+        dialogText: "Intinya, tidak boleh\u2026"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 1
+        characterIndex: -1
+        dialogText: Kami tahu yang terbaik buat kamu
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: "*kriiiiingggg\u2026*  *GASPPPP*"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 1
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: (Urghhh Mimpi ini lagi)
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 1
+        background: {fileID: 21300000, guid: 5a41f73af11bb9f4eaef2367c97c2a3a, type: 3}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: Huhh, memangnya apa yang salah dengan impian itu
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: 'Sambil masih merasa sebal, shandy bersiap-siap untuk berangkat
+          kuliah '
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: Shandy berjalan sambil minum sekaleng soda
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 1
+        background: {fileID: 21300000, guid: 2002b78648229144f9a7ae1263572d12, type: 3}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: Kenapa aku harus kuliah di jurusan yang tidak kuinginkan
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: Memang jurusanku ini menjamin aku sukses?
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: Ahhhh *shandy melemparkan kaleng soda yang sudah habis, berniat
+          untuk membuangnya*
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: '*swishhhh* Kaleng pun dilemparkannya ke arah tong sampah di
+          depannya'
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 1
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: '*Shingggg* Tepat di depan mata shandy, ia melihat kaleng yang
+          seharusnya masuk ke tempat sampah itu hilang begitu saja'
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 1
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: Hah!?
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: Kok hilang?
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: '*Shandy perlahan mendekati area hilangnya kaleng*'
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: Hah apa-apaan ini!? *Shandy merasakan tarikan kuat*
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: Shandy berusaha melawan tarikan itu
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: Arghhh To-
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: Belum sempat Shandy berteriak minta tolong, dirinya makin tertarik
+          oleh suatu hal tersebut
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: Hingga.., semuanya menjadi gelap...
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 1
+        background: {fileID: 21300000, guid: 0b3e828648c2e0a4bb7caa837da2f3e2, type: 3}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      bgm: {fileID: 0}
+      isBattlePhase: 0
+      indexEnemy: []
+      indexUnlockedCharacter: 
+    - subtitle: A Real Past
+      dialogList:
+      - bgText: 0
+        characterIndex: 0
+        dialogText: "(Sekarang aku berdiri di depan gerbang kerajaan, kerajaan besar
+          yang tercatat menguasai banyak wilayah di Indonesia\u2026, Majapahit)"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: "\u201CIkuti aku, jangan bertindak gegabah atau mencurigakan\u201D"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: (Semenjak muncul di hutan itu dan bertemu Chandra, aku berjalan
+          mengikuti Chandra yang mengajakku untuk mencari tau apa yang sedang terjadi)
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: "\u201CSekali lagi kuperingati, jangan bertindak gegabah! Kita
+          akan menghadap Paduka hayam Wuruk!\u201D"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: "\u201CHahhh!?\u201D"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: "\u201CSudah kubilang jangan berisik!\u201D"
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: ...
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: HIDUP SANG RAJA MAJAPAHIT *sorak semua prajurit*
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 1
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Hmmmm
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Ini kah anak muda yang kau maksud, Wahai Prajuritku!?
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 2
+        dialogText: Hamba mohon untuk menjawab paduka. Ya, benar ini anak muda tersebut,
+          Wahai Paduka Yang Mulia.
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Siapa namamu, Wahai Anak Muda? *Sambil menghadap ke arah Shandy*
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: Izin menjawab, Nama saya Shandy, Wahai Yang Mulia Paduka.
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Hmm, baik akan kuingat namamu. Apakah kamu tau kenapa kamu berada
+          disini?
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: -1
+        dialogText: '*Shandy menggelengkan kepala*'
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Akhir akhir ini, Kerajaan Majapahit dilanda banyak bencana yang
+          tidak wajar.
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Akibat bencana ini, banyak wargaku yang terdampak dan mengalami
+          kerugian
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Menanggapi hal ini, aku pun mengirimkan para prajurit ku untuk
+          mencari tahu penyebab bencana bencana ini
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Ketika prajuritku mencari tahu, Prajurit Chandra bersama pasukannya
+          menemukan sebuah pecahan prasasti yang dipercaya sebagai penyebab bencana
+          bencana ini muncul
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      bgm: {fileID: 0}
+      isBattlePhase: 0
+      indexEnemy: []
+      indexUnlockedCharacter: 0200000003000000
+    - subtitle: Begin of The Journey
+      dialogList:
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Bagaimana kami bisa yakin ini sebagai penyebab bencana? Karena
+          bersamaan ditemukannya prasasti itu, terdapat surat yang terletak dekat
+          prasasti
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 1
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: 'Pecahan ini merupakan salah satu bagian dari sebuah Prasasti. '
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Prasasti ini berfungsi untuk menjaga keseimbangan dan eksistensi
+          kerajaan-kerajaan masa lampau di nusantara.
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 3
+        dialogText: Namun, Prasasti ini pecah dan tersebar di berbagai tempat dan
+          lini waktu dari berbagai kerajaan
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      - bgText: 0
+        characterIndex: 0
+        dialogText: 
+        isQuestion: 0
+        answers:
+          answer: 
+          options: []
+        isTransition: 0
+        background: {fileID: 0}
+        hasSoundEffect: 0
+        soundEffect: {fileID: 0}
+      bgm: {fileID: 0}
+      isBattlePhase: 1
+      indexEnemy:
+      - {fileID: 5645772200162966460, guid: 49956acb57f5b6148bd76db7547187d9, type: 3}
+      - {fileID: 5645772200162966460, guid: 49956acb57f5b6148bd76db7547187d9, type: 3}
+      indexUnlockedCharacter: 

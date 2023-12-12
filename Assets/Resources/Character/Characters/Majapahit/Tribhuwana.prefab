@@ -57,8 +57,11 @@ MonoBehaviour:
       criticalStage: 0
       baseHP: 16
       baseAtk: 15
+      atkMod: 1
       baseDef: 8
+      defMod: 1
       baseSpd: 11
+      spdMod: 1
       baseAcc: 0.9
       baseEva: 0.3
       baseEnergy: 7
@@ -76,10 +79,11 @@ MonoBehaviour:
       description: Tribuwana melepaskan hujan panah angin yang cepat dan akurat,
         menyerang musuh-musuh dari kejauhan sambil membatasi gerakan mereka dengan
         kecepatan angin yang luar biasa.
+      skillIcon: {fileID: 0}
     abilities: []
     attribut:
       profile: {fileID: 0}
-      idle: {fileID: 0}
+      idle: {fileID: 21300000, guid: 84de863674262284d92f1b2b6c295d89, type: 3}
       attackPose: {fileID: 0}
       skillPose: {fileID: 0}
       skillEffect: {fileID: 0}
