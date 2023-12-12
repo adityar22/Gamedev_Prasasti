@@ -10,6 +10,6 @@ Sebuah prasasti. Prasasti yang telah terjaga selama ribuan tahun untuk menjaga k
 
 
 ## Our Team
-Aditya Ramadhan
-Ariq Tsaqif Aryasuta
-Pramudya Kusuma Hardika
+- Aditya Ramadhan - 20/460535/TK/51124 <br/>
+- Ariq Tsaqif Aryasuta <br/>
+- Pramudya Kusuma Hardika <br/>
