@@ -57,8 +57,11 @@ MonoBehaviour:
       criticalStage: 0
       baseHP: 12
       baseAtk: 18
+      atkMod: 1
       baseDef: 6
+      defMod: 1
       baseSpd: 17
+      spdMod: 1
       baseAcc: 0.84
       baseEva: 0.2
       baseEnergy: 9
@@ -75,6 +78,7 @@ MonoBehaviour:
       ratioChange: 0
       description: Sultan Trenggana Preach to the Lost Lamb and give them enlighment
         giving all ally extra 50% of defense
+      skillIcon: {fileID: 21300000, guid: b1a41ba4bc2afc345bc33f5212bdc9f1, type: 3}
     abilities: []
     attribut:
       profile: {fileID: 0}

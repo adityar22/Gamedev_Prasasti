@@ -57,8 +57,11 @@ MonoBehaviour:
       criticalStage: 1
       baseHP: 19
       baseAtk: 13
+      atkMod: 1
       baseDef: 9
+      defMod: 1
       baseSpd: 11
+      spdMod: 1
       baseAcc: 1
       baseEva: 0.35
       baseEnergy: 7
@@ -77,6 +80,7 @@ MonoBehaviour:
         lompatan dengan tombak membentuk bulan sabit, menyebabkan kerusakan besar
         pada musuh. Selain itu, keahlian ini meningkatkan kecepatan Chandra secara
         signifikan, memberinya keunggulan di medan pertempuran.
+      skillIcon: {fileID: 21300000, guid: 170f867ae57fb9e469cc9dd12c60e20f, type: 3}
     abilities:
     - name: 
       abilityType: 0

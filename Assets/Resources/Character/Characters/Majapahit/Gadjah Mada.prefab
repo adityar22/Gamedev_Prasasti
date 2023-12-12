@@ -57,8 +57,11 @@ MonoBehaviour:
       criticalStage: 0
       baseHP: 24
       baseAtk: 13
+      atkMod: 1
       baseDef: 11
+      defMod: 1
       baseSpd: 9
+      spdMod: 1
       baseAcc: 1
       baseEva: 0.2
       baseEnergy: 6
@@ -76,6 +79,7 @@ MonoBehaviour:
       description: Gadjah Mada memukul tanah dengan kekuatan gada legendarisnya,
         menciptakan gempa bumi yang menggetarkan musuh-musuh di sekitarnya dan meningkatkan
         daya tahan tubuhnya.
+      skillIcon: {fileID: 21300000, guid: 59dd67ce0fec94d4ab8c37bf0d45bf5e, type: 3}
     abilities: []
     attribut:
       profile: {fileID: 21300000, guid: 50ec27816767510429c5e392719b5b41, type: 3}

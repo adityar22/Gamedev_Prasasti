@@ -79,7 +79,7 @@ MonoBehaviour:
       description: Tribuwana melepaskan hujan panah angin yang cepat dan akurat,
         menyerang musuh-musuh dari kejauhan sambil membatasi gerakan mereka dengan
         kecepatan angin yang luar biasa.
-      skillIcon: {fileID: 0}
+      skillIcon: {fileID: 21300000, guid: 3c98510bde6d6d947bdbf1bc9aee7068, type: 3}
     abilities: []
     attribut:
       profile: {fileID: 0}
