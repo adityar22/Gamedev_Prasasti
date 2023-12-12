@@ -9,12 +9,16 @@ public class Story : MonoBehaviour
     [System.Serializable]
     public class Dialog
     {
+        public bool bgText;
         public int characterIndex;
         [TextArea]
         public string dialogText;
         public bool isQuestion;
         public bool isTransition;
         public Sprite background;
+
+        public bool hasSoundEffect;
+        public AudioClip soundEffect;
     }
     [System.Serializable]
     public class SubChapter
@@ -22,6 +26,8 @@ public class Story : MonoBehaviour
         public string subtitle;
         public List<Dialog> dialogList;
         public AudioClip bgm;
+        public bool isBattlePhase;
+        public int[] indexUnlockedCharacter = new int[]{};
     }
     [System.Serializable]
     public class Chapter

@@ -45,6 +45,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   charData:
+  - {fileID: 5752119146457754659, guid: e5485f62064383a4d93ea493544863b8, type: 3}
+  - {fileID: 5566065624795018748, guid: 939234b6e19cfdb499b02d015085ed03, type: 3}
   - {fileID: 559299343314850929, guid: c6e86803134d3794cb2a2cf48cbbf9d0, type: 3}
   - {fileID: 1526813620762953848, guid: 00fae6de8ef02d849b01f069328aa4c5, type: 3}
   - {fileID: 862423936728063289, guid: 35225cf1de7028e44971284687e2b96f, type: 3}

@@ -15,6 +15,8 @@ public class Dialog : MonoBehaviour
     public GameObject storyData;
     private Story story;
 
+    public static int setChapter = 0;
+
     // init story state
     private int activeChapter = -1;
     public int ActiveChapter
@@ -49,8 +51,11 @@ public class Dialog : MonoBehaviour
 
     // init game component
     [SerializeField] GameObject dialogPanel;
+    [SerializeField] GameObject txtDialogPanel;
     [SerializeField] TextMeshProUGUI textChar;
     [SerializeField] TextMeshProUGUI textDialog;
+    [SerializeField] GameObject txtBgPanel;
+    [SerializeField] TextMeshProUGUI txtBg;
     [SerializeField] Image imgBg;
     [SerializeField] Image imgChar;
 
@@ -70,6 +75,8 @@ public class Dialog : MonoBehaviour
         GameObject storyDataObj = Instantiate(storyData);
         this.story = storyDataObj.GetComponent<Story>();
 
+        ActiveChapter = setChapter;
+        ActiveSub += 1;
         ActiveDialog += 1;
     }
 
@@ -86,27 +93,35 @@ public class Dialog : MonoBehaviour
         btnDialogControl.interactable = !state;
 
         int charId = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].characterIndex;
-        textChar.text = this.character.charData[charId].name;
+
+        txtBgPanel.SetActive(this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].bgText);
+        txtDialogPanel.SetActive(!this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].bgText);
+
+        textChar.text = charId != -1 ? this.character.charData[charId].name : "";
         textDialog.text = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].dialogText;
-        imgChar.sprite = this.character.charData[charId].character.attribut.dialog;
+        txtBg.text = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].dialogText;
+
+        imgChar.sprite = charId != -1 ? this.character.charData[charId].character.attribut.dialog : null;
 
         if (this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].isTransition)
         {
             imgBg.sprite = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].background;
         }
-        
-        if(this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].isQuestion){
-
-        }
     }
 
     void onChangeSubChapter()
     {
-        ActiveDialog = 0;
-
         audio.Stop();
-        audio.clip = this.story.listChapter[ActiveChapter].subList[ActiveSub].bgm;
-        audio.Play();
+        if (this.story.listChapter[ActiveChapter].subList[ActiveSub].bgm)
+        {
+            audio.clip = this.story.listChapter[ActiveChapter].subList[ActiveSub].bgm;
+            audio.Play();
+        }
+
+        if (!this.story.listChapter[ActiveChapter].subList[ActiveSub].isBattlePhase)
+        {
+            ActiveDialog = 0;
+        }
     }
 
     void onChangeChapter()
