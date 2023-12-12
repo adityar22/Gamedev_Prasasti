@@ -8,6 +8,7 @@ using UnityEngine.Video;
 
 public class Dialog : MonoBehaviour
 {
+    public static bool hasBattle = false;
     // init character data
     public GameObject charData;
     private CharData character;
@@ -65,6 +66,8 @@ public class Dialog : MonoBehaviour
 
     // init question component
     [SerializeField] GameObject questionPanel;
+    [SerializeField] GameObject btnAnswer;
+    GameObject[] answer;
 
     // Start is called before the first frame update
     void Start()
@@ -75,8 +78,8 @@ public class Dialog : MonoBehaviour
         GameObject storyDataObj = Instantiate(storyData);
         this.story = storyDataObj.GetComponent<Story>();
 
-        ActiveChapter = setChapter;
-        ActiveSub += 1;
+        ActiveChapter = hasBattle ? Battle.activeChapter : setChapter;
+        ActiveSub += hasBattle ? Battle.activeSubChapter + 1 : 1;
         ActiveDialog += 1;
     }
 
@@ -91,6 +94,15 @@ public class Dialog : MonoBehaviour
         bool state = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].isQuestion;
         questionPanel.SetActive(state);
         btnDialogControl.interactable = !state;
+
+        int answerCount = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].answers.options.Length;
+        answer = new GameObject[answerCount];
+        for (int i = 0; i < answerCount; i++)
+        {
+            answer[i] = Instantiate(btnAnswer, questionPanel.transform);
+            Answer ansClass = answer[i].GetComponent<Answer>();
+            ansClass.answer = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].answers.options[i];
+        }
 
         int charId = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].characterIndex;
 
@@ -122,6 +134,20 @@ public class Dialog : MonoBehaviour
         {
             ActiveDialog = 0;
         }
+        else
+        {
+            int i = 0;
+            foreach (var index in this.story.listChapter[ActiveChapter].subList[ActiveSub].indexEnemy)
+            {
+                EnemySpawn.setIndex[i] = index;
+                i += 1;
+            }
+            Battle.isAdventure = false;
+            Battle.activeChapter = ActiveChapter;
+            Battle.activeSubChapter = ActiveSub;
+            hasBattle = true;
+            SceneManager.LoadScene("Battle");
+        }
     }
 
     void onChangeChapter()
@@ -136,5 +162,10 @@ public class Dialog : MonoBehaviour
         {
             ActiveSub += ActiveSub <= this.story.listChapter[ActiveChapter].subList.Count - 1 ? state : 0;
         }
+    }
+
+    public void onClickAnswer(string answer)
+    {
+
     }
 }

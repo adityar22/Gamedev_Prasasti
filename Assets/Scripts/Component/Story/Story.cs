@@ -5,6 +5,13 @@ using UnityEngine.UI;
 
 public class Story : MonoBehaviour
 {
+    // init question properties
+    [System.Serializable]
+    public class AnswerList
+    {
+        public string answer;
+        public string[] options = new string[]{};
+    }
     // init Story properties
     [System.Serializable]
     public class Dialog
@@ -14,6 +21,7 @@ public class Story : MonoBehaviour
         [TextArea]
         public string dialogText;
         public bool isQuestion;
+        public AnswerList answers;
         public bool isTransition;
         public Sprite background;
 
@@ -27,7 +35,8 @@ public class Story : MonoBehaviour
         public List<Dialog> dialogList;
         public AudioClip bgm;
         public bool isBattlePhase;
-        public int[] indexUnlockedCharacter = new int[]{};
+        public Character[] indexEnemy = new Character[]{};
+        public int[] indexUnlockedCharacter = new int[] { };
     }
     [System.Serializable]
     public class Chapter
