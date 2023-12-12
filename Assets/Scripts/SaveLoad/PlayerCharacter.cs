@@ -29,9 +29,9 @@ public class PlayerCharacter : MonoBehaviour
 
         if (getIsInit())
         {
-            SaveCharacter(dataChar.charData[0].character);
             SaveCharacter(dataChar.charData[1].character);
             SaveCharacter(dataChar.charData[2].character);
+            SaveCharacter(dataChar.charData[3].character);
         }
 
         List<CharModel> playerPrefsLoad = GetUnlockedCharacterList();

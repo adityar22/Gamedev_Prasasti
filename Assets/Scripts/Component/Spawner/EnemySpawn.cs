@@ -6,19 +6,37 @@ using UnityEngine.UI;
 
 public class EnemySpawn : MonoBehaviour
 {
+    public static Character[] setIndex = new Character[3];
     System.Random random;
     EnemyList listEnemy;
     void Start()
     {
         GameObject eventSystem = GameObject.Find("EventSystem");
         listEnemy = GetComponent<EnemyList>();
-        random = new System.Random();
-        int countEnemy = random.Next(1, 4);
-
-        Debug.Log(countEnemy);
-        for (int i = 0; i < countEnemy; i++)
+        if (setIndex[0] == null)
         {
-            ChoosedPlayer.choosedEnemy.Add(enemyGenerator(i));
+            random = new System.Random();
+            int countEnemy = random.Next(1, 4);
+
+            Debug.Log(countEnemy);
+            for (int i = 0; i < countEnemy; i++)
+            {
+                ChoosedPlayer.choosedEnemy.Add(enemyGenerator(i));
+            }
+        }
+        else
+        {
+            int i = 0;
+            foreach (var chara in setIndex)
+            {
+                if (setIndex[i] != null)
+                {
+                    Fighter fighter = new Fighter();
+                    fighter.character = chara.character;
+                    ChoosedPlayer.choosedEnemy.Add(fighter);
+                    i += 1;
+                }
+            }
         }
     }
 
@@ -27,10 +45,10 @@ public class EnemySpawn : MonoBehaviour
         Fighter charEnemy = new Fighter();
 
         double typeRate = random.NextDouble();
-        
+
         if (typeRate < EnemyList.chanceDarkHero)
         {
-            List <EnemyList.EnemyData> shuffle = listEnemy.listOfDarkHero;
+            List<EnemyList.EnemyData> shuffle = listEnemy.listOfDarkHero;
             Shuffle(shuffle);
             foreach (var enemy in shuffle)
             {
@@ -45,7 +63,7 @@ public class EnemySpawn : MonoBehaviour
         }
         else
         {
-            List <EnemyList.EnemyData> shuffle = listEnemy.listOfEnemy;
+            List<EnemyList.EnemyData> shuffle = listEnemy.listOfEnemy;
             Shuffle(shuffle);
             foreach (var enemy in shuffle)
             {

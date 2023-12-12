@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 /// CHOOSE PHASE CODE
 public class ChoosedPlayer
@@ -31,6 +32,9 @@ public class ChoosedPlayer
 
 public class Battle : MonoBehaviour
 {
+    public static bool isAdventure;
+    public static int activeChapter;
+    public static int activeSubChapter;
     public static int statePhase;
     [SerializeField] private GameObject battlePhase;
     [SerializeField] private GameObject choosePhase;
@@ -185,7 +189,7 @@ public class Battle : MonoBehaviour
 
         GameObject textRewardObj = Instantiate(textExpReward, textRewardPanel.transform);
         TextMeshProUGUI txtReward = textRewardObj.GetComponent<TextMeshProUGUI>();
-        txtReward.text = "+"+totalGainedExp.ToString("0.00")+" EXP";
+        txtReward.text = "+" + totalGainedExp.ToString("0.00") + " EXP";
         return totalGainedExp;
     }
     private void setExpReward()
@@ -201,7 +205,7 @@ public class Battle : MonoBehaviour
                 instantiate.character = player.character;
 
                 player.character.stat.SelfExp += calculateGainExp(player);
-                Debug.Log(player.character.name+" level: "+player.character.stat.Level);
+                Debug.Log(player.character.name + " level: " + player.character.stat.Level);
                 playerCharacter.SaveCharacter(player.character);
             }
         }
@@ -325,5 +329,17 @@ public class Battle : MonoBehaviour
     public static void setDetailCommentText(string comment)
     {
         Battle.txtDetailComment.text = comment;
+    }
+
+    public void onClickConfirm()
+    {
+        if (isAdventure)
+        {
+            SceneManager.LoadScene("Adventure");
+        }
+        else
+        {
+            SceneManager.LoadScene("Story");
+        }
     }
 }
