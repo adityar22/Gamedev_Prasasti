@@ -33,7 +33,7 @@ public class ChoosedPlayer
 public class Battle : MonoBehaviour
 {
     public static bool isTutorial;
-    public static bool isAdventure;
+    public static bool isAdventure = true;
     public static int activeChapter;
     public static int activeSubChapter;
     public static int statePhase;
@@ -52,6 +52,10 @@ public class Battle : MonoBehaviour
 
     [SerializeField] private GameObject[] playerEnergy = new GameObject[] { };
     [SerializeField] private GameObject[] enemyEnergy = new GameObject[] { };
+
+    [SerializeField] private GameObject[] playerStatus = new GameObject[] { };
+    [SerializeField] private GameObject[] enemyStatus = new GameObject[] { };
+    [SerializeField] private GameObject[] iconStatus = new GameObject[] { };
 
     [SerializeField] public GameObject _charData;
     [SerializeField] public GameObject _playerData;
@@ -72,6 +76,7 @@ public class Battle : MonoBehaviour
     BattleManager battleManager;
 
     public GameObject labelDamage;
+    public GameObject skillIcon;
 
     public static TextMeshProUGUI txtTurn;
     public static TextMeshProUGUI txtNextTurn;
@@ -316,9 +321,47 @@ public class Battle : MonoBehaviour
         }
     }
 
+    public void getAttackPose(int indexPosition, Teams.team team)
+    {
+        UIEffectsManager spriteEM = team == Teams.team.Player ? player[indexPosition].GetComponent<UIEffectsManager>() : enemy[indexPosition].GetComponent<UIEffectsManager>();
+        spriteEM.Run("GetAttack");
+    }
+
     public void setBattlePose(int index, int indexPosition, Teams.team team)
     {
+        UIEffectsManager spriteEM = team == Teams.team.Player ? player[indexPosition].GetComponent<UIEffectsManager>() : enemy[indexPosition].GetComponent<UIEffectsManager>();
+        spriteEM.Run("SkillEffect");
+    }
 
+    public void setIdlePose(int indexPosition, Teams.team team)
+    {
+        UIEffectsManager spriteEM = team == Teams.team.Player ? player[indexPosition].GetComponent<UIEffectsManager>() : enemy[indexPosition].GetComponent<UIEffectsManager>();
+        spriteEM.Run("ScaleIdle");
+    }
+
+    public void stopIdlePose(int indexPosition, Teams.team team)
+    {
+        UIEffectsManager spriteEM = team == Teams.team.Player ? player[indexPosition].GetComponent<UIEffectsManager>() : enemy[indexPosition].GetComponent<UIEffectsManager>();
+        spriteEM.Kill("ScaleIdle");
+        spriteEM.Kill("ScaleIdle2");
+    }
+
+    public void setIconSkill(int index, int indexPosition, Teams.team team)
+    {
+        if (team == Teams.team.Player)
+        {
+            GameObject skillIconInstantiate = Instantiate(skillIcon, player[indexPosition].transform);
+            SkillIcon skillImage = skillIconInstantiate.GetComponent<SkillIcon>();
+            Sprite spriteIcon = BattleManager.heroInBattle[index].character.skill.skillIcon;
+            skillImage.imgSkillIcon.sprite = spriteIcon != null ? spriteIcon : null;
+        }
+        else
+        {
+            GameObject skillIconInstantiate = Instantiate(skillIcon, enemy[indexPosition].transform);
+            SkillIcon skillImage = skillIconInstantiate.GetComponent<SkillIcon>();
+            Sprite spriteIcon = BattleManager.heroInBattle[index].character.skill.skillIcon;
+            skillImage.imgSkillIcon.sprite = spriteIcon != null ? spriteIcon : null;
+        }
     }
 
     public static void setTurnText(int activeChar)

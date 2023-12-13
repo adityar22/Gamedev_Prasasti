@@ -115,6 +115,8 @@ public class BattleManager : MonoBehaviour
                 // Perform actions (BasicAttack, Skill, Item) based on player input or AI logic
                 ChoosedPlayer.ActiveChar = index;
 
+                battle.setIdlePose(character.indexPosition, character.charTeam);
+
                 if (character.charTeam == Teams.team.Player)
                 {
                     Debug.Log("Now is your " + heroInBattle[ChoosedPlayer.activeChar].character.name + "'s turn");
@@ -160,7 +162,8 @@ public class BattleManager : MonoBehaviour
                 }
             }
             index += 1;
-            yield return new WaitForSeconds(1.0f);
+            battle.stopIdlePose(character.indexPosition, character.charTeam);
+            yield return new WaitForSeconds(0.8f);
         }
         // Start the next round of turns
         StartCoroutine(StartTurns());
@@ -250,6 +253,7 @@ public class BattleManager : MonoBehaviour
     {
         if (isLandingAttack(attacker, target))
         {
+            battle.setBattlePose(heroInBattle.FindIndex(a => a == attacker), attacker.indexPosition, attacker.charTeam);
             double interval = random.NextDouble() * (1.0 - 0.85) + 0.85;
 
             double basicDamage = (((2 * attacker.character.stat.level) / 5) + 2) * (attacker.character.stat.Atk - (target.character.stat.Def * 0.2));
@@ -267,6 +271,7 @@ public class BattleManager : MonoBehaviour
 
             Debug.Log(attacker.character.name + " give " + damage + " damages to " + target.character.name);
 
+            battle.getAttackPose(target.indexPosition, target.charTeam);
             battle.updateHPBar(heroInBattle.FindIndex(a => a == target), target.indexPosition, target.charTeam, damage);
 
         }
@@ -329,6 +334,7 @@ public class BattleManager : MonoBehaviour
     }
     private void SkillAttack(Fighter attacker)
     {
+        battle.setIconSkill(heroInBattle.FindIndex(a => a == attacker), attacker.indexPosition, attacker.charTeam);
         foreach (var index in ChoosedPlayer.targetChar)
         {
             if (heroInBattle[index]!=null && heroInBattle[index].character!=null)
@@ -345,6 +351,7 @@ public class BattleManager : MonoBehaviour
                     Debug.Log(attacker.character.name + " give " + damage + " damages to " + heroInBattle[index].character.name);
                     Debug.Log(heroInBattle[index].character.name + " HP  " + heroInBattle[index].HP + " / " + heroInBattle[index].character.stat.HP + " left");
 
+                    battle.getAttackPose(heroInBattle[index].indexPosition, heroInBattle[index].charTeam);
                     battle.updateHPBar(heroInBattle.FindIndex(a => a == heroInBattle[index]), heroInBattle[index].indexPosition, heroInBattle[index].charTeam, damage);
 
                     SkillStatChange(attacker, heroInBattle[index]);
