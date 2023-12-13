@@ -82,7 +82,7 @@ MonoBehaviour:
       skillIcon: {fileID: 21300000, guid: b3cf96d4ffa72c5478ff2cea2ce760ed, type: 3}
     abilities: []
     attribut:
-      profile: {fileID: 0}
+      profile: {fileID: 21300000, guid: b76cd0468e10ffc4782298b858738535, type: 3}
       idle: {fileID: 21300000, guid: 316d83e8a23166e4a8bab4e1403db4d8, type: 3}
       attackPose: {fileID: 0}
       skillPose: {fileID: 0}
