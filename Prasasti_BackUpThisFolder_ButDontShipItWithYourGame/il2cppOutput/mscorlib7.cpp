@@ -9623,6 +9623,13 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void Environment_Exit_mB18B16C580327B7B996E27
 	using namespace il2cpp::icalls;
 	((Environment_Exit_mB18B16C580327B7B996E2701CC498F84BEC5A93C_ftn)mscorlib::System::Environment::Exit) (___exitCode0);
 }
+// System.String[] System.Environment::GetCommandLineArgs()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* Environment_GetCommandLineArgs_mC76B18C02C5AF78918538E777BF6E7DF49868C7F (const RuntimeMethod* method) 
+{
+	typedef StringU5BU5D_t7674CD946EC0CE7B3AE0BE70E6EE85F2ECD9F248* (*Environment_GetCommandLineArgs_mC76B18C02C5AF78918538E777BF6E7DF49868C7F_ftn) ();
+	using namespace il2cpp::icalls;
+	return ((Environment_GetCommandLineArgs_mC76B18C02C5AF78918538E777BF6E7DF49868C7F_ftn)mscorlib::System::Environment::GetCommandLineArgs) ();
+}
 // System.String System.Environment::internalGetEnvironmentVariable_native(System.IntPtr)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR String_t* Environment_internalGetEnvironmentVariable_native_m67CE66565473187D9BA741A757A7D18359502E96 (intptr_t ___variable0, const RuntimeMethod* method) 
 {

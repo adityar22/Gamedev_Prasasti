@@ -15041,6 +15041,24 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t Math_Sign_mAC05D4F13D026746A8A27403AC
 		return ((int32_t)((int64_t)(((int64_t)(L_0>>((int32_t)63)))|((int64_t)((uint64_t)((-L_1))>>((int32_t)63))))));
 	}
 }
+// System.Double System.Math::Truncate(System.Double)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Truncate_mA50CBE5D1A156A0C494D105ABA313DDE97ED5D55 (double ___d0, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		double L_0 = ___d0;
+		il2cpp_codegen_runtime_class_init_inline(Math_tEB65DE7CA8B083C412C969C92981C030865486CE_il2cpp_TypeInfo_var);
+		double L_1;
+		L_1 = Math_ModF_mC517A11CCDD571289679FCB7FCF3B062AADE3F8C(L_0, (double*)((uintptr_t)(&___d0)), NULL);
+		double L_2 = ___d0;
+		return L_2;
+	}
+}
 // System.Double System.Math::Abs(System.Double)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Abs_m3FF743FA3733BA1EA63136ED44F66BB4C338343B (double ___value0, const RuntimeMethod* method) 
 {
@@ -15080,6 +15098,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Ceiling_m6DEC6A8275CADD68506EB4FE
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Cos_m03188A7A537364912249402E868F903B988F7238 (double ___d0, const RuntimeMethod* method) 
 {
 	return cos(___d0);
+}
+// System.Double System.Math::Cosh(System.Double)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Cosh_m108909467A659A10E60FB9408BA4EDF25FEE09AB (double ___value0, const RuntimeMethod* method) 
+{
+	return cosh(___value0);
 }
 // System.Double System.Math::Exp(System.Double)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Exp_mD4B23863C2C53306E6562BA6BEFEBEEA7C8821A1 (double ___d0, const RuntimeMethod* method) 
@@ -15127,6 +15150,11 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Sqrt_mF19DC76810AF260CF9517D91A84
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Tan_m4AA2B9BB5928428A4F6B1CF85F5C5A34C36E96C4 (double ___a0, const RuntimeMethod* method) 
 {
 	return tan(___a0);
+}
+// System.Double System.Math::Tanh(System.Double)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_Tanh_mED26BC6AC68D08ADC3297A42DC039BD8E97915A0 (double ___value0, const RuntimeMethod* method) 
+{
+	return tanh(___value0);
 }
 // System.Double System.Math::ModF(System.Double,System.Double*)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR double Math_ModF_mC517A11CCDD571289679FCB7FCF3B062AADE3F8C (double ___x0, double* ___intptr1, const RuntimeMethod* method) 

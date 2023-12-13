@@ -21688,6 +21688,42 @@ IL_0010:
 		return L_7;
 	}
 }
+// System.Boolean System.UInt32::TryParse(System.String,System.UInt32&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UInt32_TryParse_m257824027459A28A3458F5B3EA8FDC455C947AB7 (String_t* ___s0, uint32_t* ___result1, const RuntimeMethod* method) 
+{
+	static bool s_Il2CppMethodInitialized;
+	if (!s_Il2CppMethodInitialized)
+	{
+		il2cpp_codegen_initialize_runtime_metadata((uintptr_t*)&Number_tA71F95D4B9F046BDA97EFA91BC6517925969650A_il2cpp_TypeInfo_var);
+		s_Il2CppMethodInitialized = true;
+	}
+	{
+		String_t* L_0 = ___s0;
+		if (L_0)
+		{
+			goto IL_0008;
+		}
+	}
+	{
+		uint32_t* L_1 = ___result1;
+		*((int32_t*)L_1) = (int32_t)0;
+		return (bool)0;
+	}
+
+IL_0008:
+	{
+		String_t* L_2 = ___s0;
+		ReadOnlySpan_1_t59614EA6E51A945A32B02AB17FBCBDF9A5C419C1 L_3;
+		L_3 = String_op_Implicit_m43FB5A30521770D4C28C1307CF89F80BA3535CAC_inline(L_2, NULL);
+		NumberFormatInfo_t8E26808B202927FEBF9064FCFEEA4D6E076E6472* L_4;
+		L_4 = NumberFormatInfo_get_CurrentInfo_m1454E234BC45C215E5C99F2D01F53B342033C8CB(NULL);
+		uint32_t* L_5 = ___result1;
+		il2cpp_codegen_runtime_class_init_inline(Number_tA71F95D4B9F046BDA97EFA91BC6517925969650A_il2cpp_TypeInfo_var);
+		bool L_6;
+		L_6 = Number_TryParseUInt32_mDF4DA37ECFA242B35700247C33AD5A8370370B0D(L_3, 7, L_4, L_5, NULL);
+		return L_6;
+	}
+}
 // System.Boolean System.UInt32::TryParse(System.String,System.Globalization.NumberStyles,System.IFormatProvider,System.UInt32&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool UInt32_TryParse_mD359CA418C0DE3A282E4D17B8248F00E90D19F96 (String_t* ___s0, int32_t ___style1, RuntimeObject* ___provider2, uint32_t* ___result3, const RuntimeMethod* method) 
 {
