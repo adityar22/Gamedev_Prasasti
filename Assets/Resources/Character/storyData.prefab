@@ -54,6 +54,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: Shandy kebingungan sembari melihat sekelilingnya.
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -68,6 +69,7 @@ MonoBehaviour:
           yang kemudian disusul sosok pemuda dengan penampilan layaknya prajurit
           kerajaan"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -80,6 +82,7 @@ MonoBehaviour:
         characterIndex: 2
         dialogText: "\u201CKau pasti tersesat\u201D"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -92,6 +95,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: "\u201CSiapa dirimu?\u201D"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -105,6 +109,7 @@ MonoBehaviour:
         dialogText: "\u201CAku Candra, prajurit Kerajaan Majapahit, Kau pasti bukan
           berasal dari wilayah ini kan?\u201D"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -118,6 +123,7 @@ MonoBehaviour:
         dialogText: "\u201CAku akan membantumu dan membimbingmu kembali ke tempat
           asalmu\u201D"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -130,6 +136,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: "\u201CTunggu dulu, ini dimana?!\u201D"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -142,6 +149,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: "\u201CDan dari mana kau tau aku bukan berasal dari sini?!\u201D"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -154,6 +162,7 @@ MonoBehaviour:
         characterIndex: 2
         dialogText: "\u201CKau tampak kebingungan, lagipula pakaianmu aneh\u201D"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -166,6 +175,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: (Semua hal ini aneh, kurasa otakku belum bisa mencerna seluruhnya)
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -179,6 +189,7 @@ MonoBehaviour:
         dialogText: "(Tunggu\u2026 Kerajaan Majapahit?...Apakah aku\u2026 terlempar
           ke masa lalu?)"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -196,6 +207,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: Nak, pilihanmu tidak ada masa depannya
         isQuestion: 0
+        isHideChar: 1
         answers:
           answer: 
           options: []
@@ -208,6 +220,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: Mau kerja jadi apa kamu
         isQuestion: 0
+        isHideChar: 1
         answers:
           answer: 
           options: []
@@ -220,6 +233,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: Belajar kaya gitu buat apa
         isQuestion: 0
+        isHideChar: 1
         answers:
           answer: 
           options: []
@@ -232,6 +246,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: "Intinya, tidak boleh\u2026"
         isQuestion: 0
+        isHideChar: 1
         answers:
           answer: 
           options: []
@@ -244,6 +259,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: Kami tahu yang terbaik buat kamu
         isQuestion: 0
+        isHideChar: 1
         answers:
           answer: 
           options: []
@@ -256,6 +272,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: "*kriiiiingggg\u2026*  *GASPPPP*"
         isQuestion: 0
+        isHideChar: 1
         answers:
           answer: 
           options: []
@@ -268,6 +285,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: (Urghhh Mimpi ini lagi)
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -280,6 +298,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: Huhh, memangnya apa yang salah dengan impian itu
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -293,6 +312,7 @@ MonoBehaviour:
         dialogText: 'Sambil masih merasa sebal, shandy bersiap-siap untuk berangkat
           kuliah '
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -305,6 +325,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: Shandy berjalan sambil minum sekaleng soda
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -317,6 +338,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: Kenapa aku harus kuliah di jurusan yang tidak kuinginkan
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -329,6 +351,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: Memang jurusanku ini menjamin aku sukses?
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -342,6 +365,7 @@ MonoBehaviour:
         dialogText: Ahhhh *shandy melemparkan kaleng soda yang sudah habis, berniat
           untuk membuangnya*
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -355,6 +379,7 @@ MonoBehaviour:
         dialogText: '*swishhhh* Kaleng pun dilemparkannya ke arah tong sampah di
           depannya'
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -368,6 +393,7 @@ MonoBehaviour:
         dialogText: '*Shingggg* Tepat di depan mata shandy, ia melihat kaleng yang
           seharusnya masuk ke tempat sampah itu hilang begitu saja'
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -380,6 +406,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: Hah!?
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -392,6 +419,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: Kok hilang?
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -404,6 +432,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: '*Shandy perlahan mendekati area hilangnya kaleng*'
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -416,6 +445,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: Hah apa-apaan ini!? *Shandy merasakan tarikan kuat*
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -428,6 +458,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: Shandy berusaha melawan tarikan itu
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -440,6 +471,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: Arghhh To-
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -453,6 +485,7 @@ MonoBehaviour:
         dialogText: Belum sempat Shandy berteriak minta tolong, dirinya makin tertarik
           oleh suatu hal tersebut
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -465,6 +498,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: Hingga.., semuanya menjadi gelap...
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -483,6 +517,7 @@ MonoBehaviour:
         dialogText: "(Sekarang aku berdiri di depan gerbang kerajaan, kerajaan besar
           yang tercatat menguasai banyak wilayah di Indonesia\u2026, Majapahit)"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -495,6 +530,7 @@ MonoBehaviour:
         characterIndex: 2
         dialogText: "\u201CIkuti aku, jangan bertindak gegabah atau mencurigakan\u201D"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -508,6 +544,7 @@ MonoBehaviour:
         dialogText: (Semenjak muncul di hutan itu dan bertemu Chandra, aku berjalan
           mengikuti Chandra yang mengajakku untuk mencari tau apa yang sedang terjadi)
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -521,6 +558,7 @@ MonoBehaviour:
         dialogText: "\u201CSekali lagi kuperingati, jangan bertindak gegabah! Kita
           akan menghadap Paduka hayam Wuruk!\u201D"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -533,6 +571,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: "\u201CHahhh!?\u201D"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -545,6 +584,7 @@ MonoBehaviour:
         characterIndex: 2
         dialogText: "\u201CSudah kubilang jangan berisik!\u201D"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -557,6 +597,7 @@ MonoBehaviour:
         characterIndex: 3
         dialogText: ...
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -569,6 +610,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: HIDUP SANG RAJA MAJAPAHIT *sorak semua prajurit*
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -581,6 +623,7 @@ MonoBehaviour:
         characterIndex: 3
         dialogText: Hmmmm
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -593,6 +636,7 @@ MonoBehaviour:
         characterIndex: 3
         dialogText: Ini kah anak muda yang kau maksud, Wahai Prajuritku!?
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -606,6 +650,7 @@ MonoBehaviour:
         dialogText: Hamba mohon untuk menjawab paduka. Ya, benar ini anak muda tersebut,
           Wahai Paduka Yang Mulia.
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -618,6 +663,7 @@ MonoBehaviour:
         characterIndex: 3
         dialogText: Siapa namamu, Wahai Anak Muda? *Sambil menghadap ke arah Shandy*
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -630,6 +676,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: Izin menjawab, Nama saya Shandy, Wahai Yang Mulia Paduka.
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -643,6 +690,7 @@ MonoBehaviour:
         dialogText: Hmm, baik akan kuingat namamu. Apakah kamu tau kenapa kamu berada
           disini?
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -655,6 +703,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: '*Shandy menggelengkan kepala*'
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -668,6 +717,7 @@ MonoBehaviour:
         dialogText: Akhir akhir ini, Kerajaan Majapahit dilanda banyak bencana yang
           tidak wajar.
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -681,6 +731,7 @@ MonoBehaviour:
         dialogText: Akibat bencana ini, banyak wargaku yang terdampak dan mengalami
           kerugian
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -694,6 +745,7 @@ MonoBehaviour:
         dialogText: Menanggapi hal ini, aku pun mengirimkan para prajurit ku untuk
           mencari tahu penyebab bencana bencana ini
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -708,6 +760,7 @@ MonoBehaviour:
           menemukan sebuah pecahan prasasti yang dipercaya sebagai penyebab bencana
           bencana ini muncul
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -729,6 +782,7 @@ MonoBehaviour:
           bersamaan ditemukannya prasasti itu, terdapat surat yang terletak dekat
           prasasti
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -741,6 +795,7 @@ MonoBehaviour:
         characterIndex: 3
         dialogText: 'Pecahan ini merupakan salah satu bagian dari sebuah Prasasti. '
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -754,6 +809,7 @@ MonoBehaviour:
         dialogText: Prasasti ini berfungsi untuk menjaga keseimbangan dan eksistensi
           kerajaan-kerajaan masa lampau di nusantara.
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -767,6 +823,7 @@ MonoBehaviour:
         dialogText: Namun, Prasasti ini pecah dan tersebar di berbagai tempat dan
           lini waktu dari berbagai kerajaan
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -779,6 +836,7 @@ MonoBehaviour:
         characterIndex: 3
         dialogText: Penyebab prasasti ini pecah tidak disebutkan dalam surat tersebut
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -792,6 +850,7 @@ MonoBehaviour:
         dialogText: "Namun, pecahnya prasasti ini menyebabkan hilangnya keseimbangan
           sehingga memunculkan kekacauan dan \nancaman di kerajaanku"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -805,6 +864,7 @@ MonoBehaviour:
         dialogText: Kekacauan dan ancaman ini tidak akan selesai sampai kepingan
           Prasasti itu terkumpul menjadi satu kesatuan
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -818,6 +878,7 @@ MonoBehaviour:
         dialogText: Maka, mulailah perjalanan kami untuk mengumpulkan kepingan kepingan
           lain demi mengatasi bencana ini
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -830,6 +891,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: '*Hayam Wuruk mengambil nafas sejenak*'
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -843,6 +905,7 @@ MonoBehaviour:
         dialogText: Dan kau, Shandy, akan membantu kami dalam mengumpulkan bagian
           tersebut
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -855,6 +918,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: Sontak Shandy kaget mendengar hal ini
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -868,6 +932,7 @@ MonoBehaviour:
         dialogText: (Prasasti? Kekuatan? apa - apaan ini, bagaimana bisa prasasti
           mempunyai kekuatan mempersatukan nusantara)
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -880,6 +945,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: Aku masih bingung dengan kejadian ini
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -893,6 +959,7 @@ MonoBehaviour:
         dialogText: Jadi paduka menyuruh aku untuk mengumpulkan keseluruhan pecahan
           dan menyatukan pecahan itu?
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -905,6 +972,7 @@ MonoBehaviour:
         characterIndex: 3
         dialogText: Benar sekali
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -918,6 +986,7 @@ MonoBehaviour:
         dialogText: Mengapa harus aku membantu paduka? Memang prajurit paduka tidak
           bisa mengumpulkan pecahan itu sendiri
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -931,6 +1000,7 @@ MonoBehaviour:
         dialogText: Tidak tidak, pertanyaan ku lebih kearah mengapa harus aku membantu
           kamu mengumpulkan pecahan prasasti itu *nada tinggi*
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -944,6 +1014,7 @@ MonoBehaviour:
         dialogText: DIAM, LANCANG SEKALI KAMU DIHADAPAN PADUKA *sambil mengarahkan
           tombak ke arah shandy*
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -957,6 +1028,7 @@ MonoBehaviour:
         dialogText: Tenang prajurit Chandra, Shandy pasti panik sehingga belum bisa
           mengerti kondisi saat ini
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -969,6 +1041,7 @@ MonoBehaviour:
         characterIndex: 3
         dialogText: Biar ku selesaikan isi dari surat itu.
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -982,6 +1055,7 @@ MonoBehaviour:
         dialogText: Dalam surat disebutkan bahwa petunjuk untuk mengumpulkan kepingan
           lain akan muncul bersamaan dengan munculnya seorang pemuda misterius
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -995,6 +1069,7 @@ MonoBehaviour:
         dialogText: Mengetahui hal ini, aku menyuruh prajurit chandra untuk berjaga
           di sekitar pura tempat pecahan ditemukan
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1008,6 +1083,7 @@ MonoBehaviour:
         dialogText: Dan benar juga, tidak berselang lama, Prajurit Chandra menemukanmu
           di dekat pura
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1021,6 +1097,7 @@ MonoBehaviour:
         dialogText: Untuk itu, kamu memegang peran penting dalam menyelamatkan kerajaanku
           ini
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1034,6 +1111,7 @@ MonoBehaviour:
         dialogText: ( Mungkin, penyebab aku pindah ke masa lalu juga akibat dari
           pecahnya prasasti ini?)
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1049,6 +1127,7 @@ MonoBehaviour:
 
 '
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1062,6 +1141,7 @@ MonoBehaviour:
         dialogText: Tapi, aku tidak tahu bagaimana aku bisa membantu dalam mengumpulkan
           pecahan prasasti ini
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1075,6 +1155,7 @@ MonoBehaviour:
         dialogText: Tidak apa apa, kita akan bersama sama mencari tahu cara mengumpulkan
           pecahan-pecahan prasasti
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1087,6 +1168,7 @@ MonoBehaviour:
         characterIndex: 3
         dialogText: Untuk pertama, coba kamu melihat pecahan prasasti tersebut
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1099,6 +1181,7 @@ MonoBehaviour:
         characterIndex: 3
         dialogText: prajurit Chandra!
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1111,6 +1194,7 @@ MonoBehaviour:
         characterIndex: 2
         dialogText: SIAP PADUKA!
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1123,6 +1207,7 @@ MonoBehaviour:
         characterIndex: 3
         dialogText: Bawa shandy ke tempat pecahan prasasti disimpan
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1135,6 +1220,7 @@ MonoBehaviour:
         characterIndex: 2
         dialogText: Baik Paduka
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1147,6 +1233,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: Shandy dan Chandra pergi meninggalkan ruang tahta
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1160,6 +1247,7 @@ MonoBehaviour:
         dialogText: Sudah kubilang jangan bertindak gegabah dihadapan paduka! *nada
           sedikit marah*
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1172,6 +1260,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: Maaf chandra, aku masih syok dengan semua kejadian ini
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1184,6 +1273,7 @@ MonoBehaviour:
         characterIndex: 2
         dialogText: Untung saja Yang Mulia Paduka tidak marah terhadapmu
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1197,6 +1287,7 @@ MonoBehaviour:
         dialogText: Kalau sampai paduka marah, kamu sudah jadi makanan untuk peliharaan
           paduka sekarang
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1209,6 +1300,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: '*gulp*'
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1221,6 +1313,7 @@ MonoBehaviour:
         characterIndex: 2
         dialogText: Pokoknya jangan diulang lagi, mengerti?
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1233,6 +1326,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: Iya iya mengerti
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1245,6 +1339,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: Shandy dan Chandra berjalan ke arah tempat pecahan disimpan
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1257,6 +1352,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: Shandy dan Chandra sampai di tempat pecahan disimpan
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1270,6 +1366,7 @@ MonoBehaviour:
         dialogText: Terlihat ada suatu benda seperti pecahan batu yang terletak di
           tengah ruangan
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1282,6 +1379,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: Apakah itu pecahanya, chandra?
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1294,6 +1392,7 @@ MonoBehaviour:
         characterIndex: 2
         dialogText: Ya benar, coba kau mendekat ke pecahan itu
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1306,6 +1405,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: Perlahan - lahan, shandy pun bergerak ke arah pecahan
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1318,6 +1418,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: '*kriiinggggggggg*'
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1330,6 +1431,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: '*sontak kaget chandra dan shandy*'
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1342,6 +1444,7 @@ MonoBehaviour:
         characterIndex: 2
         dialogText: Suara apa i-
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1354,6 +1457,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: ...
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1366,6 +1470,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: Apa yang terjadi?
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1378,6 +1483,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: Dimana ini?
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1391,6 +1497,7 @@ MonoBehaviour:
         dialogText: Mendengar ada suara orang lain, shandy menoleh ke arah suara
           itu?
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1403,6 +1510,7 @@ MonoBehaviour:
         characterIndex: 0
         dialogText: Chandra? Apa yang terjadi? Dimana kita sekarang?
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1415,6 +1523,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: Chandra melihat ke sekeliling dia
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1427,6 +1536,7 @@ MonoBehaviour:
         characterIndex: 2
         dialogText: Aku pun juga tidak tahu apa yang terjadi
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1439,6 +1549,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: Tiba tiba Chandra teringat akan suatu hal
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1451,6 +1562,7 @@ MonoBehaviour:
         characterIndex: 2
         dialogText: Tunggu, aku jadi teringat suatu hal
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1463,6 +1575,7 @@ MonoBehaviour:
         characterIndex: 2
         dialogText: Aku ingat
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1475,6 +1588,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: ...
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1487,6 +1601,7 @@ MonoBehaviour:
         characterIndex: 1
         dialogText: HAHHHHH DIMANA AKUUUUUU?
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1500,6 +1615,7 @@ MonoBehaviour:
         dialogText: '*Aruna kebingungan melihat pemandangan yang belum pernah ia
           lihat sebelumnya'
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1512,6 +1628,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: AHHHHHHHHH *Terdengar suara jeritan anak kecil*
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1525,6 +1642,7 @@ MonoBehaviour:
         dialogText: Aruna melihat ke arah sumber suara tersebut sembari menyadari
           bahwa ada seorang anak kecil yang hampir terkena reruntuhan bangunan
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1538,6 +1656,7 @@ MonoBehaviour:
         dialogText: Aruna menyelamatkan anak kecil tersebut, dan menyadari bahwa
           nampak ada portal besar yang muncul di dekatnya
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1551,6 +1670,7 @@ MonoBehaviour:
         dialogText: "\u2018Perasaan ini\u2019, \u2018sama seperti saat aku terbawa
           ke dunia yang asing ini\u2019"
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1564,6 +1684,7 @@ MonoBehaviour:
         dialogText: '*Tiba-tiba muncul aura pahlawan yang hendak menyerang ke arah
           Aruna'
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1584,6 +1705,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: '*setelah musuh dikalahkan, portal ikut hancur dan tertutup'
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1596,6 +1718,7 @@ MonoBehaviour:
         characterIndex: -1
         dialogText: '*muncul sesuatu surat sebagai guide dari Aruna'
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []
@@ -1609,6 +1732,7 @@ MonoBehaviour:
         dialogText: Mungkin dengan mengikuti semua ini, aku akan dapat menemukan
           jawaban dan kembali ke asalku
         isQuestion: 0
+        isHideChar: 0
         answers:
           answer: 
           options: []

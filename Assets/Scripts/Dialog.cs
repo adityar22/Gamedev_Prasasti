@@ -136,6 +136,7 @@ public class Dialog : MonoBehaviour
         textDialog.text = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].dialogText;
         txtBg.text = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].dialogText;
 
+        imgChar.enabled = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].isHideChar ? false : charId != -1 ? true : false; 
         imgChar.sprite = charId != -1 ? this.character.charData[charId].character.attribut.idle : null;
 
         if (this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].isTransition)

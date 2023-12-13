@@ -684,7 +684,7 @@ MonoBehaviour:
     OnFinished:
       m_PersistentCalls:
         m_Calls: []
-  - showSettings: 0
+  - showSettings: 1
     Name: idleScale0
     nodePos: {x: 403, y: 294}
     Outputs:
@@ -699,7 +699,7 @@ MonoBehaviour:
     Speed: 5
     initialState: 0
     startVector: {x: 0, y: 0, z: 0}
-    targetVector: {x: 1.9, y: 1.9, z: 0}
+    targetVector: {x: 2.2, y: 2.2, z: 0}
     Duration: 1
     color: {r: 1, g: 1, b: 1, a: 1}
     RotationType: 0
@@ -719,7 +719,7 @@ MonoBehaviour:
     OnFinished:
       m_PersistentCalls:
         m_Calls: []
-  - showSettings: 0
+  - showSettings: 1
     Name: idleScale2
     nodePos: {x: 411, y: 381}
     Outputs:
@@ -734,7 +734,7 @@ MonoBehaviour:
     Speed: 5
     initialState: 0
     startVector: {x: 0, y: 0, z: 0}
-    targetVector: {x: 2, y: 2, z: 0}
+    targetVector: {x: 2.5, y: 2.5, z: 0}
     Duration: 1
     color: {r: 1, g: 1, b: 1, a: 1}
     RotationType: 0
@@ -789,7 +789,7 @@ MonoBehaviour:
     OnFinished:
       m_PersistentCalls:
         m_Calls: []
-  - showSettings: 0
+  - showSettings: 1
     Name: enterPortal2
     nodePos: {x: 94, y: 228}
     Outputs: []
@@ -803,7 +803,7 @@ MonoBehaviour:
     Speed: 5
     initialState: 0
     startVector: {x: 0, y: 0, z: 0}
-    targetVector: {x: 3, y: 3, z: 0}
+    targetVector: {x: 3.3, y: 3.3, z: 0}
     Duration: 1
     color: {r: 1, g: 1, b: 1, a: 1}
     RotationType: 0
