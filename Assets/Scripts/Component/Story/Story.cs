@@ -21,6 +21,7 @@ public class Story : MonoBehaviour
         [TextArea]
         public string dialogText;
         public bool isQuestion;
+        public bool isHideChar;
         public AnswerList answers;
         
         public bool isTransition;

@@ -91,6 +91,8 @@ public class Battle : MonoBehaviour
 
     public PlayerCharacter playerCharacter;
 
+    [SerializeField] GameObject portal;
+
     void Start()
     {
         GameObject eventSystem = GameObject.Find("EventSystem");
@@ -161,6 +163,15 @@ public class Battle : MonoBehaviour
             instantiate.indexChar = playerCharacter.unlockedCharacters.IndexOf(character);
             instantiate.character = character;
         }
+    }
+
+    public void enterPortal()
+    {
+        UIEffectsManager spriteEM = portal.GetComponent<UIEffectsManager>();
+        spriteEM.Kill("scaleUp");
+        spriteEM.Kill("idleScale0");
+        spriteEM.Kill("idleScale2");
+        spriteEM.Run("enterPortal");
     }
 
     public void initBattle()
@@ -393,11 +404,12 @@ public class Battle : MonoBehaviour
         {
             SceneManager.LoadScene("Adventure");
         }
-        else if(isBossChapter)
+        else if (isBossChapter)
         {
             SceneManager.LoadScene("Adventure");
         }
-        else{
+        else
+        {
             SceneManager.LoadScene("Story");
         }
     }
