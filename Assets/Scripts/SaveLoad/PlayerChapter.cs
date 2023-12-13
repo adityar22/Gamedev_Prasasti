@@ -20,4 +20,10 @@ public class PlayerChapter : MonoBehaviour
         isInit = initPrefs != "hasInit" ? true : false;
     }
 
+    public static void SaveChapter(int chapter)
+    {
+        PlayerPrefs.SetString("SavedChapter", chapter.ToString());
+        PlayerPrefs.SetString("prefsChapterState", "hasInit");
+    }
+
 }
