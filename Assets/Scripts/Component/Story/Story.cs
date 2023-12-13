@@ -22,9 +22,11 @@ public class Story : MonoBehaviour
         public string dialogText;
         public bool isQuestion;
         public AnswerList answers;
+        
         public bool isTransition;
         public Sprite background;
 
+        public AudioClip bgm;
         public bool hasSoundEffect;
         public AudioClip soundEffect;
     }
@@ -33,7 +35,6 @@ public class Story : MonoBehaviour
     {
         public string subtitle;
         public List<Dialog> dialogList;
-        public AudioClip bgm;
         public bool isBattlePhase;
         public Character[] indexEnemy = new Character[]{};
         public Character[] indexUnlockedCharacter = new Character[] { };

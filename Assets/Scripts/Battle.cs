@@ -393,8 +393,11 @@ public class Battle : MonoBehaviour
         {
             SceneManager.LoadScene("Adventure");
         }
-        else
+        else if(isBossChapter)
         {
+            SceneManager.LoadScene("Adventure");
+        }
+        else{
             SceneManager.LoadScene("Story");
         }
     }

@@ -143,8 +143,15 @@ public class Dialog : MonoBehaviour
             imgBg.sprite = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].background;
         }
 
+        if (this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].bgm)
+        {
+            audio.Stop();
+            audio.clip = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].bgm;
+            audio.Play();
+        }
+
+        sfxAudio.Stop();
         if(this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].hasSoundEffect){
-            sfxAudio.Stop();
             sfxAudio.clip = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].soundEffect;
             sfxAudio.Play();
         }
@@ -152,13 +159,6 @@ public class Dialog : MonoBehaviour
 
     void onChangeSubChapter()
     {
-        audio.Stop();
-        if (this.story.listChapter[ActiveChapter].subList[ActiveSub].bgm)
-        {
-            audio.clip = this.story.listChapter[ActiveChapter].subList[ActiveSub].bgm;
-            audio.Play();
-        }
-
         if (!this.story.listChapter[ActiveChapter].subList[ActiveSub].isBattlePhase)
         {
             ActiveDialog = 0;
