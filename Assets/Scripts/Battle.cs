@@ -34,6 +34,7 @@ public class Battle : MonoBehaviour
 {
     public static bool isTutorial;
     public static bool isAdventure = true;
+    public static bool isBossChapter;
     public static int activeChapter;
     public static int activeSubChapter;
     public static int statePhase;
@@ -227,7 +228,13 @@ public class Battle : MonoBehaviour
         ChoosedPlayer.choosedChar = new List<Fighter>();
         ChoosedPlayer.totalEnemy = 0;
         ChoosedPlayer.totalPlayer = 0;
+        Battle.choosed = 0;
         PlayerInput.choosedArea = 0;
+
+        if (isBossChapter)
+        {
+            PlayerChapter.SaveChapter(activeChapter);
+        }
     }
     private void checkTotal()
     {
@@ -386,8 +393,11 @@ public class Battle : MonoBehaviour
         {
             SceneManager.LoadScene("Adventure");
         }
-        else
+        else if(isBossChapter)
         {
+            SceneManager.LoadScene("Adventure");
+        }
+        else{
             SceneManager.LoadScene("Story");
         }
     }

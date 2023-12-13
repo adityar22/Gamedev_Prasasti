@@ -63,6 +63,7 @@ public class Dialog : MonoBehaviour
     [SerializeField] Button btnDialogControl;
 
     [SerializeField] AudioSource audio;
+    [SerializeField] AudioSource sfxAudio;
 
     // init question component
     [SerializeField] GameObject questionPanel;
@@ -135,23 +136,29 @@ public class Dialog : MonoBehaviour
         textDialog.text = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].dialogText;
         txtBg.text = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].dialogText;
 
-        imgChar.sprite = charId != -1 ? this.character.charData[charId].character.attribut.dialog : null;
+        imgChar.sprite = charId != -1 ? this.character.charData[charId].character.attribut.idle : null;
 
         if (this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].isTransition)
         {
             imgBg.sprite = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].background;
         }
+
+        if (this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].bgm)
+        {
+            audio.Stop();
+            audio.clip = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].bgm;
+            audio.Play();
+        }
+
+        sfxAudio.Stop();
+        if(this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].hasSoundEffect){
+            sfxAudio.clip = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].soundEffect;
+            sfxAudio.Play();
+        }
     }
 
     void onChangeSubChapter()
     {
-        audio.Stop();
-        if (this.story.listChapter[ActiveChapter].subList[ActiveSub].bgm)
-        {
-            audio.clip = this.story.listChapter[ActiveChapter].subList[ActiveSub].bgm;
-            audio.Play();
-        }
-
         if (!this.story.listChapter[ActiveChapter].subList[ActiveSub].isBattlePhase)
         {
             ActiveDialog = 0;
@@ -207,6 +214,7 @@ public class Dialog : MonoBehaviour
                 Battle.isAdventure = false;
                 Battle.activeChapter = ActiveChapter;
                 Battle.activeSubChapter = ActiveSub;
+                Battle.isBossChapter = true;
                 hasBattle = true;
                 SceneManager.LoadScene("Battle");
             }
