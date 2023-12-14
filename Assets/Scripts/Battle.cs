@@ -93,6 +93,9 @@ public class Battle : MonoBehaviour
 
     [SerializeField] GameObject portal;
 
+    [SerializeField] GameObject pausePanel;
+    [SerializeField] GameObject pauseContainer;
+
     void Start()
     {
         GameObject eventSystem = GameObject.Find("EventSystem");
@@ -240,6 +243,8 @@ public class Battle : MonoBehaviour
         ChoosedPlayer.totalEnemy = 0;
         ChoosedPlayer.totalPlayer = 0;
         Battle.choosed = 0;
+        Battle.statePhase = 0;
+        ChoosePlayer.teamIndex = 0;
         PlayerInput.choosedArea = 0;
 
         if (isBossChapter)
@@ -406,11 +411,54 @@ public class Battle : MonoBehaviour
         }
         else if (isBossChapter)
         {
+            Battle.isAdventure = true;
             SceneManager.LoadScene("Adventure");
         }
         else
         {
+            Battle.isAdventure = true;
             SceneManager.LoadScene("Story");
+        }
+    }
+
+    public void onClickPause()
+    {
+        pausePanel.SetActive(true);
+        UIEffectsManager spriteEM = pauseContainer.GetComponent<UIEffectsManager>();
+        spriteEM.Run("scaleUp");
+    }
+
+    public void onClickResume()
+    {
+        UIEffectsManager spriteEM = pauseContainer.GetComponent<UIEffectsManager>();
+        spriteEM.Run("scaleDown");
+    }
+
+    public void setPanelPause()
+    {
+        pausePanel.SetActive(false);
+    }
+
+    public void onClickBackMenu()
+    {
+        ChoosedPlayer.choosedEnemy = new List<Fighter>();
+        ChoosedPlayer.choosedChar = new List<Fighter>();
+        ChoosedPlayer.totalEnemy = 0;
+        ChoosedPlayer.totalPlayer = 0;
+        Battle.choosed = 0;
+        Battle.statePhase = 0;
+        ChoosePlayer.teamIndex = 0;
+        PlayerInput.choosedArea = 0;
+
+        if (activeChapter != 0)
+        {
+            Dialog.hasBattle = false;
+            SceneManager.LoadScene("Adventure");
+        }
+        else
+        {
+            Dialog.hasBattle = false;
+            SceneManager.LoadScene("Landing");
         }
     }
 }

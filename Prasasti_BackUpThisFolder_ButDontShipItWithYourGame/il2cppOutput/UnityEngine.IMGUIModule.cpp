@@ -2500,6 +2500,12 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void WindowFunction_Invoke_m27ADD
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUILayoutUtility_Layout_m6F689A1EB6D4CA82AF2D8010778554A028871AE7 (const RuntimeMethod* method) ;
 // System.Void UnityEngine.GUIClip::get_visibleRect_Injected(UnityEngine.Rect&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_get_visibleRect_Injected_mF5BF8D806F6001D7840508E0A7275B3FAB4D2E8F (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* ___ret0, const RuntimeMethod* method) ;
+// System.Void UnityEngine.GUIClip::get_topmostRect_Injected(UnityEngine.Rect&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_get_topmostRect_Injected_m767865A67E70F43E4A5EBF887C4D610800B966F4 (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* ___ret0, const RuntimeMethod* method) ;
+// System.Void UnityEngine.GUIClip::GetTopRect_Injected(UnityEngine.Rect&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_GetTopRect_Injected_m0CE3BE945DB3D885A8362308E57A9097EED7E86E (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* ___ret0, const RuntimeMethod* method) ;
+// System.Void UnityEngine.GUIClip::Unclip_Vector2_Injected(UnityEngine.Vector2&,UnityEngine.Vector2&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_Unclip_Vector2_Injected_m5602569747ED028CCF73AAAF94799A345AA394F3 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* ___pos0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* ___ret1, const RuntimeMethod* method) ;
 // System.Void UnityEngine.GUIClip::GetMatrix_Injected(UnityEngine.Matrix4x4&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_GetMatrix_Injected_mCB086DC9E1125093C1CF2E4284FD984343B3264D (Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6* ___ret0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.GUIClip::SetMatrix_Injected(UnityEngine.Matrix4x4&)
@@ -2508,6 +2514,8 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_SetMatrix_Injected_m3814F02E5A37
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_Internal_PushParentClip_m2120885AA2FA7E17C955D5338A301764BC1B5214 (Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 ___renderTransform0, Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 ___inputTransform1, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___clipRect2, const RuntimeMethod* method) ;
 // System.Void UnityEngine.GUIClip::Internal_PushParentClip_Injected(UnityEngine.Matrix4x4&,UnityEngine.Matrix4x4&,UnityEngine.Rect&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_Internal_PushParentClip_Injected_m387813A4C81BC4696170EAC66C562AC7C4D8B32E (Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6* ___renderTransform0, Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6* ___inputTransform1, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* ___clipRect2, const RuntimeMethod* method) ;
+// UnityEngine.Vector2 UnityEngine.GUIClip::Unclip_Vector2(UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 GUIClip_Unclip_Vector2_mF410B185357C34DA273CB2207A21BC462A5F7258 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pos0, const RuntimeMethod* method) ;
 // System.Void UnityEngine.GUIClip::Internal_PushParentClip(UnityEngine.Matrix4x4,UnityEngine.Rect)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_Internal_PushParentClip_mFE9DFC5FB3FFA569D32662657F397CCDD07B93D3 (Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 ___objectTransform0, Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D ___clipRect1, const RuntimeMethod* method) ;
 // System.Void UnityEngine.GUIClip/ParentClipScope::.ctor(UnityEngine.Matrix4x4,UnityEngine.Rect)
@@ -8838,6 +8846,17 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0
 		return L_0;
 	}
 }
+// UnityEngine.Rect UnityEngine.GUIClip::get_topmostRect()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D GUIClip_get_topmostRect_m56397FF62AE28AACFD3349765CA247E8EF707D9F (const RuntimeMethod* method) 
+{
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		GUIClip_get_topmostRect_Injected_m767865A67E70F43E4A5EBF887C4D610800B966F4((&V_0), NULL);
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_0 = V_0;
+		return L_0;
+	}
+}
 // System.Void UnityEngine.GUIClip::Internal_Pop()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_Internal_Pop_m4CBE4C8D938F7BA00378D6C7F15E4B18DC0AE59A (const RuntimeMethod* method) 
 {
@@ -8856,6 +8875,28 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t GUIClip_Internal_GetCount_m80532C2069
 	_il2cpp_icall_func = (GUIClip_Internal_GetCount_m80532C2069780BF3931AA44793D678F4BEDA283C_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUIClip::Internal_GetCount()");
 	int32_t icallRetVal = _il2cpp_icall_func();
 	return icallRetVal;
+}
+// UnityEngine.Rect UnityEngine.GUIClip::GetTopRect()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D GUIClip_GetTopRect_mEDBF117053BFFB8F1C5C6889612326081742C8C5 (const RuntimeMethod* method) 
+{
+	Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		GUIClip_GetTopRect_Injected_m0CE3BE945DB3D885A8362308E57A9097EED7E86E((&V_0), NULL);
+		Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D L_0 = V_0;
+		return L_0;
+	}
+}
+// UnityEngine.Vector2 UnityEngine.GUIClip::Unclip_Vector2(UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 GUIClip_Unclip_Vector2_mF410B185357C34DA273CB2207A21BC462A5F7258 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pos0, const RuntimeMethod* method) 
+{
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		GUIClip_Unclip_Vector2_Injected_m5602569747ED028CCF73AAAF94799A345AA394F3((&___pos0), (&V_0), NULL);
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = V_0;
+		return L_0;
+	}
 }
 // UnityEngine.Matrix4x4 UnityEngine.GUIClip::GetMatrix()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6 GUIClip_GetMatrix_m9699D9DF43674E472D2C264E92890419FAE2982E (const RuntimeMethod* method) 
@@ -8904,6 +8945,25 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_Internal_PopParentClip_m6FAD6317
 	_il2cpp_icall_func = (GUIClip_Internal_PopParentClip_m6FAD6317A3DBC965B9757E883B14FCDDB4DFA8B0_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUIClip::Internal_PopParentClip()");
 	_il2cpp_icall_func();
 }
+// UnityEngine.Vector2 UnityEngine.GUIClip::Unclip(UnityEngine.Vector2)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 GUIClip_Unclip_mEB9179067940395635AA4A796D0BD6C123B934ED (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___pos0, const RuntimeMethod* method) 
+{
+	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_0 = ___pos0;
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_1;
+		L_1 = GUIClip_Unclip_Vector2_mF410B185357C34DA273CB2207A21BC462A5F7258(L_0, NULL);
+		V_0 = L_1;
+		goto IL_000a;
+	}
+
+IL_000a:
+	{
+		Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 L_2 = V_0;
+		return L_2;
+	}
+}
 // System.Void UnityEngine.GUIClip::get_visibleRect_Injected(UnityEngine.Rect&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_get_visibleRect_Injected_mF5BF8D806F6001D7840508E0A7275B3FAB4D2E8F (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* ___ret0, const RuntimeMethod* method) 
 {
@@ -8912,6 +8972,33 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_get_visibleRect_Injected_mF5BF8D
 	if (!_il2cpp_icall_func)
 	_il2cpp_icall_func = (GUIClip_get_visibleRect_Injected_mF5BF8D806F6001D7840508E0A7275B3FAB4D2E8F_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUIClip::get_visibleRect_Injected(UnityEngine.Rect&)");
 	_il2cpp_icall_func(___ret0);
+}
+// System.Void UnityEngine.GUIClip::get_topmostRect_Injected(UnityEngine.Rect&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_get_topmostRect_Injected_m767865A67E70F43E4A5EBF887C4D610800B966F4 (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* ___ret0, const RuntimeMethod* method) 
+{
+	typedef void (*GUIClip_get_topmostRect_Injected_m767865A67E70F43E4A5EBF887C4D610800B966F4_ftn) (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D*);
+	static GUIClip_get_topmostRect_Injected_m767865A67E70F43E4A5EBF887C4D610800B966F4_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GUIClip_get_topmostRect_Injected_m767865A67E70F43E4A5EBF887C4D610800B966F4_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUIClip::get_topmostRect_Injected(UnityEngine.Rect&)");
+	_il2cpp_icall_func(___ret0);
+}
+// System.Void UnityEngine.GUIClip::GetTopRect_Injected(UnityEngine.Rect&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_GetTopRect_Injected_m0CE3BE945DB3D885A8362308E57A9097EED7E86E (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D* ___ret0, const RuntimeMethod* method) 
+{
+	typedef void (*GUIClip_GetTopRect_Injected_m0CE3BE945DB3D885A8362308E57A9097EED7E86E_ftn) (Rect_tA04E0F8A1830E767F40FB27ECD8D309303571F0D*);
+	static GUIClip_GetTopRect_Injected_m0CE3BE945DB3D885A8362308E57A9097EED7E86E_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GUIClip_GetTopRect_Injected_m0CE3BE945DB3D885A8362308E57A9097EED7E86E_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUIClip::GetTopRect_Injected(UnityEngine.Rect&)");
+	_il2cpp_icall_func(___ret0);
+}
+// System.Void UnityEngine.GUIClip::Unclip_Vector2_Injected(UnityEngine.Vector2&,UnityEngine.Vector2&)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_Unclip_Vector2_Injected_m5602569747ED028CCF73AAAF94799A345AA394F3 (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* ___pos0, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7* ___ret1, const RuntimeMethod* method) 
+{
+	typedef void (*GUIClip_Unclip_Vector2_Injected_m5602569747ED028CCF73AAAF94799A345AA394F3_ftn) (Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*, Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7*);
+	static GUIClip_Unclip_Vector2_Injected_m5602569747ED028CCF73AAAF94799A345AA394F3_ftn _il2cpp_icall_func;
+	if (!_il2cpp_icall_func)
+	_il2cpp_icall_func = (GUIClip_Unclip_Vector2_Injected_m5602569747ED028CCF73AAAF94799A345AA394F3_ftn)il2cpp_codegen_resolve_icall ("UnityEngine.GUIClip::Unclip_Vector2_Injected(UnityEngine.Vector2&,UnityEngine.Vector2&)");
+	_il2cpp_icall_func(___pos0, ___ret1);
 }
 // System.Void UnityEngine.GUIClip::GetMatrix_Injected(UnityEngine.Matrix4x4&)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void GUIClip_GetMatrix_Injected_mCB086DC9E1125093C1CF2E4284FD984343B3264D (Matrix4x4_tDB70CF134A14BA38190C59AA700BCE10E2AED3E6* ___ret0, const RuntimeMethod* method) 

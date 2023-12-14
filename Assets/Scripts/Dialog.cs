@@ -74,9 +74,14 @@ public class Dialog : MonoBehaviour
     [SerializeField] GameObject notifPanel;
     [SerializeField] TextMeshProUGUI txtNotif;
 
+    [SerializeField] GameObject pausePanel;
+    [SerializeField] GameObject pauseContainer;
+
     // Start is called before the first frame update
     void Start()
     {
+        pausePanel.SetActive(false);
+
         GameObject charDataObj = Instantiate(charData);
         this.character = charDataObj.GetComponent<CharData>();
 
@@ -136,7 +141,7 @@ public class Dialog : MonoBehaviour
         textDialog.text = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].dialogText;
         txtBg.text = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].dialogText;
 
-        imgChar.enabled = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].isHideChar ? false : charId != -1 ? true : false; 
+        imgChar.enabled = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].isHideChar ? false : charId != -1 ? true : false;
         imgChar.sprite = charId != -1 ? this.character.charData[charId].character.attribut.idle : null;
 
         if (this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].isTransition)
@@ -152,7 +157,8 @@ public class Dialog : MonoBehaviour
         }
 
         sfxAudio.Stop();
-        if(this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].hasSoundEffect){
+        if (this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].hasSoundEffect)
+        {
             sfxAudio.clip = this.story.listChapter[ActiveChapter].subList[ActiveSub].dialogList[ActiveDialog].soundEffect;
             sfxAudio.Play();
         }
@@ -234,5 +240,37 @@ public class Dialog : MonoBehaviour
     public void onClickAnswer(string answer)
     {
 
+    }
+
+    public void onClickPause()
+    {
+        pausePanel.SetActive(true);
+        UIEffectsManager spriteEM = pauseContainer.GetComponent<UIEffectsManager>();
+        spriteEM.Run("scaleUp");
+    }
+
+    public void onClickResume()
+    {
+        UIEffectsManager spriteEM = pauseContainer.GetComponent<UIEffectsManager>();
+        spriteEM.Run("scaleDown");
+    }
+
+    public void setPanelPause()
+    {
+        pausePanel.SetActive(false);
+    }
+
+    public void onClickBackMenu()
+    {
+        if (ActiveChapter != 0)
+        {
+            Dialog.hasBattle = false;
+            SceneManager.LoadScene("Adventure");
+        }
+        else
+        {
+            Dialog.hasBattle = false;
+            SceneManager.LoadScene("Landing");
+        }
     }
 }

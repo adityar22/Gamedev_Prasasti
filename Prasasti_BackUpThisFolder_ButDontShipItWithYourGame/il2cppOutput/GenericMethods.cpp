@@ -719,6 +719,8 @@ struct Binder_t91BFCE95A7057FADF4D8A1A342AFE52872246235;
 struct BufferOffsetSize_t46A7671E4C06281BB2D4C4AC98A6263715BDAC71;
 // System.Net.BufferedReadStream
 struct BufferedReadStream_t02C23C74C829832E0FE18150F609CFB3F8560479;
+// System.Byte
+struct Byte_t94D9231AC217BE4D2E004C4CD32DF6D099EA41A3;
 // System.Threading.CancellationTokenSource
 struct CancellationTokenSource_tAAE1E0033BCFC233801F8CB4CED5C852B350CB7B;
 // UnityEngine.Component
@@ -2254,6 +2256,105 @@ struct NativeArray_1_t1ABEAB84724CAEAFCB8767B8502FD3185AC9CAD0
 	int32_t ___m_Length_1;
 	// Unity.Collections.Allocator Unity.Collections.NativeArray`1::m_AllocatorLabel
 	int32_t ___m_AllocatorLabel_2;
+};
+
+// Unity.Collections.NativeSlice`1<System.Byte>
+struct NativeSlice_1_tCEC4B2B900638EC1820BB61FE436766204DFD8DA 
+{
+	// System.Byte* Unity.Collections.NativeSlice`1::m_Buffer
+	uint8_t* ___m_Buffer_0;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Stride
+	int32_t ___m_Stride_1;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Length
+	int32_t ___m_Length_2;
+};
+
+// Unity.Collections.NativeSlice`1<UnityEngine.Matrix4x4>
+struct NativeSlice_1_t834036F9BEE3B44BA1A65E51849556E5B7AEAF0A 
+{
+	// System.Byte* Unity.Collections.NativeSlice`1::m_Buffer
+	uint8_t* ___m_Buffer_0;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Stride
+	int32_t ___m_Stride_1;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Length
+	int32_t ___m_Length_2;
+};
+
+// Unity.Collections.NativeSlice`1<UnityEngine.U2D.Animation.PositionTangentVertex>
+struct NativeSlice_1_t896C643D92AC9B70D47A50D65CB166F74009189F 
+{
+	// System.Byte* Unity.Collections.NativeSlice`1::m_Buffer
+	uint8_t* ___m_Buffer_0;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Stride
+	int32_t ___m_Stride_1;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Length
+	int32_t ___m_Length_2;
+};
+
+// Unity.Collections.NativeSlice`1<UnityEngine.U2D.Animation.PositionVertex>
+struct NativeSlice_1_tC7AC7DD3A727BCA7CF8B7EBDD6DE68FB33E8D9D2 
+{
+	// System.Byte* Unity.Collections.NativeSlice`1::m_Buffer
+	uint8_t* ___m_Buffer_0;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Stride
+	int32_t ___m_Stride_1;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Length
+	int32_t ___m_Length_2;
+};
+
+// Unity.Collections.NativeSlice`1<UnityEngine.Vector3>
+struct NativeSlice_1_t4B5C42A704ED060AB92A8716135FE435B1E6C23A 
+{
+	// System.Byte* Unity.Collections.NativeSlice`1::m_Buffer
+	uint8_t* ___m_Buffer_0;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Stride
+	int32_t ___m_Stride_1;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Length
+	int32_t ___m_Length_2;
+};
+
+// Unity.Collections.NativeSlice`1<UnityEngine.Vector4>
+struct NativeSlice_1_tA687F314957178F2A299D03D59B960DDC218680F 
+{
+	// System.Byte* Unity.Collections.NativeSlice`1::m_Buffer
+	uint8_t* ___m_Buffer_0;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Stride
+	int32_t ___m_Stride_1;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Length
+	int32_t ___m_Length_2;
+};
+
+// Unity.Collections.NativeSlice`1<Unity.Mathematics.float3>
+struct NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 
+{
+	// System.Byte* Unity.Collections.NativeSlice`1::m_Buffer
+	uint8_t* ___m_Buffer_0;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Stride
+	int32_t ___m_Stride_1;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Length
+	int32_t ___m_Length_2;
+};
+
+// Unity.Collections.NativeSlice`1<Unity.Mathematics.float4>
+struct NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC 
+{
+	// System.Byte* Unity.Collections.NativeSlice`1::m_Buffer
+	uint8_t* ___m_Buffer_0;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Stride
+	int32_t ___m_Stride_1;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Length
+	int32_t ___m_Length_2;
+};
+
+// Unity.Collections.NativeSlice`1<Unity.Mathematics.float4x4>
+struct NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 
+{
+	// System.Byte* Unity.Collections.NativeSlice`1::m_Buffer
+	uint8_t* ___m_Buffer_0;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Stride
+	int32_t ___m_Stride_1;
+	// System.Int32 Unity.Collections.NativeSlice`1::m_Length
+	int32_t ___m_Length_2;
 };
 
 // System.Nullable`1<System.Double>
@@ -9214,6 +9315,22 @@ IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AsyncValueTaskMethodBuilder_
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void AsyncValueTaskMethodBuilder_1_AwaitUnsafeOnCompleted_TisRuntimeObject_TisRuntimeObject_m3833EDB0AC258584C1739BB70FE59870811221C6_gshared (AsyncValueTaskMethodBuilder_1_tC52370C9D79190662723A5015241A6CA0D150DC2* __this, RuntimeObject** ___awaiter0, RuntimeObject** ___stateMachine1, const RuntimeMethod* method) ;
 // System.Void System.Runtime.CompilerServices.AsyncValueTaskMethodBuilder`1<System.Object>::Start<System.Object>(TStateMachine&)
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR void AsyncValueTaskMethodBuilder_1_Start_TisRuntimeObject_m55DA5DA01C3062E2C184C227ADFB7B06F755DA52_gshared_inline (AsyncValueTaskMethodBuilder_1_tC52370C9D79190662723A5015241A6CA0D150DC2* __this, RuntimeObject** ___stateMachine0, const RuntimeMethod* method) ;
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<System.Byte>::SliceConvert<UnityEngine.U2D.Animation.PositionTangentVertex>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_t896C643D92AC9B70D47A50D65CB166F74009189F NativeSlice_1_SliceConvert_TisPositionTangentVertex_t2A3AA7C428755E24BA9ECCBD89F67D0828D6555C_mC9A5768FC81FE720688CF72AB9DF287FF511DCD3_gshared (NativeSlice_1_tCEC4B2B900638EC1820BB61FE436766204DFD8DA* __this, const RuntimeMethod* method) ;
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<System.Byte>::SliceConvert<UnityEngine.U2D.Animation.PositionVertex>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_tC7AC7DD3A727BCA7CF8B7EBDD6DE68FB33E8D9D2 NativeSlice_1_SliceConvert_TisPositionVertex_tE2E9C13E829C47759FB1722B0548D2D8925C4D12_m3A884AB015CACD97331FCB65E68CB755D3C58880_gshared (NativeSlice_1_tCEC4B2B900638EC1820BB61FE436766204DFD8DA* __this, const RuntimeMethod* method) ;
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Matrix4x4>::SliceWithStride<Unity.Mathematics.float4x4>(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 NativeSlice_1_SliceWithStride_Tisfloat4x4_t7EDD16F7F57DC7F61A6302535F7C19FB97915DF2_m734F830067A253F7EC3C5D79985A64202EE50007_gshared (NativeSlice_1_t834036F9BEE3B44BA1A65E51849556E5B7AEAF0A* __this, int32_t ___offset0, const RuntimeMethod* method) ;
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Matrix4x4>::SliceWithStride<Unity.Mathematics.float4x4>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 NativeSlice_1_SliceWithStride_Tisfloat4x4_t7EDD16F7F57DC7F61A6302535F7C19FB97915DF2_m61E2D8D641E199D591AAA07666FE59D1908784D7_gshared (NativeSlice_1_t834036F9BEE3B44BA1A65E51849556E5B7AEAF0A* __this, const RuntimeMethod* method) ;
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Vector3>::SliceWithStride<Unity.Mathematics.float3>(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 NativeSlice_1_SliceWithStride_Tisfloat3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_m201EB7AC692534C4A5B805A9E503496DF6571E74_gshared (NativeSlice_1_t4B5C42A704ED060AB92A8716135FE435B1E6C23A* __this, int32_t ___offset0, const RuntimeMethod* method) ;
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Vector3>::SliceWithStride<Unity.Mathematics.float3>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 NativeSlice_1_SliceWithStride_Tisfloat3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_m85528838E37FA29C4F17F31ADE7BD1645D0E721E_gshared (NativeSlice_1_t4B5C42A704ED060AB92A8716135FE435B1E6C23A* __this, const RuntimeMethod* method) ;
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Vector4>::SliceWithStride<Unity.Mathematics.float4>(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC NativeSlice_1_SliceWithStride_Tisfloat4_t89D9A294E7A79BD81BFBDD18654508532958555E_m8A0BEB23FF7C6880F6D43B5825EA90BD602CC38B_gshared (NativeSlice_1_tA687F314957178F2A299D03D59B960DDC218680F* __this, int32_t ___offset0, const RuntimeMethod* method) ;
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Vector4>::SliceWithStride<Unity.Mathematics.float4>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC NativeSlice_1_SliceWithStride_Tisfloat4_t89D9A294E7A79BD81BFBDD18654508532958555E_m0A4D6ABC5A25366CD8CC35DA249E178E5C2320C7_gshared (NativeSlice_1_tA687F314957178F2A299D03D59B960DDC218680F* __this, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.Object>::.ctor()
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void List_1__ctor_m7F078BB342729BDF11327FD89D7872265328F690_gshared (List_1_tA239CB83DE5615F348BB0507E45F490F4F7C9A8D* __this, const RuntimeMethod* method) ;
 // System.Void System.Collections.Generic.List`1<System.Object>::Add(T)
@@ -9944,6 +10061,46 @@ inline void AsyncValueTaskMethodBuilder_1_Start_TisRuntimeObject_m55DA5DA01C3062
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR void ThrowHelper_ThrowArgumentNullException_m37384675C99E588A5288DECAE9BD7AD7849B22FF (int32_t ___argument0, const RuntimeMethod* method) ;
 // System.Exception System.Linq.Error::ArgumentNull(System.String)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR Exception_t* Error_ArgumentNull_m9157523765DB73FC9F7B984F2F740F2B5EDB7337 (String_t* ___s0, const RuntimeMethod* method) ;
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<System.Byte>::SliceConvert<UnityEngine.U2D.Animation.PositionTangentVertex>()
+inline NativeSlice_1_t896C643D92AC9B70D47A50D65CB166F74009189F NativeSlice_1_SliceConvert_TisPositionTangentVertex_t2A3AA7C428755E24BA9ECCBD89F67D0828D6555C_mC9A5768FC81FE720688CF72AB9DF287FF511DCD3 (NativeSlice_1_tCEC4B2B900638EC1820BB61FE436766204DFD8DA* __this, const RuntimeMethod* method)
+{
+	return ((  NativeSlice_1_t896C643D92AC9B70D47A50D65CB166F74009189F (*) (NativeSlice_1_tCEC4B2B900638EC1820BB61FE436766204DFD8DA*, const RuntimeMethod*))NativeSlice_1_SliceConvert_TisPositionTangentVertex_t2A3AA7C428755E24BA9ECCBD89F67D0828D6555C_mC9A5768FC81FE720688CF72AB9DF287FF511DCD3_gshared)(__this, method);
+}
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<System.Byte>::SliceConvert<UnityEngine.U2D.Animation.PositionVertex>()
+inline NativeSlice_1_tC7AC7DD3A727BCA7CF8B7EBDD6DE68FB33E8D9D2 NativeSlice_1_SliceConvert_TisPositionVertex_tE2E9C13E829C47759FB1722B0548D2D8925C4D12_m3A884AB015CACD97331FCB65E68CB755D3C58880 (NativeSlice_1_tCEC4B2B900638EC1820BB61FE436766204DFD8DA* __this, const RuntimeMethod* method)
+{
+	return ((  NativeSlice_1_tC7AC7DD3A727BCA7CF8B7EBDD6DE68FB33E8D9D2 (*) (NativeSlice_1_tCEC4B2B900638EC1820BB61FE436766204DFD8DA*, const RuntimeMethod*))NativeSlice_1_SliceConvert_TisPositionVertex_tE2E9C13E829C47759FB1722B0548D2D8925C4D12_m3A884AB015CACD97331FCB65E68CB755D3C58880_gshared)(__this, method);
+}
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Matrix4x4>::SliceWithStride<Unity.Mathematics.float4x4>(System.Int32)
+inline NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 NativeSlice_1_SliceWithStride_Tisfloat4x4_t7EDD16F7F57DC7F61A6302535F7C19FB97915DF2_m734F830067A253F7EC3C5D79985A64202EE50007 (NativeSlice_1_t834036F9BEE3B44BA1A65E51849556E5B7AEAF0A* __this, int32_t ___offset0, const RuntimeMethod* method)
+{
+	return ((  NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 (*) (NativeSlice_1_t834036F9BEE3B44BA1A65E51849556E5B7AEAF0A*, int32_t, const RuntimeMethod*))NativeSlice_1_SliceWithStride_Tisfloat4x4_t7EDD16F7F57DC7F61A6302535F7C19FB97915DF2_m734F830067A253F7EC3C5D79985A64202EE50007_gshared)(__this, ___offset0, method);
+}
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Matrix4x4>::SliceWithStride<Unity.Mathematics.float4x4>()
+inline NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 NativeSlice_1_SliceWithStride_Tisfloat4x4_t7EDD16F7F57DC7F61A6302535F7C19FB97915DF2_m61E2D8D641E199D591AAA07666FE59D1908784D7 (NativeSlice_1_t834036F9BEE3B44BA1A65E51849556E5B7AEAF0A* __this, const RuntimeMethod* method)
+{
+	return ((  NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 (*) (NativeSlice_1_t834036F9BEE3B44BA1A65E51849556E5B7AEAF0A*, const RuntimeMethod*))NativeSlice_1_SliceWithStride_Tisfloat4x4_t7EDD16F7F57DC7F61A6302535F7C19FB97915DF2_m61E2D8D641E199D591AAA07666FE59D1908784D7_gshared)(__this, method);
+}
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Vector3>::SliceWithStride<Unity.Mathematics.float3>(System.Int32)
+inline NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 NativeSlice_1_SliceWithStride_Tisfloat3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_m201EB7AC692534C4A5B805A9E503496DF6571E74 (NativeSlice_1_t4B5C42A704ED060AB92A8716135FE435B1E6C23A* __this, int32_t ___offset0, const RuntimeMethod* method)
+{
+	return ((  NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 (*) (NativeSlice_1_t4B5C42A704ED060AB92A8716135FE435B1E6C23A*, int32_t, const RuntimeMethod*))NativeSlice_1_SliceWithStride_Tisfloat3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_m201EB7AC692534C4A5B805A9E503496DF6571E74_gshared)(__this, ___offset0, method);
+}
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Vector3>::SliceWithStride<Unity.Mathematics.float3>()
+inline NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 NativeSlice_1_SliceWithStride_Tisfloat3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_m85528838E37FA29C4F17F31ADE7BD1645D0E721E (NativeSlice_1_t4B5C42A704ED060AB92A8716135FE435B1E6C23A* __this, const RuntimeMethod* method)
+{
+	return ((  NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 (*) (NativeSlice_1_t4B5C42A704ED060AB92A8716135FE435B1E6C23A*, const RuntimeMethod*))NativeSlice_1_SliceWithStride_Tisfloat3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_m85528838E37FA29C4F17F31ADE7BD1645D0E721E_gshared)(__this, method);
+}
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Vector4>::SliceWithStride<Unity.Mathematics.float4>(System.Int32)
+inline NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC NativeSlice_1_SliceWithStride_Tisfloat4_t89D9A294E7A79BD81BFBDD18654508532958555E_m8A0BEB23FF7C6880F6D43B5825EA90BD602CC38B (NativeSlice_1_tA687F314957178F2A299D03D59B960DDC218680F* __this, int32_t ___offset0, const RuntimeMethod* method)
+{
+	return ((  NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC (*) (NativeSlice_1_tA687F314957178F2A299D03D59B960DDC218680F*, int32_t, const RuntimeMethod*))NativeSlice_1_SliceWithStride_Tisfloat4_t89D9A294E7A79BD81BFBDD18654508532958555E_m8A0BEB23FF7C6880F6D43B5825EA90BD602CC38B_gshared)(__this, ___offset0, method);
+}
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Vector4>::SliceWithStride<Unity.Mathematics.float4>()
+inline NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC NativeSlice_1_SliceWithStride_Tisfloat4_t89D9A294E7A79BD81BFBDD18654508532958555E_m0A4D6ABC5A25366CD8CC35DA249E178E5C2320C7 (NativeSlice_1_tA687F314957178F2A299D03D59B960DDC218680F* __this, const RuntimeMethod* method)
+{
+	return ((  NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC (*) (NativeSlice_1_tA687F314957178F2A299D03D59B960DDC218680F*, const RuntimeMethod*))NativeSlice_1_SliceWithStride_Tisfloat4_t89D9A294E7A79BD81BFBDD18654508532958555E_m0A4D6ABC5A25366CD8CC35DA249E178E5C2320C7_gshared)(__this, method);
+}
 // System.Linq.Expressions.Expression System.Linq.Expressions.LambdaExpression::get_Body()
 IL2CPP_MANAGED_FORCE_INLINE IL2CPP_METHOD_ATTR Expression_t70AA908ECBD33E94249BF235E4EBB0F831AD8785* LambdaExpression_get_Body_m161E156442547AE8A6837C5AE065BD93345451DE_inline (LambdaExpression_tD26FB6AEAD01B2EBB668CDEAFAAFA4948697300E* __this, const RuntimeMethod* method) ;
 // System.Linq.Expressions.Expression System.Linq.Expressions.UnaryExpression::get_Operand()
@@ -19899,6 +20056,272 @@ IL_006f:
 		Lookup_2_tA174F043B099699DBEBE654509E5D32FA2CA556C* L_24 = V_0;
 		return L_24;
 	}
+}
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<System.Byte>::SliceConvert<UnityEngine.U2D.Animation.PositionTangentVertex>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_t896C643D92AC9B70D47A50D65CB166F74009189F NativeSlice_1_SliceConvert_TisPositionTangentVertex_t2A3AA7C428755E24BA9ECCBD89F67D0828D6555C_mC9A5768FC81FE720688CF72AB9DF287FF511DCD3_gshared (NativeSlice_1_tCEC4B2B900638EC1820BB61FE436766204DFD8DA* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	NativeSlice_1_t896C643D92AC9B70D47A50D65CB166F74009189F V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	NativeSlice_1_t896C643D92AC9B70D47A50D65CB166F74009189F V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	{
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		V_0 = L_0;
+		uint8_t* L_1 = (uint8_t*)__this->___m_Buffer_0;
+		(&V_1)->___m_Buffer_0 = L_1;
+		int32_t L_2 = V_0;
+		(&V_1)->___m_Stride_1 = L_2;
+		int32_t L_3 = (int32_t)__this->___m_Length_2;
+		int32_t L_4 = (int32_t)__this->___m_Stride_1;
+		int32_t L_5 = V_0;
+		(&V_1)->___m_Length_2 = ((int32_t)(((int32_t)il2cpp_codegen_multiply(L_3, L_4))/L_5));
+		NativeSlice_1_t896C643D92AC9B70D47A50D65CB166F74009189F L_6 = V_1;
+		V_2 = L_6;
+		goto IL_0036;
+	}
+
+IL_0036:
+	{
+		NativeSlice_1_t896C643D92AC9B70D47A50D65CB166F74009189F L_7 = V_2;
+		return L_7;
+	}
+}
+IL2CPP_EXTERN_C  NativeSlice_1_t896C643D92AC9B70D47A50D65CB166F74009189F NativeSlice_1_SliceConvert_TisPositionTangentVertex_t2A3AA7C428755E24BA9ECCBD89F67D0828D6555C_mC9A5768FC81FE720688CF72AB9DF287FF511DCD3_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	NativeSlice_1_tCEC4B2B900638EC1820BB61FE436766204DFD8DA* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<NativeSlice_1_tCEC4B2B900638EC1820BB61FE436766204DFD8DA*>(__this + _offset);
+	NativeSlice_1_t896C643D92AC9B70D47A50D65CB166F74009189F _returnValue;
+	_returnValue = NativeSlice_1_SliceConvert_TisPositionTangentVertex_t2A3AA7C428755E24BA9ECCBD89F67D0828D6555C_mC9A5768FC81FE720688CF72AB9DF287FF511DCD3(_thisAdjusted, method);
+	return _returnValue;
+}
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<System.Byte>::SliceConvert<UnityEngine.U2D.Animation.PositionVertex>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_tC7AC7DD3A727BCA7CF8B7EBDD6DE68FB33E8D9D2 NativeSlice_1_SliceConvert_TisPositionVertex_tE2E9C13E829C47759FB1722B0548D2D8925C4D12_m3A884AB015CACD97331FCB65E68CB755D3C58880_gshared (NativeSlice_1_tCEC4B2B900638EC1820BB61FE436766204DFD8DA* __this, const RuntimeMethod* method) 
+{
+	int32_t V_0 = 0;
+	NativeSlice_1_tC7AC7DD3A727BCA7CF8B7EBDD6DE68FB33E8D9D2 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	NativeSlice_1_tC7AC7DD3A727BCA7CF8B7EBDD6DE68FB33E8D9D2 V_2;
+	memset((&V_2), 0, sizeof(V_2));
+	{
+		int32_t L_0;
+		L_0 = ((  int32_t (*) (const RuntimeMethod*))il2cpp_codegen_get_method_pointer(il2cpp_rgctx_method(method->rgctx_data, 0)))(il2cpp_rgctx_method(method->rgctx_data, 0));
+		V_0 = L_0;
+		uint8_t* L_1 = (uint8_t*)__this->___m_Buffer_0;
+		(&V_1)->___m_Buffer_0 = L_1;
+		int32_t L_2 = V_0;
+		(&V_1)->___m_Stride_1 = L_2;
+		int32_t L_3 = (int32_t)__this->___m_Length_2;
+		int32_t L_4 = (int32_t)__this->___m_Stride_1;
+		int32_t L_5 = V_0;
+		(&V_1)->___m_Length_2 = ((int32_t)(((int32_t)il2cpp_codegen_multiply(L_3, L_4))/L_5));
+		NativeSlice_1_tC7AC7DD3A727BCA7CF8B7EBDD6DE68FB33E8D9D2 L_6 = V_1;
+		V_2 = L_6;
+		goto IL_0036;
+	}
+
+IL_0036:
+	{
+		NativeSlice_1_tC7AC7DD3A727BCA7CF8B7EBDD6DE68FB33E8D9D2 L_7 = V_2;
+		return L_7;
+	}
+}
+IL2CPP_EXTERN_C  NativeSlice_1_tC7AC7DD3A727BCA7CF8B7EBDD6DE68FB33E8D9D2 NativeSlice_1_SliceConvert_TisPositionVertex_tE2E9C13E829C47759FB1722B0548D2D8925C4D12_m3A884AB015CACD97331FCB65E68CB755D3C58880_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	NativeSlice_1_tCEC4B2B900638EC1820BB61FE436766204DFD8DA* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<NativeSlice_1_tCEC4B2B900638EC1820BB61FE436766204DFD8DA*>(__this + _offset);
+	NativeSlice_1_tC7AC7DD3A727BCA7CF8B7EBDD6DE68FB33E8D9D2 _returnValue;
+	_returnValue = NativeSlice_1_SliceConvert_TisPositionVertex_tE2E9C13E829C47759FB1722B0548D2D8925C4D12_m3A884AB015CACD97331FCB65E68CB755D3C58880(_thisAdjusted, method);
+	return _returnValue;
+}
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Matrix4x4>::SliceWithStride<Unity.Mathematics.float4x4>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 NativeSlice_1_SliceWithStride_Tisfloat4x4_t7EDD16F7F57DC7F61A6302535F7C19FB97915DF2_m61E2D8D641E199D591AAA07666FE59D1908784D7_gshared (NativeSlice_1_t834036F9BEE3B44BA1A65E51849556E5B7AEAF0A* __this, const RuntimeMethod* method) 
+{
+	NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 L_0;
+		L_0 = NativeSlice_1_SliceWithStride_Tisfloat4x4_t7EDD16F7F57DC7F61A6302535F7C19FB97915DF2_m734F830067A253F7EC3C5D79985A64202EE50007(__this, 0, il2cpp_rgctx_method(method->rgctx_data, 0));
+		V_0 = L_0;
+		goto IL_000b;
+	}
+
+IL_000b:
+	{
+		NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 L_1 = V_0;
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C  NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 NativeSlice_1_SliceWithStride_Tisfloat4x4_t7EDD16F7F57DC7F61A6302535F7C19FB97915DF2_m61E2D8D641E199D591AAA07666FE59D1908784D7_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	NativeSlice_1_t834036F9BEE3B44BA1A65E51849556E5B7AEAF0A* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<NativeSlice_1_t834036F9BEE3B44BA1A65E51849556E5B7AEAF0A*>(__this + _offset);
+	NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 _returnValue;
+	_returnValue = NativeSlice_1_SliceWithStride_Tisfloat4x4_t7EDD16F7F57DC7F61A6302535F7C19FB97915DF2_m61E2D8D641E199D591AAA07666FE59D1908784D7(_thisAdjusted, method);
+	return _returnValue;
+}
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Matrix4x4>::SliceWithStride<Unity.Mathematics.float4x4>(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 NativeSlice_1_SliceWithStride_Tisfloat4x4_t7EDD16F7F57DC7F61A6302535F7C19FB97915DF2_m734F830067A253F7EC3C5D79985A64202EE50007_gshared (NativeSlice_1_t834036F9BEE3B44BA1A65E51849556E5B7AEAF0A* __this, int32_t ___offset0, const RuntimeMethod* method) 
+{
+	NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		uint8_t* L_0 = (uint8_t*)__this->___m_Buffer_0;
+		int32_t L_1 = ___offset0;
+		(&V_0)->___m_Buffer_0 = ((uint8_t*)il2cpp_codegen_add((intptr_t)L_0, L_1));
+		int32_t L_2 = (int32_t)__this->___m_Stride_1;
+		(&V_0)->___m_Stride_1 = L_2;
+		int32_t L_3 = (int32_t)__this->___m_Length_2;
+		(&V_0)->___m_Length_2 = L_3;
+		NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 L_4 = V_0;
+		V_1 = L_4;
+		goto IL_002e;
+	}
+
+IL_002e:
+	{
+		NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 L_5 = V_1;
+		return L_5;
+	}
+}
+IL2CPP_EXTERN_C  NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 NativeSlice_1_SliceWithStride_Tisfloat4x4_t7EDD16F7F57DC7F61A6302535F7C19FB97915DF2_m734F830067A253F7EC3C5D79985A64202EE50007_AdjustorThunk (RuntimeObject* __this, int32_t ___offset0, const RuntimeMethod* method)
+{
+	NativeSlice_1_t834036F9BEE3B44BA1A65E51849556E5B7AEAF0A* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<NativeSlice_1_t834036F9BEE3B44BA1A65E51849556E5B7AEAF0A*>(__this + _offset);
+	NativeSlice_1_t14A9CE6361CD2BA1425D4FF7F9C320B32E3F8B63 _returnValue;
+	_returnValue = NativeSlice_1_SliceWithStride_Tisfloat4x4_t7EDD16F7F57DC7F61A6302535F7C19FB97915DF2_m734F830067A253F7EC3C5D79985A64202EE50007(_thisAdjusted, ___offset0, method);
+	return _returnValue;
+}
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Vector3>::SliceWithStride<Unity.Mathematics.float3>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 NativeSlice_1_SliceWithStride_Tisfloat3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_m85528838E37FA29C4F17F31ADE7BD1645D0E721E_gshared (NativeSlice_1_t4B5C42A704ED060AB92A8716135FE435B1E6C23A* __this, const RuntimeMethod* method) 
+{
+	NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 L_0;
+		L_0 = NativeSlice_1_SliceWithStride_Tisfloat3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_m201EB7AC692534C4A5B805A9E503496DF6571E74(__this, 0, il2cpp_rgctx_method(method->rgctx_data, 0));
+		V_0 = L_0;
+		goto IL_000b;
+	}
+
+IL_000b:
+	{
+		NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 L_1 = V_0;
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C  NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 NativeSlice_1_SliceWithStride_Tisfloat3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_m85528838E37FA29C4F17F31ADE7BD1645D0E721E_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	NativeSlice_1_t4B5C42A704ED060AB92A8716135FE435B1E6C23A* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<NativeSlice_1_t4B5C42A704ED060AB92A8716135FE435B1E6C23A*>(__this + _offset);
+	NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 _returnValue;
+	_returnValue = NativeSlice_1_SliceWithStride_Tisfloat3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_m85528838E37FA29C4F17F31ADE7BD1645D0E721E(_thisAdjusted, method);
+	return _returnValue;
+}
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Vector3>::SliceWithStride<Unity.Mathematics.float3>(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 NativeSlice_1_SliceWithStride_Tisfloat3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_m201EB7AC692534C4A5B805A9E503496DF6571E74_gshared (NativeSlice_1_t4B5C42A704ED060AB92A8716135FE435B1E6C23A* __this, int32_t ___offset0, const RuntimeMethod* method) 
+{
+	NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		uint8_t* L_0 = (uint8_t*)__this->___m_Buffer_0;
+		int32_t L_1 = ___offset0;
+		(&V_0)->___m_Buffer_0 = ((uint8_t*)il2cpp_codegen_add((intptr_t)L_0, L_1));
+		int32_t L_2 = (int32_t)__this->___m_Stride_1;
+		(&V_0)->___m_Stride_1 = L_2;
+		int32_t L_3 = (int32_t)__this->___m_Length_2;
+		(&V_0)->___m_Length_2 = L_3;
+		NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 L_4 = V_0;
+		V_1 = L_4;
+		goto IL_002e;
+	}
+
+IL_002e:
+	{
+		NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 L_5 = V_1;
+		return L_5;
+	}
+}
+IL2CPP_EXTERN_C  NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 NativeSlice_1_SliceWithStride_Tisfloat3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_m201EB7AC692534C4A5B805A9E503496DF6571E74_AdjustorThunk (RuntimeObject* __this, int32_t ___offset0, const RuntimeMethod* method)
+{
+	NativeSlice_1_t4B5C42A704ED060AB92A8716135FE435B1E6C23A* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<NativeSlice_1_t4B5C42A704ED060AB92A8716135FE435B1E6C23A*>(__this + _offset);
+	NativeSlice_1_t1FC9E9FE0BB166305C1E3C50A7E9D588E1D92502 _returnValue;
+	_returnValue = NativeSlice_1_SliceWithStride_Tisfloat3_t4AB5D88249ADB24F69FFD0793E8ED25E1CC3745E_m201EB7AC692534C4A5B805A9E503496DF6571E74(_thisAdjusted, ___offset0, method);
+	return _returnValue;
+}
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Vector4>::SliceWithStride<Unity.Mathematics.float4>()
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC NativeSlice_1_SliceWithStride_Tisfloat4_t89D9A294E7A79BD81BFBDD18654508532958555E_m0A4D6ABC5A25366CD8CC35DA249E178E5C2320C7_gshared (NativeSlice_1_tA687F314957178F2A299D03D59B960DDC218680F* __this, const RuntimeMethod* method) 
+{
+	NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	{
+		NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC L_0;
+		L_0 = NativeSlice_1_SliceWithStride_Tisfloat4_t89D9A294E7A79BD81BFBDD18654508532958555E_m8A0BEB23FF7C6880F6D43B5825EA90BD602CC38B(__this, 0, il2cpp_rgctx_method(method->rgctx_data, 0));
+		V_0 = L_0;
+		goto IL_000b;
+	}
+
+IL_000b:
+	{
+		NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC L_1 = V_0;
+		return L_1;
+	}
+}
+IL2CPP_EXTERN_C  NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC NativeSlice_1_SliceWithStride_Tisfloat4_t89D9A294E7A79BD81BFBDD18654508532958555E_m0A4D6ABC5A25366CD8CC35DA249E178E5C2320C7_AdjustorThunk (RuntimeObject* __this, const RuntimeMethod* method)
+{
+	NativeSlice_1_tA687F314957178F2A299D03D59B960DDC218680F* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<NativeSlice_1_tA687F314957178F2A299D03D59B960DDC218680F*>(__this + _offset);
+	NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC _returnValue;
+	_returnValue = NativeSlice_1_SliceWithStride_Tisfloat4_t89D9A294E7A79BD81BFBDD18654508532958555E_m0A4D6ABC5A25366CD8CC35DA249E178E5C2320C7(_thisAdjusted, method);
+	return _returnValue;
+}
+// Unity.Collections.NativeSlice`1<U> Unity.Collections.NativeSlice`1<UnityEngine.Vector4>::SliceWithStride<Unity.Mathematics.float4>(System.Int32)
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC NativeSlice_1_SliceWithStride_Tisfloat4_t89D9A294E7A79BD81BFBDD18654508532958555E_m8A0BEB23FF7C6880F6D43B5825EA90BD602CC38B_gshared (NativeSlice_1_tA687F314957178F2A299D03D59B960DDC218680F* __this, int32_t ___offset0, const RuntimeMethod* method) 
+{
+	NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC V_0;
+	memset((&V_0), 0, sizeof(V_0));
+	NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC V_1;
+	memset((&V_1), 0, sizeof(V_1));
+	{
+		uint8_t* L_0 = (uint8_t*)__this->___m_Buffer_0;
+		int32_t L_1 = ___offset0;
+		(&V_0)->___m_Buffer_0 = ((uint8_t*)il2cpp_codegen_add((intptr_t)L_0, L_1));
+		int32_t L_2 = (int32_t)__this->___m_Stride_1;
+		(&V_0)->___m_Stride_1 = L_2;
+		int32_t L_3 = (int32_t)__this->___m_Length_2;
+		(&V_0)->___m_Length_2 = L_3;
+		NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC L_4 = V_0;
+		V_1 = L_4;
+		goto IL_002e;
+	}
+
+IL_002e:
+	{
+		NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC L_5 = V_1;
+		return L_5;
+	}
+}
+IL2CPP_EXTERN_C  NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC NativeSlice_1_SliceWithStride_Tisfloat4_t89D9A294E7A79BD81BFBDD18654508532958555E_m8A0BEB23FF7C6880F6D43B5825EA90BD602CC38B_AdjustorThunk (RuntimeObject* __this, int32_t ___offset0, const RuntimeMethod* method)
+{
+	NativeSlice_1_tA687F314957178F2A299D03D59B960DDC218680F* _thisAdjusted;
+	int32_t _offset = 1;
+	_thisAdjusted = reinterpret_cast<NativeSlice_1_tA687F314957178F2A299D03D59B960DDC218680F*>(__this + _offset);
+	NativeSlice_1_t0ADA4C4E7F86D6AC8C977F595CA8C8F00A8197EC _returnValue;
+	_returnValue = NativeSlice_1_SliceWithStride_Tisfloat4_t89D9A294E7A79BD81BFBDD18654508532958555E_m8A0BEB23FF7C6880F6D43B5825EA90BD602CC38B(_thisAdjusted, ___offset0, method);
+	return _returnValue;
 }
 // System.Linq.IOrderedEnumerable`1<TElement> System.Linq.OrderedEnumerable`1<Vuforia.DriverCameraMode>::System.Linq.IOrderedEnumerable<TElement>.CreateOrderedEnumerable<System.Int32>(System.Func`2<TElement,TKey>,System.Collections.Generic.IComparer`1<TKey>,System.Boolean)
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR RuntimeObject* OrderedEnumerable_1_System_Linq_IOrderedEnumerableU3CTElementU3E_CreateOrderedEnumerable_TisInt32_t680FF22E76F6EFAD4375103CBBFFA0421349384C_m24910BE89A1F854B3CA7EC8F66D286CF32A567E8_gshared (OrderedEnumerable_1_t844389E9208116DBB16C8331AC4A98EFA60577CD* __this, Func_2_t131F49D1C96D99D1E862D67F43A78D916CF668D6* ___keySelector0, RuntimeObject* ___comparer1, bool ___descending2, const RuntimeMethod* method) 
