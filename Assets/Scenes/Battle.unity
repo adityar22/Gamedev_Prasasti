@@ -8507,8 +8507,8 @@ MonoBehaviour:
   textExpReward: {fileID: 8330353394450878099, guid: a9e5e3d103fc87844906615d2f68c1f9, type: 3}
   playerCharacter: {fileID: 0}
   portal: {fileID: 152138245}
-  pausePanel: {fileID: 0}
-  pauseContainer: {fileID: 0}
+  pausePanel: {fileID: 413819678}
+  pauseContainer: {fileID: 349738698}
 --- !u!114 &1715482375
 MonoBehaviour:
   m_ObjectHideFlags: 0
