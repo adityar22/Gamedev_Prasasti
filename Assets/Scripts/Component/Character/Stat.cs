@@ -15,7 +15,7 @@ public class intervenceStatus
 
     public static double intervenceAcc(int stage)
     {
-        switch (stage)
+        switch(stage)
         {
             case -4:
                 return 3.0 / 7;

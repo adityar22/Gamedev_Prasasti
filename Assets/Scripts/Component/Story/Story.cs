@@ -45,6 +45,7 @@ public class Story : MonoBehaviour
     {
         public string title;
         public string kingdom;
+        public string synopsis;
         public List<SubChapter> subList;
         public Character[] indexEnemy = new Character[]{};
     }

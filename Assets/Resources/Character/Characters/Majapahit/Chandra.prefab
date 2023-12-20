@@ -99,3 +99,7 @@ MonoBehaviour:
       effectType: 0
       deathPose: {fileID: 0}
       dialog: {fileID: 0}
+    descriptionAndHistories:
+      description: 
+      additionalDesc: 
+      histories: {fileID: -2227699224616239276, guid: 15390c2323695d5499443d968ed4b2c8, type: 3}
