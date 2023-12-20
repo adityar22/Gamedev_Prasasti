@@ -42,4 +42,6 @@ public class CharModel
     [SerializeField] public Skill skill;
     [SerializeField] public Ability[] abilities = new Ability[]{};
     [SerializeField] public AttributView attribut;
+
+    [SerializeField] public DescAndHist descriptionAndHistories;
 }
